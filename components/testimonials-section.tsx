@@ -1,113 +1,85 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Star } from "lucide-react"
+import { ExternalLink, FileCheck2, Newspaper, Scale } from "lucide-react"
 
-const testimonials = [
+const trustItems = [
   {
-    content:
-      "Imvelo helped us navigate a complex estate planning situation after my father's passing. Their expertise and compassionate approach made a difficult time much easier for our family.",
-    author: "Sarah M.",
-    role: "Estate Planning Client",
-    location: "Cape Town",
-    rating: 5,
+    title: "Regulatory identity",
+    detail: "FSP Licence Number 49944 and Company Registration 2018/195882/07 are now surfaced consistently.",
+    icon: Scale,
   },
   {
-    content:
-      "As a business owner, I needed sophisticated financial planning. The team at Imvelo created a comprehensive strategy that's helped me optimize both personal and business finances.",
-    author: "David K.",
-    role: "Entrepreneur",
-    location: "Johannesburg",
-    rating: 5,
+    title: "Compliance documents",
+    detail: "PAIA, POPIA, treating-customers-fairly and conflict-management material should remain easy to reach.",
+    icon: FileCheck2,
   },
   {
-    content:
-      "We've been working with Imvelo for over 8 years. Their investment strategies have consistently outperformed our expectations, and we're on track for a comfortable retirement.",
-    author: "Michael & Linda R.",
-    role: "Retirement Planning Clients",
-    location: "Durban",
-    rating: 5,
+    title: "Public financial education",
+    detail: "Palesa and Siba have existing public commentary and media material that can support credibility.",
+    icon: Newspaper,
   },
 ]
 
-const caseStudies = [
+const complianceLinks = [
   {
-    title: "Young Professional's First Home",
-    challenge: "28-year-old needed to save for a home deposit while managing student loans",
-    solution: "Created a structured savings plan with tax-efficient investments",
-    result: "Purchased R2.5M home within 3 years, 6 months ahead of schedule",
+    label: "COI Management Policy",
+    href: "https://imvelowealth.co.za/wp-content/uploads/2022/09/COI-Management-Policy_2022-Update-Imvelo-Wealth.pdf",
   },
   {
-    title: "Multi-Generational Wealth Transfer",
-    challenge: "Family business owner wanted to transfer wealth to children tax-efficiently",
-    solution: "Implemented trust structures and succession planning strategies",
-    result: "Saved over R1.2M in estate duties while ensuring business continuity",
+    label: "PAIA Manual",
+    href: "https://imvelowealth.co.za/wp-content/uploads/2022/09/PAIA-Manual_2022-Update-Imvelo-Wealth-1.pdf",
+  },
+  {
+    label: "POPIA Privacy Statement",
+    href: "https://imvelowealth.co.za/wp-content/uploads/2022/09/POPIA-Data-Private-Policy-Statement-Imvelo-Wealth-Solutions-1.pdf",
   },
 ]
 
 export function TestimonialsSection() {
   return (
-    <section className="bg-muted/30 py-24 sm:py-32">
+    <section className="bg-[#0b2025] py-24 text-white sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Testimonials */}
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            What Our Clients Say
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Don't just take our word for it. Here's what families across South Africa say about working with us.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index}>
-              <CardContent className="p-6">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-accent text-accent" />
-                  ))}
-                </div>
-                <blockquote className="text-sm leading-6 text-muted-foreground">"{testimonial.content}"</blockquote>
-                <div className="mt-4">
-                  <div className="font-semibold text-foreground">{testimonial.author}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.location}</div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Case Studies */}
-        <div className="mt-24">
-          <div className="mx-auto max-w-2xl text-center">
-            <h3 className="font-serif text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              Real Results for Real Families
-            </h3>
-            <p className="mt-4 text-lg leading-8 text-muted-foreground">
-              See how we've helped clients achieve their financial goals with measurable outcomes.
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c8a85a]">Trust architecture</p>
+            <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+              Trust should be visible before it is requested.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-white/70">
+              The strongest current proof points are verifiable: regulation, company identity, compliance material, and
+              visible advisory presence through public financial education.
             </p>
           </div>
-          <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            {caseStudies.map((study, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-foreground mb-3">{study.title}</h4>
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <span className="font-medium text-foreground">Challenge: </span>
-                      <span className="text-muted-foreground">{study.challenge}</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-foreground">Solution: </span>
-                      <span className="text-muted-foreground">{study.solution}</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-accent">Result: </span>
-                      <span className="text-foreground font-medium">{study.result}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+
+          <div className="grid gap-px overflow-hidden rounded-md border border-white/12 bg-white/12 sm:grid-cols-3">
+            {trustItems.map((item) => (
+              <div key={item.title} className="bg-white/[0.04] p-6">
+                <item.icon className="h-6 w-6 text-[#c8a85a]" aria-hidden="true" />
+                <h3 className="mt-7 text-base font-semibold text-white">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-white/65">{item.detail}</p>
+              </div>
             ))}
+          </div>
+        </div>
+
+        <div className="mt-14 border-t border-white/12 pt-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <p className="max-w-xl text-sm leading-7 text-white/65">
+              Compliance references currently point to Imvelo’s existing public documents and can be re-hosted or
+              refreshed before final launch.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {complianceLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-white/16 px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:border-white/30 hover:text-white"
+                >
+                  {link.label}
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

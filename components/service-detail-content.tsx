@@ -10,7 +10,8 @@ interface ServiceDetailContentProps {
       icon: React.ComponentType<{ className?: string }>
     }>
     process: string[]
-    pricing: {
+    engagement?: string[]
+    pricing?: {
       initial: string
       ongoing: string
       included: string[]
@@ -19,6 +20,8 @@ interface ServiceDetailContentProps {
 }
 
 export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
+  const engagementItems = service.engagement ?? service.pricing?.included ?? []
+
   return (
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -26,7 +29,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">What's Included</h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Our comprehensive approach ensures every aspect of your financial life is optimized.
+            A planning engagement should clarify the moving parts before specific recommendations are made.
           </p>
         </div>
 
@@ -56,7 +59,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Our Process</h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              We follow a proven methodology to ensure your financial plan is comprehensive and actionable.
+              The process keeps discovery, advice, implementation, and review connected.
             </p>
           </div>
 
@@ -74,14 +77,14 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
           </div>
         </div>
 
-        {/* Pricing */}
+        {/* Engagement */}
         <div className="mt-24">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Investment & Pricing
+              Engagement Scope
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Transparent pricing with no hidden fees. Your investment in professional financial planning.
+              Fees and service levels should be confirmed in the advice proposal after discovery.
             </p>
           </div>
 
@@ -90,19 +93,9 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Initial Planning Fee</h3>
-                    <p className="text-2xl font-bold text-accent">{service.pricing.initial}</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Ongoing Reviews</h3>
-                    <p className="text-xl font-semibold text-foreground">{service.pricing.ongoing}</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-3">What's Included:</h3>
+                    <h3 className="text-lg font-semibold text-foreground mb-3">Typical Scope:</h3>
                     <ul className="space-y-2">
-                      {service.pricing.included.map((item) => (
+                      {engagementItems.map((item) => (
                         <li key={item} className="flex items-center text-muted-foreground">
                           <CheckCircle className="mr-2 h-4 w-4 text-accent" />
                           {item}

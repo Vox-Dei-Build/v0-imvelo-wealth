@@ -1,16 +1,13 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { AboutHero } from "@/components/about-hero"
+import { BrandStoryBlock } from "@/components/brand-story-block"
 import { AboutStory } from "@/components/about-story"
 import { TeamSection } from "@/components/team-section"
-import { AboutValues } from "@/components/about-values"
 import { AboutCTA } from "@/components/about-cta"
+import { metadataForPath } from "@/lib/seo"
 
-export const metadata = {
-  title: "About Us | Imvelo Wealth Solutions",
-  description:
-    "Learn about our mission to help South African families build generational wealth. Meet our experienced team of licensed financial advisors.",
-}
+export const metadata = metadataForPath("/about")
 
 export default function AboutPage() {
   return (
@@ -18,8 +15,8 @@ export default function AboutPage() {
       <Navigation />
       <main>
         <AboutHero />
+        <BrandStoryBlock />
         <AboutStory />
-        <AboutValues />
         <TeamSection />
         <AboutCTA />
       </main>

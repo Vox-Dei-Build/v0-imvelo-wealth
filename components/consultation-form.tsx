@@ -25,7 +25,24 @@ export function ConsultationForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Consultation form submitted:", formData)
+    const subject = encodeURIComponent("Consultation request")
+    const body = encodeURIComponent(
+      [
+        `Name: ${formData.firstName} ${formData.lastName}`,
+        `Email: ${formData.email}`,
+        `Phone: ${formData.phone}`,
+        `Preferred date: ${formData.preferredDate || "Not provided"}`,
+        `Preferred time: ${formData.preferredTime || "Not selected"}`,
+        "",
+        "Main financial goals:",
+        formData.goals || "Not provided",
+        "",
+        "Current situation:",
+        formData.currentSituation || "Not provided",
+      ].join("\n")
+    )
+
+    window.location.href = `mailto:info@imvelowealth.co.za?subject=${subject}&body=${body}`
   }
 
   return (
@@ -33,7 +50,7 @@ export function ConsultationForm() {
       <CardHeader>
         <CardTitle className="text-2xl font-serif">Book Your Session</CardTitle>
         <CardDescription>
-          Complete the form below and we'll contact you within 24 hours to confirm your appointment.
+          Complete the form below and your email app will open a prepared consultation request.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -104,7 +121,6 @@ export function ConsultationForm() {
                 <SelectContent>
                   <SelectItem value="morning">Morning (9:00 - 12:00)</SelectItem>
                   <SelectItem value="afternoon">Afternoon (12:00 - 17:00)</SelectItem>
-                  <SelectItem value="evening">Evening (17:00 - 19:00)</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -134,11 +150,11 @@ export function ConsultationForm() {
 
           <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
             <Calendar className="mr-2 h-5 w-5" />
-            Schedule My Consultation
+            Prepare Consultation Email
           </Button>
 
           <p className="text-xs text-muted-foreground text-center">
-            This consultation is completely free with no obligation. We'll discuss your goals and how we can help.
+            Office hours are Monday to Friday, 09:00-17:00.
           </p>
         </form>
       </CardContent>

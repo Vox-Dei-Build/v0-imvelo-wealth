@@ -1,75 +1,44 @@
-import { CheckCircle } from "lucide-react"
-
 const steps = [
   {
     id: "01",
-    name: "Initial Consultation",
-    description:
-      "We start with a comprehensive discussion about your financial goals, current situation, and future aspirations.",
-    details: ["Free 60-minute consultation", "Goal assessment", "Risk profiling", "Initial recommendations"],
+    name: "Discover",
+    description: "Clarify the client’s position, obligations, goals, risk appetite, and planning priorities.",
   },
   {
     id: "02",
-    name: "Strategy Development",
-    description: "Our team creates a personalized financial plan tailored to your unique circumstances and objectives.",
-    details: [
-      "Detailed financial analysis",
-      "Custom strategy creation",
-      "Investment recommendations",
-      "Risk management plan",
-    ],
+    name: "Design",
+    description: "Build a structured plan that connects cash flow, investment, risk, retirement, estate, and business needs.",
   },
   {
     id: "03",
-    name: "Implementation",
-    description: "We help you implement your financial plan with ongoing support and guidance every step of the way.",
-    details: ["Account setup assistance", "Investment execution", "Insurance arrangements", "Legal documentation"],
+    name: "Implement",
+    description: "Coordinate the chosen actions, documentation, provider interactions, and advice records.",
   },
   {
     id: "04",
-    name: "Ongoing Management",
-    description: "Regular reviews and adjustments ensure your plan stays on track as your life and goals evolve.",
-    details: ["Quarterly reviews", "Performance monitoring", "Strategy adjustments", "24/7 support access"],
+    name: "Review",
+    description: "Keep the plan current as legislation, markets, family circumstances, and business realities change.",
   },
 ]
 
 export function ProcessSection() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Our Proven Process
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            We follow a structured approach to ensure your financial success. Here's what you can expect when working
-            with our team.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-y-16 lg:max-w-none lg:grid-cols-4 lg:gap-x-8">
-            {steps.map((step, stepIdx) => (
-              <div key={step.name} className="relative">
-                <div className="flex items-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground font-bold text-lg">
-                    {step.id}
-                  </div>
-                  {stepIdx !== steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-6 left-12 w-full h-0.5 bg-border"></div>
-                  )}
-                </div>
-                <div className="mt-6">
-                  <h3 className="text-lg font-semibold leading-8 text-foreground">{step.name}</h3>
-                  <p className="mt-2 text-base leading-7 text-muted-foreground">{step.description}</p>
-                  <ul className="mt-4 space-y-2">
-                    {step.details.map((detail) => (
-                      <li key={detail} className="flex items-center text-sm text-muted-foreground">
-                        <CheckCircle className="mr-2 h-4 w-4 text-accent" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.6fr] lg:gap-20">
+          <div data-aos="fade-up">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Method</p>
+            <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              A calmer way to make consequential money decisions.
+            </h2>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2">
+            {steps.map((step, index) => (
+              <div key={step.name} className="border-t border-border pt-6" data-aos="fade-up" data-aos-delay={index * 80}>
+                <div className="font-mono text-sm text-primary">{step.id}</div>
+                <h3 className="mt-6 text-xl font-semibold text-foreground">{step.name}</h3>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">{step.description}</p>
               </div>
             ))}
           </div>

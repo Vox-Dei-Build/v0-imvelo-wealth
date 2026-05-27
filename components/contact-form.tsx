@@ -25,8 +25,21 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    const subject = encodeURIComponent("Website enquiry")
+    const body = encodeURIComponent(
+      [
+        `Name: ${formData.firstName} ${formData.lastName}`,
+        `Email: ${formData.email}`,
+        `Phone: ${formData.phone || "Not provided"}`,
+        `Service interest: ${formData.service || "Not selected"}`,
+        `Newsletter opt-in: ${formData.newsletter ? "Yes" : "No"}`,
+        "",
+        "Message:",
+        formData.message || "Not provided",
+      ].join("\n")
+    )
+
+    window.location.href = `mailto:info@imvelowealth.co.za?subject=${subject}&body=${body}`
   }
 
   return (
@@ -34,7 +47,7 @@ export function ContactForm() {
       <CardHeader>
         <CardTitle className="text-2xl font-serif">Get Started Today</CardTitle>
         <CardDescription>
-          Fill out the form below and we'll get back to you within 24 hours to schedule your complimentary consultation.
+          Share your details and your email app will open a prepared message to Imvelo Wealth Solutions.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -124,7 +137,7 @@ export function ContactForm() {
 
           <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
             <Send className="mr-2 h-5 w-5" />
-            Send Message
+            Prepare Email
           </Button>
 
           <p className="text-xs text-muted-foreground text-center">

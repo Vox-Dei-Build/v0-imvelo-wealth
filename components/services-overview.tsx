@@ -1,51 +1,42 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { PiggyBank, TrendingUp, FileText, Shield, Home, Briefcase } from "lucide-react"
 import Link from "next/link"
+import { ArrowUpRight, Briefcase, FileText, GraduationCap, PiggyBank, RefreshCw, Users } from "lucide-react"
 
 const services = [
   {
     title: "Financial Planning",
-    description:
-      "Comprehensive financial plans tailored to your life goals, from buying your first home to retirement.",
+    description: "Goals, protection, investments, retirement, tax awareness, and education funding in one plan.",
     icon: PiggyBank,
-    benefits: ["Goal-based planning", "Cash flow optimization", "Tax-efficient strategies"],
     href: "/services/financial-planning",
   },
   {
-    title: "Investment Management",
-    description: "Professional portfolio management with diversified strategies designed for long-term growth.",
-    icon: TrendingUp,
-    benefits: ["Diversified portfolios", "Risk management", "Regular rebalancing"],
-    href: "/services/investment-management",
-  },
-  {
     title: "Estate Planning",
-    description: "Protect your legacy and ensure smooth wealth transfer to future generations.",
+    description: "Wills, trust structures, beneficiary nominations, estate duty exposure, and liquidity planning.",
     icon: FileText,
-    benefits: ["Will drafting", "Trust structures", "Tax minimization"],
     href: "/services/estate-planning",
   },
   {
-    title: "Risk Management",
-    description: "Comprehensive insurance strategies to protect your family and assets from unforeseen events.",
-    icon: Shield,
-    benefits: ["Life insurance", "Disability cover", "Asset protection"],
-    href: "/services/risk-management",
+    title: "Employee Benefits",
+    description: "Key employee retention, group risk, compensation structures, and employee education.",
+    icon: Users,
+    href: "/services/employee-benefits",
   },
   {
-    title: "Retirement Planning",
-    description: "Build a secure retirement with strategies that maximize your pension and investment returns.",
-    icon: Home,
-    benefits: ["Pension optimization", "Retirement annuities", "Income planning"],
-    href: "/services/retirement-planning",
+    title: "Retirement Counselling",
+    description: "Annuity decisions, preservation funds, tax implications, and two-pot system guidance.",
+    icon: RefreshCw,
+    href: "/services/retirement-counselling",
   },
   {
-    title: "Business Solutions",
-    description: "Specialized financial services for business owners and entrepreneurs.",
+    title: "Financial Coaching",
+    description: "Budgeting, debt reduction, credit health, emergency funds, and workplace financial wellness.",
+    icon: GraduationCap,
+    href: "/services/financial-coaching",
+  },
+  {
+    title: "Business Assurance",
+    description: "Buy-and-sell agreements, key person cover, succession, valuation, and continuity planning.",
     icon: Briefcase,
-    benefits: ["Business succession", "Key person insurance", "Employee benefits"],
-    href: "/services/business-solutions",
+    href: "/services/business-assurance",
   },
 ]
 
@@ -53,42 +44,39 @@ export function ServicesOverview() {
   return (
     <section className="bg-muted/30 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Comprehensive Wealth Solutions
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            From financial planning to estate management, we provide the full spectrum of services needed to build and
-            preserve your wealth.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
-          {services.map((service) => (
-            <Card key={service.title} className="flex flex-col">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10">
-                    <service.icon className="h-6 w-6 text-accent" />
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.5fr] lg:gap-20">
+          <div data-aos="fade-up">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Services</p>
+            <h2 className="mt-4 font-serif text-4xl font-semibold tracking-[-0.01em] text-foreground sm:text-5xl">
+              A complete planning surface, without the catalogue noise.
+            </h2>
+            <p className="mt-6 text-base leading-7 text-muted-foreground">
+              Each service is a doorway into the same advisory standard: understand the full picture first, then
+              implement only what the plan calls for.
+            </p>
+          </div>
+
+          <div className="divide-y divide-border border-y border-border" data-aos="fade-up" data-aos-delay="120">
+            {services.map((service, index) => (
+              <Link
+                key={service.title}
+                href={service.href}
+                className="group grid gap-5 py-6 transition-colors hover:bg-background/65 sm:grid-cols-[4rem_1fr_auto]"
+              >
+                <div className="flex items-center gap-4 sm:block">
+                  <span className="font-mono text-sm text-muted-foreground">{String(index + 1).padStart(2, "0")}</span>
+                  <service.icon className="h-5 w-5 text-primary sm:mt-6" aria-hidden="true" />
                 </div>
-                <CardDescription className="text-base">{service.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1">
-                <ul className="space-y-2">
-                  {service.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center text-sm text-muted-foreground">
-                      <div className="mr-2 h-1.5 w-1.5 rounded-full bg-accent"></div>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-                <Button variant="outline" className="mt-6 w-full bg-transparent" asChild>
-                  <Link href={service.href}>Learn More</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                <div>
+                  <h3 className="text-xl font-semibold tracking-[-0.01em] text-foreground">{service.title}</h3>
+                  <p className="mt-2 max-w-2xl text-sm leading-7 text-muted-foreground">{service.description}</p>
+                </div>
+                <div className="flex items-center text-primary">
+                  <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

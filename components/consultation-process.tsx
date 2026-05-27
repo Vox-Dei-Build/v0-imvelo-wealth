@@ -4,8 +4,8 @@ import { CheckCircle, Calendar, Users, TrendingUp, FileText } from "lucide-react
 const processSteps = [
   {
     icon: Calendar,
-    title: "Schedule Your Call",
-    description: "Book a convenient time for your complimentary 60-minute consultation.",
+    title: "Send the Request",
+    description: "Share your details, preferred time window, and the decisions you want to discuss.",
   },
   {
     icon: Users,
@@ -15,22 +15,22 @@ const processSteps = [
   {
     icon: FileText,
     title: "Custom Proposal",
-    description: "Receive a personalized financial strategy tailored to your unique needs.",
+    description: "Imvelo can outline the appropriate advisory scope and next steps after discovery.",
   },
   {
     icon: TrendingUp,
     title: "Implementation",
-    description: "Begin executing your wealth-building strategy with our ongoing support.",
+    description: "Approved recommendations can then be coordinated, documented, and reviewed over time.",
   },
 ]
 
 const benefits = [
-  "Comprehensive financial health assessment",
-  "Personalized investment recommendations",
-  "Tax optimization strategies",
-  "Estate planning guidance",
-  "Retirement planning roadmap",
-  "Risk management review",
+  "Goals, priorities, and current constraints",
+  "Existing investments, policies, and retirement structures",
+  "Risk, estate, and family continuity considerations",
+  "Business or employee-benefit planning needs",
+  "Possible advisory scope and next documentation",
+  "Contact and follow-up preferences",
 ]
 
 export function ConsultationProcess() {
@@ -80,26 +80,26 @@ export function ConsultationProcess() {
 
       <Card className="border-primary/20">
         <CardHeader>
-          <CardTitle className="text-xl font-serif">Why Choose Imvelo?</CardTitle>
+          <CardTitle className="text-xl font-serif">Verified Details</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             <div>
-              <h4 className="font-semibold text-foreground mb-1">Licensed & Regulated</h4>
+              <h4 className="font-semibold text-foreground mb-1">Licensed FSP</h4>
               <p className="text-sm text-muted-foreground">
-                FSP licensed and regulated by the FSCA for your protection.
+                FSP Licence Number 49944.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-1">Proven Track Record</h4>
+              <h4 className="font-semibold text-foreground mb-1">Registered Company</h4>
               <p className="text-sm text-muted-foreground">
-                Over R2.5 billion in assets under management with 500+ satisfied clients.
+                Company Registration 2018/195882/07.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-1">Holistic Approach</h4>
+              <h4 className="font-semibold text-foreground mb-1">Office Hours</h4>
               <p className="text-sm text-muted-foreground">
-                We consider all aspects of your financial life for comprehensive planning.
+                Monday to Friday, 09:00-17:00.
               </p>
             </div>
           </div>

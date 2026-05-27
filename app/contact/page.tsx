@@ -4,6 +4,9 @@ import { ContactHero } from "@/components/contact-hero"
 import { ContactForm } from "@/components/contact-form"
 import { ContactInfo } from "@/components/contact-info"
 import { ContactCTA } from "@/components/contact-cta"
+import { metadataForPath } from "@/lib/seo"
+
+export const metadata = metadataForPath("/contact")
 
 export default function ContactPage() {
   return (

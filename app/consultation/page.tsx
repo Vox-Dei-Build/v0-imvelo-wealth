@@ -3,6 +3,9 @@ import { Footer } from "@/components/footer"
 import { ConsultationHero } from "@/components/consultation-hero"
 import { ConsultationForm } from "@/components/consultation-form"
 import { ConsultationProcess } from "@/components/consultation-process"
+import { metadataForPath } from "@/lib/seo"
+
+export const metadata = metadataForPath("/consultation")
 
 export default function ConsultationPage() {
   return (
