@@ -2,13 +2,11 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ServicesHero } from "@/components/services-hero"
 import { ServicesGrid } from "@/components/services-grid"
+import { FeeComparisonTable } from "@/components/fee-comparison-table"
 import { ServicesCTA } from "@/components/services-cta"
+import { metadataForPath } from "@/lib/seo"
 
-export const metadata = {
-  title: "Financial Services | Imvelo Wealth Solutions",
-  description:
-    "Comprehensive financial planning, investment management, estate planning, and wealth management services for South African families and businesses.",
-}
+export const metadata = metadataForPath("/services")
 
 export default function ServicesPage() {
   return (
@@ -17,6 +15,7 @@ export default function ServicesPage() {
       <main>
         <ServicesHero />
         <ServicesGrid />
+        <FeeComparisonTable />
         <ServicesCTA />
       </main>
       <Footer />

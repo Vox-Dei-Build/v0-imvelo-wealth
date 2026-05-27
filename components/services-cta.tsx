@@ -9,10 +9,10 @@ export function ServicesCTA() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Ready to Get Started?
+            Ready to Discuss Your Planning Needs?
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Choose the best way to connect with our team and begin your wealth-building journey.
+            Choose the simplest way to connect with Imvelo during office hours.
           </p>
         </div>
 
@@ -20,12 +20,12 @@ export function ServicesCTA() {
           <Card>
             <CardContent className="p-6 text-center">
               <Calendar className="mx-auto h-8 w-8 text-accent mb-4" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Schedule Consultation</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Request Consultation</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Book a free 60-minute consultation to discuss your financial goals and explore our services.
+                Share the planning questions, decisions, or priorities you want to discuss.
               </p>
               <Button asChild className="w-full">
-                <Link href="/consultation">Book Now</Link>
+                <Link href="/consultation">Request Time</Link>
               </Button>
             </CardContent>
           </Card>
@@ -33,12 +33,12 @@ export function ServicesCTA() {
           <Card>
             <CardContent className="p-6 text-center">
               <Phone className="mx-auto h-8 w-8 text-accent mb-4" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Call Us Today</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Call the Office</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Speak directly with one of our advisors to get immediate answers to your questions.
+                Reach Imvelo Wealth Solutions on the confirmed office number.
               </p>
               <Button variant="outline" asChild className="w-full bg-transparent">
-                <Link href="tel:+27111234567">+27 (0)11 123 4567</Link>
+                <Link href="tel:+27101095097">010 109 5097</Link>
               </Button>
             </CardContent>
           </Card>
@@ -48,7 +48,7 @@ export function ServicesCTA() {
               <Mail className="mx-auto h-8 w-8 text-accent mb-4" />
               <h3 className="text-lg font-semibold text-foreground mb-2">Send Us a Message</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Email us your questions and we'll respond within 24 hours with detailed information.
+                Use the contact page or email info@imvelowealth.co.za.
               </p>
               <Button variant="outline" asChild className="w-full bg-transparent">
                 <Link href="/contact">Contact Form</Link>

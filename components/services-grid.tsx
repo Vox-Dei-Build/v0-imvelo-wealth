@@ -1,191 +1,123 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { PiggyBank, TrendingUp, FileText, Shield, Home, Briefcase, CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import {
+  ArrowUpRight,
+  Briefcase,
+  CheckCircle,
+  FileText,
+  GraduationCap,
+  PiggyBank,
+  RefreshCw,
+  Users,
+} from "lucide-react"
 
 const services = [
   {
     title: "Financial Planning",
-    description: "Comprehensive financial plans tailored to your life goals and circumstances.",
+    description:
+      "A goals-based plan covering investments, protection, retirement, tax awareness, preservation funds, and education funding.",
     icon: PiggyBank,
-    features: [
-      "Goal-based financial planning",
-      "Cash flow analysis and optimization",
-      "Tax-efficient strategies",
-      "Debt management solutions",
-      "Education funding planning",
-      "Emergency fund strategies",
-    ],
-    benefits: [
-      "Clear roadmap to financial goals",
-      "Optimized cash flow management",
-      "Reduced tax burden",
-      "Peace of mind about your future",
-    ],
+    features: ["Life, disability, and critical illness", "Investment and savings strategy", "Retirement annuities"],
+    outcomes: ["Clear planning roadmap", "Coordinated life-stage decisions", "Ongoing review discipline"],
     href: "/services/financial-planning",
-    price: "From R2,500 initial consultation",
-  },
-  {
-    title: "Investment Management",
-    description: "Professional portfolio management with diversified strategies for long-term growth.",
-    icon: TrendingUp,
-    features: [
-      "Diversified investment portfolios",
-      "Risk-adjusted returns",
-      "Regular portfolio rebalancing",
-      "Tax-efficient investing",
-      "ESG investment options",
-      "Performance monitoring",
-    ],
-    benefits: [
-      "Professional investment expertise",
-      "Reduced investment risk",
-      "Consistent long-term returns",
-      "Time-saving portfolio management",
-    ],
-    href: "/services/investment-management",
-    price: "1.5% annual management fee",
   },
   {
     title: "Estate Planning",
-    description: "Protect your legacy and ensure smooth wealth transfer to future generations.",
+    description:
+      "Wills, trust structures, beneficiary nominations, estate duty exposure, fiduciary coordination, and estate liquidity.",
     icon: FileText,
-    features: [
-      "Will drafting and updates",
-      "Trust structure planning",
-      "Estate duty minimization",
-      "Beneficiary planning",
-      "Power of attorney documents",
-      "Estate administration",
-    ],
-    benefits: [
-      "Protected family wealth",
-      "Minimized estate taxes",
-      "Clear succession planning",
-      "Avoided family disputes",
-    ],
+    features: ["Will drafting and review", "Trust considerations", "Executor coordination"],
+    outcomes: ["Cleaner wealth transfer", "Reduced administration friction", "Family continuity"],
     href: "/services/estate-planning",
-    price: "From R5,000 for basic will",
   },
   {
-    title: "Risk Management",
-    description: "Comprehensive insurance strategies to protect your family and assets.",
-    icon: Shield,
-    features: [
-      "Life insurance planning",
-      "Disability income protection",
-      "Critical illness cover",
-      "Asset protection strategies",
-      "Business insurance",
-      "Insurance needs analysis",
-    ],
-    benefits: [
-      "Financial security for family",
-      "Protected income streams",
-      "Covered medical expenses",
-      "Business continuity assurance",
-    ],
-    href: "/services/risk-management",
-    price: "Customized premium quotes",
+    title: "Employee Benefits",
+    description:
+      "Retention structures, investment-linked benefits, group risk cover, employer education, and compliant administration.",
+    icon: Users,
+    features: ["Retention schemes", "Group risk cover", "Employee communication"],
+    outcomes: ["Stronger retention", "Clearer employee value", "Compliant benefit design"],
+    href: "/services/employee-benefits",
   },
   {
-    title: "Retirement Planning",
-    description: "Build a secure retirement with optimized pension and investment strategies.",
-    icon: Home,
-    features: [
-      "Retirement needs analysis",
-      "Pension fund optimization",
-      "Retirement annuity planning",
-      "Living annuity management",
-      "Social security maximization",
-      "Healthcare cost planning",
-    ],
-    benefits: [
-      "Comfortable retirement lifestyle",
-      "Maximized retirement income",
-      "Healthcare cost coverage",
-      "Legacy preservation",
-    ],
-    href: "/services/retirement-planning",
-    price: "Included in planning fee",
+    title: "Retirement Benefit Counselling",
+    description:
+      "Independent guidance on preservation funds, living and life annuities, tax, fees, nominations, and two-pot decisions.",
+    icon: RefreshCw,
+    features: ["Annuity analysis", "Preservation options", "Tax modelling"],
+    outcomes: ["Informed retirement choices", "Avoided irreversible mistakes", "Aligned income strategy"],
+    href: "/services/retirement-counselling",
   },
   {
-    title: "Business Solutions",
-    description: "Specialized financial services for business owners and entrepreneurs.",
+    title: "Financial Coaching",
+    description:
+      "Practical financial wellness for individuals and teams: budgeting, debt management, credit health, and savings habits.",
+    icon: GraduationCap,
+    features: ["Budget and cash flow", "Debt reduction", "Credit improvement"],
+    outcomes: ["Lower financial stress", "Better money habits", "Stronger savings base"],
+    href: "/services/financial-coaching",
+  },
+  {
+    title: "Business Assurance",
+    description:
+      "Business-owner planning for buy-and-sell agreements, key person cover, valuation, contingent liability, and succession.",
     icon: Briefcase,
-    features: [
-      "Business succession planning",
-      "Key person insurance",
-      "Employee benefit schemes",
-      "Business loan structuring",
-      "Exit strategy planning",
-      "Corporate investment management",
-    ],
-    benefits: [
-      "Business continuity assurance",
-      "Attracted and retained talent",
-      "Optimized business value",
-      "Successful exit strategies",
-    ],
-    href: "/services/business-solutions",
-    price: "Custom business packages",
+    features: ["Buy-and-sell structuring", "Key person cover", "Continuity planning"],
+    outcomes: ["Business resilience", "Fair partner buyout logic", "Protected enterprise value"],
+    href: "/services/business-assurance",
   },
 ]
 
 export function ServicesGrid() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:gap-12">
-          {services.map((service) => (
-            <Card key={service.title} className="flex flex-col h-full">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                    <service.icon className="h-6 w-6 text-accent" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                    <div className="text-sm text-accent font-medium">{service.price}</div>
-                  </div>
+        <div className="divide-y divide-border border-y border-border" data-aos="fade-up">
+          {services.map((service, index) => (
+            <article key={service.title} className="grid gap-8 py-10 lg:grid-cols-[0.65fr_1fr_0.85fr] lg:gap-12">
+              <div>
+                <div className="flex items-center gap-4">
+                  <span className="font-mono text-sm text-muted-foreground">{String(index + 1).padStart(2, "0")}</span>
+                  <service.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                 </div>
-                <CardDescription className="text-base">{service.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1 space-y-6">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3">What's Included:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-start text-sm text-muted-foreground">
-                        <CheckCircle className="mr-2 h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <h2 className="mt-6 font-serif text-3xl font-semibold tracking-[-0.01em] text-foreground">
+                  {service.title}
+                </h2>
+                <p className="mt-4 text-sm leading-7 text-muted-foreground">{service.description}</p>
+                <Link
+                  href={service.href}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/75"
+                >
+                  Learn more
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+              </div>
 
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3">Key Benefits:</h4>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-start text-sm text-muted-foreground">
-                        <div className="mr-2 h-1.5 w-1.5 rounded-full bg-accent mt-2 flex-shrink-0"></div>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Scope</p>
+                <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3 text-sm leading-6 text-foreground">
+                      <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-                <div className="pt-4">
-                  <Button className="w-full group" asChild>
-                    <Link href={service.href}>
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Outcome</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {service.outcomes.map((outcome) => (
+                    <span
+                      key={outcome}
+                      className="rounded-full border border-border bg-muted/35 px-3 py-1.5 text-xs font-medium text-muted-foreground"
+                    >
+                      {outcome}
+                    </span>
+                  ))}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </article>
           ))}
         </div>
       </div>

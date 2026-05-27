@@ -2,8 +2,11 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ResourcesHero } from "@/components/resources-hero"
 import { ResourcesGrid } from "@/components/resources-grid"
-import { NewsletterSignup } from "@/components/newsletter-signup"
-import { ResourcesCTA } from "@/components/resources-cta"
+import { MediaSection } from "@/components/media-section"
+import { CTASection } from "@/components/cta-section"
+import { metadataForPath } from "@/lib/seo"
+
+export const metadata = metadataForPath("/resources")
 
 export default function ResourcesPage() {
   return (
@@ -12,8 +15,8 @@ export default function ResourcesPage() {
       <main>
         <ResourcesHero />
         <ResourcesGrid />
-        <NewsletterSignup />
-        <ResourcesCTA />
+        <MediaSection />
+        <CTASection />
       </main>
       <Footer />
     </div>

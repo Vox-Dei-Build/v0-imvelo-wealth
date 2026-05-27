@@ -16,12 +16,19 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border/40">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/88 backdrop-blur-xl supports-[backdrop-filter]:bg-background/72">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="font-serif text-2xl font-bold text-foreground">Imvelo</span>
-            <span className="ml-2 text-sm font-medium text-muted-foreground">Wealth Solutions</span>
+          <Link href="/" className="-m-1.5 flex items-center gap-3 p-1.5">
+            <span className="flex h-9 w-9 items-center justify-center rounded-md border border-primary/30 bg-primary text-sm font-semibold text-primary-foreground">
+              IW
+            </span>
+            <span>
+              <span className="block font-serif text-xl font-semibold leading-none text-foreground">Imvelo</span>
+              <span className="mt-1 block text-[11px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
+                Wealth Solutions
+              </span>
+            </span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -34,20 +41,20 @@ export function Navigation() {
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-10">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-foreground hover:text-accent-foreground transition-colors"
+              className="text-sm font-medium leading-6 text-muted-foreground transition-colors hover:text-foreground"
             >
               {item.name}
             </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button asChild>
-            <Link href="/consultation">Schedule Consultation</Link>
+          <Button asChild className="rounded-md">
+            <Link href="/consultation">Request Consultation</Link>
           </Button>
         </div>
       </nav>
@@ -59,7 +66,7 @@ export function Navigation() {
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
-                <span className="font-serif text-2xl font-bold text-foreground">Imvelo</span>
+                <span className="font-serif text-2xl font-semibold text-foreground">Imvelo</span>
                 <span className="ml-2 text-sm font-medium text-muted-foreground">Wealth Solutions</span>
               </Link>
               <button
@@ -87,7 +94,7 @@ export function Navigation() {
                 </div>
                 <div className="py-6">
                   <Button asChild className="w-full">
-                    <Link href="/consultation">Schedule Consultation</Link>
+                    <Link href="/consultation">Request Consultation</Link>
                   </Button>
                 </div>
               </div>

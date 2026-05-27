@@ -2,13 +2,13 @@ export function ResourcesHero() {
   return (
     <section className="bg-gradient-to-b from-muted/30 to-background py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 text-balance">
-            Financial Insights & Resources
+        <div className="mx-auto max-w-3xl">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-primary">Resources</p>
+          <h1 className="mb-6 font-serif text-5xl font-semibold tracking-tight text-foreground md:text-6xl">
+            Public commentary and financial education.
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto">
-            Stay informed with our latest market insights, financial planning guides, and wealth management strategies.
-            Knowledge is the foundation of smart financial decisions.
+          <p className="max-w-2xl text-lg leading-8 text-muted-foreground">
+            Practical financial education, planning explainers, and public commentary from the Imvelo team.
           </p>
         </div>
       </div>

@@ -2,13 +2,13 @@ export function ContactHero() {
   return (
     <section className="bg-gradient-to-b from-muted/30 to-background py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 text-balance">
-            Let's Start Your Wealth Journey
+        <div className="mx-auto max-w-3xl">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-primary">Contact</p>
+          <h1 className="mb-6 font-serif text-5xl font-semibold tracking-tight text-foreground md:text-6xl">
+            Speak to Imvelo Wealth Solutions.
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto">
-            Ready to take control of your financial future? We're here to help you build, preserve, and pass on wealth
-            that lasts for generations. Get in touch for a personalized consultation.
+          <p className="max-w-2xl text-lg leading-8 text-muted-foreground">
+            Use the confirmed office details below or request a focused consultation through the review form.
           </p>
         </div>
       </div>

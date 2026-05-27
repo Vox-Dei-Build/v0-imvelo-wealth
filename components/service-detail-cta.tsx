@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, Phone, Download } from "lucide-react"
+import { Calendar, Mail, Phone } from "lucide-react"
 import Link from "next/link"
 
 interface ServiceDetailCTAProps {
@@ -15,10 +15,10 @@ export function ServiceDetailCTA({ service }: ServiceDetailCTAProps) {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Ready to Start Your {service.title} Journey?
+            Discuss Your {service.title} Needs
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Take the first step towards achieving your financial goals. Our expert advisors are ready to help.
+            Use a confirmed channel to request a focused planning conversation.
           </p>
         </div>
 
@@ -26,12 +26,12 @@ export function ServiceDetailCTA({ service }: ServiceDetailCTAProps) {
           <Card>
             <CardContent className="p-6 text-center">
               <Calendar className="mx-auto h-8 w-8 text-accent mb-4" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Free Consultation</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Consultation Request</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Schedule a 60-minute consultation to discuss your specific needs and goals.
+                Share your context and preferred time window.
               </p>
               <Button asChild className="w-full">
-                <Link href="/consultation">Book Consultation</Link>
+                <Link href="/consultation">Request Consultation</Link>
               </Button>
             </CardContent>
           </Card>
@@ -41,23 +41,23 @@ export function ServiceDetailCTA({ service }: ServiceDetailCTAProps) {
               <Phone className="mx-auto h-8 w-8 text-accent mb-4" />
               <h3 className="text-lg font-semibold text-foreground mb-2">Speak to an Advisor</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Call us directly to speak with one of our qualified financial advisors.
+                Call the confirmed office line during business hours.
               </p>
               <Button variant="outline" asChild className="w-full bg-transparent">
-                <Link href="tel:+27111234567">Call Now</Link>
+                <Link href="tel:+27101095097">010 109 5097</Link>
               </Button>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent className="p-6 text-center">
-              <Download className="mx-auto h-8 w-8 text-accent mb-4" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Planning Guide</h3>
+              <Mail className="mx-auto h-8 w-8 text-accent mb-4" />
+              <h3 className="text-lg font-semibold text-foreground mb-2">Email Imvelo</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Download our comprehensive guide to financial planning in South Africa.
+                Send a direct message to the confirmed info inbox.
               </p>
               <Button variant="outline" asChild className="w-full bg-transparent">
-                <Link href="/resources/financial-planning-guide">Download Guide</Link>
+                <a href="mailto:info@imvelowealth.co.za">info@imvelowealth.co.za</a>
               </Button>
             </CardContent>
           </Card>

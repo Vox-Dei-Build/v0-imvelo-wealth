@@ -1,47 +1,66 @@
+import Image from "next/image"
+
 export function AboutStory() {
   return (
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-          <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-            <div className="lg:pr-4">
-              <div className="lg:max-w-lg">
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Our Story</h2>
-                <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                  Imvelo Wealth Solutions was founded with a simple but powerful mission: to help South African families
-                  build wealth that lasts for generations. The name "Imvelo" comes from the Zulu word meaning "nature"
-                  or "character," reflecting our belief that true wealth building is about understanding the unique
-                  character and needs of each family we serve.
-                </p>
-              </div>
+        <div className="mx-auto max-w-4xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Our Story</p>
+          <h2 className="mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            Advice shaped around character, context, and continuity.
+          </h2>
+
+          <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground">
+            <p>
+              The name <strong className="text-foreground">Imvelo</strong> comes from the Zulu word meaning
+              "nature" or "character." It reflects a founding conviction: that good financial planning starts with
+              understanding the person, family, or business sitting across the table.
+            </p>
+
+            <p>
+              The practice is positioned around personalised, goals-based financial planning. The stronger story is not
+              a long provider list or a stack of claims; it is the discipline of helping clients understand what they
+              own, what they pay, what they are exposed to, and what needs to happen next.
+            </p>
+
+            <p>
+              The practice is led by{" "}
+              <strong className="text-foreground">Palesa Tlholoe, CFP®</strong> and{" "}
+              <strong className="text-foreground">Siba Njoba, CFP®</strong>. Full public bios and background detail
+              can be expanded once the final credentials pack is confirmed.
+            </p>
+
+            <p>
+              The most credible posture is clear and restrained: licensed practice, transparent contact details,
+              confirmed regulatory identifiers, and proof points that can be traced.
+            </p>
+          </div>
+
+          <div className="relative mt-12 aspect-[16/7] w-full overflow-hidden rounded-md ring-1 ring-border/40">
+            <Image
+              src="/bayport-house.jpg"
+              alt="Office park associated with Imvelo Wealth Solutions"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 800px"
+            />
+            <div className="absolute bottom-3 right-4 rounded bg-black/45 px-2 py-1 text-xs text-white/75">
+              Bryanston East office park
             </div>
           </div>
-          <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-            <img
-              className="w-[48rem] max-w-none rounded-xl bg-muted shadow-xl ring-1 ring-border/10 sm:w-[57rem]"
-              src="/professional-financial-advisors-in-modern-office-s.jpg"
-              alt="Imvelo Wealth Solutions team in their office"
-            />
-          </div>
-          <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-            <div className="lg:pr-4">
-              <div className="max-w-xl text-base leading-7 text-muted-foreground lg:max-w-lg">
-                <p>
-                  What started as a small practice has grown into one of South Africa's most trusted wealth management
-                  firms. We've weathered market downturns, celebrated bull markets, and most importantly, we've been
-                  there for our clients through every major life event.
-                </p>
-                <p className="mt-8">
-                  Our approach is different. We don't just manage money – we build relationships. We take the time to
-                  understand your family's unique story, your values, and your dreams for the future. This deep
-                  understanding allows us to create financial strategies that are truly personalized and effective.
-                </p>
-                <p className="mt-8">
-                  Today, we're proud to serve over 500 families across South Africa, managing more than R2.5 billion in
-                  assets. But our success isn't measured just in numbers – it's measured in the peace of mind our
-                  clients have, knowing their financial future is secure.
-                </p>
-              </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div className="rounded-md border border-border bg-card p-6">
+              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">FSP</div>
+              <div className="mt-3 text-2xl font-semibold text-foreground">49944</div>
+            </div>
+            <div className="rounded-md border border-border bg-card p-6">
+              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Directors</div>
+              <div className="mt-3 text-2xl font-semibold text-foreground">CFP® led</div>
+            </div>
+            <div className="rounded-md border border-border bg-card p-6">
+              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Location</div>
+              <div className="mt-3 text-2xl font-semibold text-foreground">Bryanston</div>
             </div>
           </div>
         </div>

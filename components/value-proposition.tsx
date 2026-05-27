@@ -1,56 +1,54 @@
-import { Shield, TrendingUp, Users, Award } from "lucide-react"
+import { FileText, ShieldCheck, Users } from "lucide-react"
 
 const features = [
   {
-    name: "Advice-Driven Approach",
+    name: "Advice Before Product",
     description:
-      "Personalized financial strategies tailored to your unique goals, risk tolerance, and family circumstances.",
+      "Planning starts with the client’s circumstances, obligations, and objectives before any provider or product conversation.",
     icon: Users,
   },
   {
-    name: "Proven Track Record",
-    description: "Over 15 years of helping South African families build and preserve wealth through market cycles.",
-    icon: TrendingUp,
+    name: "Regulated Practice",
+    description: "Imvelo Wealth Solutions is a licensed Financial Services Provider with FSP Licence Number 49944.",
+    icon: ShieldCheck,
   },
   {
-    name: "Licensed & Regulated",
-    description: "Fully licensed FSP with FSCA oversight, ensuring the highest standards of professional conduct.",
-    icon: Shield,
-  },
-  {
-    name: "Generational Focus",
-    description: "Strategies designed not just for today, but to create lasting wealth for future generations.",
-    icon: Award,
+    name: "Documented Standards",
+    description:
+      "Compliance, privacy, conflict-of-interest and fair-treatment documentation is surfaced clearly for review.",
+    icon: FileText,
   },
 ]
 
 export function ValueProposition() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Why Choose Imvelo Wealth Solutions?
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            We're not just financial advisors – we're your partners in building lasting wealth. Here's what sets us
-            apart from other wealth management firms.
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.4fr] lg:gap-20" data-aos="fade-up">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Why Imvelo</p>
+            <h2 className="mt-4 max-w-xl font-serif text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              Quiet confidence over financial noise.
+            </h2>
+          </div>
+          <p className="max-w-2xl text-lg leading-8 text-muted-foreground lg:pt-10">
+            Good advice is built on licensed practice, clear scope, visible governance, and a planning relationship
+            that treats wealth as a long-term family and business decision.
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-            {features.map((feature) => (
-              <div key={feature.name} className="flex flex-col">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-foreground">
-                  <feature.icon className="h-5 w-5 flex-none text-accent" aria-hidden="true" />
-                  {feature.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground">
-                  <p className="flex-auto">{feature.description}</p>
-                </dd>
-              </div>
-            ))}
-          </dl>
+
+        <div
+          className="mt-16 grid gap-px overflow-hidden rounded-md border border-border bg-border md:grid-cols-3"
+          data-aos="fade-up"
+          data-aos-delay="120"
+        >
+          {features.map((feature) => (
+            <div key={feature.name} className="bg-card p-8">
+              <feature.icon className="h-6 w-6 text-primary" aria-hidden="true" />
+              <h3 className="mt-6 text-lg font-semibold text-foreground">{feature.name}</h3>
+              <p className="mt-4 text-sm leading-7 text-muted-foreground">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

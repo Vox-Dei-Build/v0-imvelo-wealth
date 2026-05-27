@@ -3,7 +3,9 @@ import { Footer } from "@/components/footer"
 import { ServiceDetailHero } from "@/components/service-detail-hero"
 import { ServiceDetailContent } from "@/components/service-detail-content"
 import { ServiceDetailCTA } from "@/components/service-detail-cta"
+import { ServiceStructuredData } from "@/components/service-structured-data"
 import { PiggyBank, Target, Calculator, TrendingUp, Shield, FileText } from "lucide-react"
+import { metadataForPath } from "@/lib/seo"
 
 const serviceData = {
   title: "Financial Planning",
@@ -47,22 +49,15 @@ const serviceData = {
     "Implementation support and ongoing monitoring",
     "Regular reviews and plan adjustments as needed",
   ],
-  pricing: {
-    initial: "R2,500 for comprehensive financial plan",
-    ongoing: "R500 per quarter for plan reviews and updates",
-    included: ["Initial consultation", "Written financial plan", "Implementation guidance", "First quarterly review"],
-  },
+  engagement: ["Discovery conversation", "Advice scope", "Written recommendations", "Implementation support"],
 }
 
-export const metadata = {
-  title: "Financial Planning Services | Imvelo Wealth Solutions",
-  description:
-    "Comprehensive financial planning services to help you achieve your goals. Goal-based planning, cash flow analysis, and investment strategies.",
-}
+export const metadata = metadataForPath("/services/financial-planning")
 
 export default function FinancialPlanningPage() {
   return (
     <div className="min-h-screen bg-background">
+      <ServiceStructuredData path="/services/financial-planning" name={serviceData.title} />
       <Navigation />
       <main>
         <ServiceDetailHero service={serviceData} />

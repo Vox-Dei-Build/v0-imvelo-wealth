@@ -1,95 +1,81 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Download } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
+import { ArrowRight, Building2, FileCheck2, ShieldCheck } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+const proof = [
+  { label: "FSCA Licensed FSP", value: "49944", icon: ShieldCheck },
+  { label: "Company Registration", value: "2018/195882/07", icon: FileCheck2 },
+  { label: "Office", value: "Bryanston East", icon: Building2 },
+]
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8f6ef_0%,#ffffff_58%,#f4f0e7_100%)] py-20 sm:py-28">
+      <div className="absolute inset-x-0 top-0 h-px bg-border" />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          {/* Announcement Banner */}
-          <div className="mb-8">
-            <div className="inline-flex items-center rounded-full bg-accent/10 px-4 py-2 text-sm font-medium text-accent-foreground ring-1 ring-accent/20">
-              <span className="mr-2 h-2 w-2 rounded-full bg-accent"></span>
-              Licensed FSP - Trusted by 500+ South African families
-            </div>
+        <div className="mx-auto max-w-5xl text-center">
+          <div
+            data-aos="fade-up"
+            className="inline-flex items-center rounded-full border border-primary/20 bg-background/75 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary shadow-sm"
+          >
+            Independent · FSCA licensed · Planning-led
           </div>
 
-          {/* Main Headlines - 3 Alternative Options */}
-          <div className="space-y-6">
-            <h1 className="font-serif text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
-              Build Wealth That
-              <span className="text-accent"> Lasts Generations</span>
-            </h1>
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="80"
+            className="mx-auto mt-8 max-w-5xl font-serif text-5xl font-semibold leading-[0.98] tracking-[-0.015em] text-foreground sm:text-7xl lg:text-8xl"
+          >
+            Build wealth that has a place to go.
+          </h1>
 
-            {/* Alternative Headlines (commented for reference):
-            
-            Option 2:
-            <h1 className="font-serif text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
-              Your Legacy Starts 
-              <span className="text-accent"> With Smart Planning</span>
-            </h1>
-            
-            Option 3:
-            <h1 className="font-serif text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
-              Preserve & Grow 
-              <span className="text-accent"> Family Wealth</span>
-            </h1>
-            */}
+          <p
+            data-aos="fade-up"
+            data-aos-delay="160"
+            className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl"
+          >
+            Clear financial planning for South African families, professionals, and business owners who want structure,
+            discretion, and continuity around consequential money decisions.
+          </p>
 
-            <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground text-pretty">
-              Expert financial planning and wealth management for South African professionals, entrepreneurs, and
-              families. Create, preserve, and transfer wealth with confidence through our proven strategies.
-            </p>
-          </div>
-
-          {/* Call to Action Buttons */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" asChild className="group">
+          <div data-aos="fade-up" data-aos-delay="240" className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button size="lg" asChild className="group rounded-md">
               <Link href="/consultation">
-                Schedule Free Consultation
+                Request a Consultation
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link href="/resources/wealth-guide">
-                <Download className="mr-2 h-4 w-4" />
-                Download Wealth Guide
-              </Link>
+            <Button variant="outline" size="lg" asChild className="rounded-md bg-transparent">
+              <Link href="/services">Explore Advisory Services</Link>
             </Button>
           </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-foreground">R2.5B+</div>
-              <div className="text-sm text-muted-foreground">Assets Under Management</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-foreground">500+</div>
-              <div className="text-sm text-muted-foreground">Families Served</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-foreground">15+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-foreground">98%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-            </div>
-          </div>
         </div>
-      </div>
 
-      {/* Hero Image */}
-      <div className="mt-16 sm:mt-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="relative rounded-xl bg-muted/50 p-2 ring-1 ring-border/10 lg:rounded-2xl lg:p-4">
-            <img
-              src="/professional-financial-planning-meeting-with-diver.jpg"
-              alt="Professional financial planning consultation"
-              className="w-full rounded-lg bg-background shadow-2xl ring-1 ring-border/10"
-            />
+        <div data-aos="fade-up" data-aos-delay="320" className="mx-auto mt-16 max-w-6xl">
+          <div className="relative overflow-hidden rounded-md border border-border bg-background p-2 shadow-2xl shadow-primary/10">
+            <div className="relative aspect-[16/8] overflow-hidden rounded-[5px] bg-[#0b2025] sm:aspect-[16/7]">
+              <Image
+                src="/bayport-house.jpg"
+                alt="Imvelo Wealth Solutions office park"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 1120px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,31,36,0.08)_0%,rgba(7,31,36,0.42)_100%)]" />
+              <div className="absolute bottom-0 left-0 right-0 grid gap-px border-t border-white/15 bg-white/15 backdrop-blur-sm sm:grid-cols-3">
+                {proof.map((item) => (
+                  <div key={item.label} className="bg-[#071f24]/78 p-5 text-left text-white">
+                    <div className="flex items-center gap-3 text-white/62">
+                      <item.icon className="h-4 w-4 text-[#d7bd73]" aria-hidden="true" />
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.18em]">{item.label}</span>
+                    </div>
+                    <p className="mt-3 text-base font-semibold">{item.value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
