@@ -1,13 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CalendarDays, FileCheck2, ShieldCheck, UsersRound } from "lucide-react"
+import { ArrowRight, BriefcaseBusiness, ShieldCheck, TrendingUp, UsersRound } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const trustIndicators = [
+  { value: "R500M+", label: "AUM", icon: TrendingUp },
+  { value: "500+", label: "Families Served", icon: UsersRound },
+  { value: "30+", label: "Years Combined Experience", icon: BriefcaseBusiness },
   { value: "49944", label: "FSP Licence", icon: ShieldCheck },
-  { value: "2018/195882/07", label: "Company Registration", icon: FileCheck2, compact: true },
-  { value: "2018", label: "Founded", icon: CalendarDays },
-  { value: "CFP®", label: "Director-led Advice", icon: UsersRound },
 ]
 
 export function HeroSection() {
@@ -71,15 +71,7 @@ export function HeroSection() {
             {trustIndicators.map((item) => (
               <div key={item.label} className="min-w-0 text-center">
                 <item.icon className="mx-auto mb-3 h-5 w-5 text-primary" aria-hidden="true" />
-                <div
-                  className={
-                    item.compact
-                      ? "text-[0.95rem] font-bold leading-7 text-foreground sm:text-2xl"
-                      : "text-xl font-bold text-foreground sm:text-2xl"
-                  }
-                >
-                  {item.value}
-                </div>
+                <div className="text-xl font-bold text-foreground sm:text-2xl">{item.value}</div>
                 <div className="mt-1 text-sm text-muted-foreground">{item.label}</div>
               </div>
             ))}

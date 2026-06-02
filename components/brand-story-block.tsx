@@ -4,7 +4,7 @@ export function BrandStoryBlock() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-14 md:grid-cols-[0.9fr_1.1fr] md:gap-24">
           {/* Etymology */}
-          <div data-aos="fade-right">
+          <div data-aos="fade-up">
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-accent">Our name</p>
             <div className="mb-5 flex flex-wrap items-baseline gap-x-4 gap-y-2">
               <span className="font-serif text-5xl font-bold leading-none text-foreground sm:text-6xl">
@@ -23,7 +23,7 @@ export function BrandStoryBlock() {
           </div>
 
           {/* Philosophy */}
-          <div className="space-y-6" data-aos="fade-left" data-aos-delay="120">
+          <div className="space-y-6" data-aos="fade-up" data-aos-delay="120">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">Our philosophy</p>
             <h2 className="max-w-2xl font-serif text-3xl font-bold leading-tight text-foreground text-balance sm:text-4xl">
               Purpose-driven wealth management, built around financial empowerment.

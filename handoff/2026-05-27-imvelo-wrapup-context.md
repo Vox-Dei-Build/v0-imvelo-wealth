@@ -553,3 +553,24 @@ Feedback called out that internal-facing provider-logo caveats had leaked into t
   - `/tmp/imvelo-partners-copy-spacing-fix.png`
   - `/tmp/imvelo-team-section-top.png`
   - `/tmp/imvelo-team-section-lower.png`
+
+## 2026-06-02 Confirmed Proof Metrics Pass
+
+Palesa confirmed selected proof metrics after the earlier initial-commit claims were held back for verification.
+
+### What changed
+- Restored client-confirmed scale metrics in `components/hero-section.tsx`:
+  - `R500M+` AUM
+  - `500+` families served
+  - `30+` years combined founder experience
+  - FSP Licence `49944`
+- Updated the trust architecture section to reference the confirmed scale metrics alongside regulatory and compliance proof.
+- Continued to exclude the `98% satisfaction` claim because the client explicitly said to leave it out.
+- Superseded the earlier unverified `R2.5B+ AUM` and `15+ years` claims with the confirmed `R500M+ AUM` and `30+ years combined experience` claims.
+
+### Verification
+- `pnpm build` passed after the copy/proof update.
+- Mobile browser check confirmed:
+  - `R500M+`, `500+`, and `30+` are present
+  - `98%` is absent
+  - no horizontal overflow at 390px mobile viewport
