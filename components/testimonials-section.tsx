@@ -1,6 +1,11 @@
-import { ExternalLink, FileCheck2, Newspaper, Scale } from "lucide-react"
+import { ExternalLink, FileCheck2, Scale, TrendingUp, UsersRound } from "lucide-react"
 
 const trustItems = [
+  {
+    title: "Scale and experience",
+    detail: "R500M+ AUM, 500+ families served, and 30+ years of combined founder experience are now confirmed proof points.",
+    icon: TrendingUp,
+  },
   {
     title: "Regulatory identity",
     detail: "FSP Licence Number 49944 and Company Registration 2018/195882/07 are now surfaced consistently.",
@@ -14,7 +19,7 @@ const trustItems = [
   {
     title: "Public financial education",
     detail: "Palesa and Siba have existing public commentary and media material that can support credibility.",
-    icon: Newspaper,
+    icon: UsersRound,
   },
 ]
 
@@ -44,12 +49,12 @@ export function TestimonialsSection() {
               Trust should be visible before it is requested.
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/70">
-              The strongest current proof points are verifiable: regulation, company identity, compliance material, and
-              visible advisory presence through public financial education.
+              The strongest proof points now combine client-confirmed scale with visible regulatory identity, compliance
+              material, and public financial education.
             </p>
           </div>
 
-          <div className="grid gap-px overflow-hidden rounded-md border border-white/12 bg-white/12 sm:grid-cols-3">
+          <div className="grid gap-px overflow-hidden rounded-md border border-white/12 bg-white/12 sm:grid-cols-2 xl:grid-cols-4">
             {trustItems.map((item) => (
               <div key={item.title} className="bg-white/[0.04] p-6">
                 <item.icon className="h-6 w-6 text-[#c8a85a]" aria-hidden="true" />

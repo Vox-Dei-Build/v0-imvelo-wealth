@@ -12,7 +12,7 @@ export function AboutCTA() {
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             A considered first conversation is the right place to clarify context, planning priorities, and whether
-            Imvelo is the right advisory partner.
+            Imvelo Wealth is the right advisory partner.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild className="group rounded-md">

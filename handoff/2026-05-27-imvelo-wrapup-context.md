@@ -207,12 +207,29 @@ The highest-leverage move was to remove weak proof and make the site feel more d
 - WhatsApp CTA remains blocked until the correct WhatsApp number is confirmed.
 - Compliance PDFs currently link to the existing Imvelo site; confirm whether they should be re-hosted in this project before any public launch.
 - The current review gate needs runtime credentials configured before sharing.
+- If link previews need to work in WhatsApp or similar apps, use the preview-token path described below instead of relying only on Basic Auth.
 
 ### Internal review readiness
 This lane is now appropriate for internal review only. It is not public-launch-ready, but it is materially safer and more premium than the previous wrap-up baseline because unsupported proof has been removed, the first screen is stronger, the service presentation is quieter, and trust is based on confirmed or traceable details.
 
 ### Verification
 - `pnpm build` passed on 2026-05-27.
+
+## Share / Preview Link Note
+Basic Auth alone can block WhatsApp, Slack, and other unfurl bots from reading metadata, which prevents rich link previews from rendering.
+
+To preserve internal-only access while still allowing shareable previews:
+- keep `IMVELO_REVIEW_GATE` enabled
+- set `IMVELO_REVIEW_USER` and `IMVELO_REVIEW_PASSWORD` for direct browser access
+- also set `IMVELO_PREVIEW_TOKEN` to a long random value
+- share links in this format:
+  - `https://<preview-domain>/?preview=<token>`
+
+Current middleware behavior:
+- `/og/*` routes are allowed through so Open Graph images can render
+- a valid `?preview=<token>` query grants access and drops a short-lived secure cookie
+- all responses still carry `noindex, nofollow, noarchive`
+- this is safer for client review sharing than disabling the gate entirely
 
 ## 2026-05-27 Follow-up Restoration Pass
 
@@ -314,3 +331,246 @@ Latest feedback identified that the homepage provider strip still looked unresol
   - page metadata now resolves to noindex unless `IMVELO_REVIEW_GATE=off`
   - review-mode `robots.txt` disallows all crawling
   - sitemap output is suppressed unless public indexing is deliberately enabled
+
+## 2026-06-01 Client Feedback Alignment Pass
+
+Client feedback received after review made the direction clearer: this is not a rebrand, the existing Imvelo Wealth logo and identity must remain, the site should move closer to the earlier visual/stock-image feel, copy should follow the current website/company-profile terminology, and the presentation should use South African financial-services language.
+
+### Source material reviewed
+- `/Users/admin/Downloads/Imvelo/logo.jpeg`
+- `/Users/admin/Downloads/Imvelo/IWS Company Profile 2026.pdf`
+- `/Users/admin/Downloads/Imvelo/Proposal_Hybrid_Wealth_Management_Strategy - Imvelo Wealth.pdf`
+- `/Users/admin/Downloads/Imvelo/WhatsApp Image 2026-05-29 at 05.35.02.jpeg`
+- `/Users/admin/Downloads/Imvelo/team/siba_njoba.jpeg`
+- Reference sites:
+  - Citadel: strong image-led hero, concise “wealth journey” sections, premium restraint
+  - Nicola Wealth: more editorial/visual wealth-management feel
+  - PSG About: clear division/service architecture and South African terminology
+
+### What changed
+- Restored the client’s existing logo identity instead of the interim text/monogram treatment.
+  - Added `public/imvelo-logo.jpeg`
+  - Added cropped web-ready `public/imvelo-logo-wide.jpeg`
+  - Updated navigation and footer to use the existing logo.
+- Reinforced the preferred short name: `Imvelo Wealth`.
+  - Replaced visible “Imvelo” short-form references with “Imvelo Wealth” where appropriate.
+- Updated the Imvelo meaning section:
+  - changed from Zulu/nature-origin copy to Xhosa “to bring forth”
+  - aligned wording with the company profile: nurture, grow, and preserve wealth.
+- Reworked the hero away from the physical office/building story.
+  - removed the Bayport/office image from the hero
+  - restored a stock-style financial-planning image closer to the first visual direction
+  - changed the proof rail from “Office / Bryanston East” to “Founded / 2018”
+- Replaced the partner marquee/cards with the client-supplied uniform partner-logo graphic.
+  - Added `public/imvelo-partner-logos.jpeg`
+  - Kept provider links below the graphic for internal review.
+- Updated Siba’s headshot to the client-supplied image:
+  - Added `public/siba-njoba-client.jpeg`
+  - Updated `components/team-section.tsx`.
+- Added client material graphics for future/internal visual use:
+  - `public/imvelo-services-graphic.jpeg`
+  - `public/imvelo-demographics-graphic.jpeg`
+- The supplied demographics graphic was used briefly, then removed from the About page in the follow-up correction below.
+- Reduced homepage text weight:
+  - removed the trust-architecture section from the homepage flow
+  - added a concise `Latest Resources` preview on the homepage
+  - kept fuller resource content on `/resources`
+- Updated South African terminology:
+  - Employee Benefits now uses pension/provident funds, group retirement plans, group risk benefits, group investment plans, and employee wellness workshops.
+  - Business Assurance now uses buy and sell, key man insurance, contingent liability, and preferred compensation.
+  - Removed visible “retention schemes” wording.
+- Reduced physical-office emphasis:
+  - visible homepage/contact/footer language now uses Sandton/Johannesburg or general contact details rather than the physical building story.
+
+### Robo-advice / digital strategy context
+The hybrid wealth strategy PDF and client note introduce a future roadmap:
+- white-labelled robo-advice via One-moola / Sechaba
+- FSCA approval to offer automated advice
+- target launch later in 2026, possibly September/October
+- intended move toward self-service and a more interactive Allan Gray-like model
+- funding still being explored
+
+This is important product direction, but it should not yet be positioned as a live public capability. Current recommendation: keep it in internal strategy notes and prepare future IA/CTA room for it, but only publish once launch scope, compliance wording, and funding/build plan are confirmed.
+
+### Verification
+- `pnpm build` passed on 2026-06-01.
+- Local gated preview checks passed:
+  - unauthenticated `/` returns `401`
+  - authenticated `/`, `/about`, and `/services/employee-benefits` return `200`
+  - homepage included the Imvelo logo treatment used at that stage
+  - homepage includes the partner-logo image
+  - homepage includes `Latest Resources`
+  - homepage has `0` `Product-led Advice` occurrences
+  - homepage has no visible `Bryanston`, `EPPF`, `Georgian`, or `office park` mentions
+  - About page uses `siba-njoba-client.jpeg`
+
+### Still pending / blocked
+- Client still intends to send websites they like and the organogram.
+- Partner logo usage still needs final public permissions/approval.
+- Final team profile pack is still pending.
+- Robo-advice content must remain internal-roadmap only until launch/compliance wording is confirmed.
+- Designer-updated direction is still pending.
+
+## 2026-06-01 Partner Logo Asset Pass
+
+The client rejected the flattened WhatsApp partner-logo screenshot and asked for individual web-sourced logos instead.
+
+### What changed
+- Replaced the single partner screenshot layout in `components/partner-strip.tsx` with a clickable uniform provider wall.
+- Added individual local partner assets under `public/partners/`:
+  - Ninety One
+  - Liberty
+  - Sanlam
+  - PPS
+  - Momentum
+  - Discovery
+  - Allan Gray
+  - Old Mutual
+  - STANLIB
+  - Hollard
+- Ordered the providers to match the client-supplied reference image.
+- Used dark tiles for white/reversed marks so the logos read cleanly.
+- Kept a visible internal-review note that public logo usage must be cleared before launch.
+
+### Source caveat
+- Most assets were pulled from provider public web domains or provider page source.
+- Ninety One and Old Mutual currently use public-logo-database fallbacks because direct provider-domain access was blocked or did not expose a usable full logo in the scrape.
+- These assets are acceptable for internal review only. Final launch should use approved brand files or written provider permissions.
+
+### Verification
+- `pnpm build` passed on 2026-06-01 after the partner logo replacement.
+- Local gated preview checks passed:
+  - unauthenticated `/` returns `401`
+  - authenticated `/` returns `200`
+  - authenticated `/partners/sanlam.svg` returns `200`
+- Browser visual check passed on the homepage partner section after AOS animation completed.
+
+## 2026-06-01 Logo / Demographics Correction
+
+Feedback called out two issues from the prior pass: the Imvelo logo still looked like a pasted JPEG with a visible background, and the target-demographics material should not have been shown as a raw screenshot.
+
+### What changed
+- Generated `public/imvelo-logo-transparent.png` from the supplied client logo and switched navigation/footer to that transparent asset.
+- Removed the raw `imvelo-demographics-graphic.jpeg` presentation screenshot from the About page.
+- Rebuilt the same broad audience intent as native, editable site content under a restrained `Client Focus` section:
+  - retirees
+  - working professionals
+  - mid-career professionals
+  - employers and business owners
+
+### Verification
+- `pnpm build` passed after the correction.
+- Local visual check confirmed:
+  - the navigation logo no longer renders as a white rectangular JPEG block
+  - the About page uses native text/UI for client focus instead of the target-demographics screenshot
+
+## 2026-06-01 V0 Hero Restoration
+
+The original v0 hero direction was restored structurally after feedback that the split hero still did not match the first premium version.
+
+### What changed
+- Reworked `components/hero-section.tsx` back to the original centered hero composition:
+  - centered credential pill
+  - large centered editorial headline
+  - centered CTA pair
+  - broad image panel underneath
+- Kept current client-safe copy instead of reinstating unsupported older claims such as commission/fee promises.
+- Used the confirmed review proof items in the image panel:
+  - FSP Licence Number `49944`
+  - Company Registration `2018/195882/07`
+  - Founded `2018`
+- Tightened vertical spacing so the image panel is visible in the first viewport on desktop.
+
+### Verification
+- `pnpm build` passed after the hero restoration.
+- Browser visual check saved the restored hero at `/tmp/imvelo-restored-v0-hero-tight.png`.
+
+## 2026-06-01 Initial Commit Hero Restoration
+
+The actual initial commit hero was checked from `eed43db` and restored more closely after clarification.
+
+### What changed
+- Restored the initial hero's core presentation:
+  - centered announcement pill
+  - `Build Wealth That Lasts Generations` headline
+  - centered two-button CTA row
+  - four-column trust/stat row
+  - wide consultation image using `professional-financial-planning-meeting-with-diver.jpg`
+- Intentionally did not restore unconfirmed claims from the initial commit:
+  - `Trusted by 500+ South African families`
+  - `R2.5B+ Assets Under Management`
+  - `500+ Families Served`
+  - `15+ Years Experience`
+  - `98% Client Satisfaction`
+  - `Download Wealth Guide` route, because `/resources/wealth-guide` is not present in this lane
+- Replaced those with confirmed or currently safe items:
+  - FSP Licence `49944`
+  - Company Registration `2018/195882/07`
+  - Founded `2018`
+  - CFP® director-led advice
+
+### Verification
+- `pnpm build` passed after this closer initial-commit restoration.
+- Browser visual checks saved:
+  - `/tmp/imvelo-initial-commit-hero-restored.png`
+  - `/tmp/imvelo-initial-commit-hero-lower-settled.png`
+
+## 2026-06-02 Partner Copy / Spacing / Full Team Pass
+
+Feedback called out that internal-facing provider-logo caveats had leaked into the visible page, that the philosophy and partner sections felt too tight, and that the team section did not reflect the supplied organogram.
+
+### What changed
+- Removed visible internal-review/provider-permission caveats from `components/partner-strip.tsx`.
+- Replaced the partner intro with client-facing copy about a broader provider universe supporting planning-led advice.
+- Increased breathing room in:
+  - `components/brand-story-block.tsx`
+  - `components/partner-strip.tsx`
+- Rebuilt `components/team-section.tsx` from the organogram instead of showing only the two directors.
+- Added local team image assets under `public/team/` for:
+  - Palesa Tlholoe
+  - Siba Njoba
+  - Blendine Kika
+  - Nicholas Minnie
+  - Phakama Nyembe
+  - Tshepang Ngobeni
+  - Zanele Dube
+  - Valerie Mabalane
+  - Lebogang Pooe
+- Team roles now reflect the organogram:
+  - Directors & Wealth Managers
+  - Financial Advisers
+  - Client Service Consultant
+  - Paraplanner
+  - Compliance and Fiduciary Consultant
+
+### Still to confirm
+- Several non-director headshots arrived as unnamed WhatsApp images. They are placed for internal review, but the final headshot-to-person mapping should be confirmed before public launch.
+
+### Verification
+- `pnpm build` passed after the pass.
+- Browser checks saved:
+  - `/tmp/imvelo-philosophy-spacing-fix.png`
+  - `/tmp/imvelo-partners-copy-spacing-fix.png`
+  - `/tmp/imvelo-team-section-top.png`
+  - `/tmp/imvelo-team-section-lower.png`
+
+## 2026-06-02 Confirmed Proof Metrics Pass
+
+Palesa confirmed selected proof metrics after the earlier initial-commit claims were held back for verification.
+
+### What changed
+- Restored client-confirmed scale metrics in `components/hero-section.tsx`:
+  - `R500M+` AUM
+  - `500+` families served
+  - `30+` years combined founder experience
+  - FSP Licence `49944`
+- Updated the trust architecture section to reference the confirmed scale metrics alongside regulatory and compliance proof.
+- Continued to exclude the `98% satisfaction` claim because the client explicitly said to leave it out.
+- Superseded the earlier unverified `R2.5B+ AUM` and `15+ years` claims with the confirmed `R500M+ AUM` and `30+ years combined experience` claims.
+
+### Verification
+- `pnpm build` passed after the copy/proof update.
+- Mobile browser check confirmed:
+  - `R500M+`, `500+`, and `30+` are present
+  - `98%` is absent
+  - no horizontal overflow at 390px mobile viewport

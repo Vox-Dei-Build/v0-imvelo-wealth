@@ -11,7 +11,7 @@ const serviceData = {
   title: "Business Assurance",
   subtitle: "Protect your business and your partners when it matters most",
   description:
-    "Business assurance is specialist financial planning for business owners and their partners. Buy-and-sell agreements backed by life and disability cover ensure that if a partner dies or becomes disabled, the business can continue and surviving partners can buy out the affected interest at a pre-agreed fair value — without fire-sale liquidations or family disputes.",
+    "Business assurance is specialist financial planning for business owners and their partners, covering buy and sell arrangements, key man insurance, contingent liability, and preferred compensation.",
   icon: Briefcase,
   features: [
     {
@@ -21,7 +21,7 @@ const serviceData = {
       icon: Scale,
     },
     {
-      title: "Key Person Life & Disability Cover",
+      title: "Key Man Insurance",
       description:
         "Cover on the life of a key individual whose death or disability would materially impact the business — providing a capital buffer to recruit, retrain, and maintain operations.",
       icon: Shield,
@@ -48,7 +48,7 @@ const serviceData = {
   process: [
     "Business structure review — number of partners, ownership percentages, and current agreements",
     "Business valuation method agreed with all partners and their legal advisers",
-    "Life and disability cover needs analysis for each partner and key person",
+    "Life and disability cover needs analysis for each partner and key man requirement",
     "Policy structuring — correct ownership and beneficiary nomination for buy-and-sell to work",
     "Coordination with attorney for buy-and-sell agreement drafting",
     "Annual review of cover amounts as business value changes",

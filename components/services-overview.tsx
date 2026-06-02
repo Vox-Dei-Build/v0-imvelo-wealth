@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "Employee Benefits",
-    description: "Key employee retention, group risk, compensation structures, and employee education.",
+    description: "Pension and provident funds, group retirement plans, group risk benefits, and wellness workshops.",
     icon: Users,
     href: "/services/employee-benefits",
   },
@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: "Business Assurance",
-    description: "Buy-and-sell agreements, key person cover, succession, valuation, and continuity planning.",
+    description: "Buy and sell cover, key man insurance, contingent liability, and preferred compensation.",
     icon: Briefcase,
     href: "/services/business-assurance",
   },
@@ -48,7 +48,7 @@ export function ServicesOverview() {
           <div data-aos="fade-up">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Services</p>
             <h2 className="mt-4 font-serif text-4xl font-semibold tracking-[-0.01em] text-foreground sm:text-5xl">
-              A complete planning surface, without the catalogue noise.
+              Comprehensive wealth solutions.
             </h2>
             <p className="mt-6 text-base leading-7 text-muted-foreground">
               Each service is a doorway into the same advisory standard: understand the full picture first, then

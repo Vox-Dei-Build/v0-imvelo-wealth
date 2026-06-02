@@ -1,4 +1,31 @@
-import Image from "next/image"
+import { BriefcaseBusiness, Landmark, Sprout, UsersRound } from "lucide-react"
+
+const clientFocus = [
+  {
+    title: "Retirees",
+    detail: "Planning for income, preservation, and the next chapter.",
+    note: "55-75",
+    icon: Landmark,
+  },
+  {
+    title: "Working professionals",
+    detail: "Structured advice for accumulation, protection, and life-stage decisions.",
+    note: "25-55",
+    icon: UsersRound,
+  },
+  {
+    title: "Mid-career professionals",
+    detail: "More deliberate planning as responsibilities, income, and complexity increase.",
+    note: "30-55",
+    icon: Sprout,
+  },
+  {
+    title: "Employers and business owners",
+    detail: "Employee benefits, business assurance, and planning for growing teams.",
+    note: "Business clients",
+    icon: BriefcaseBusiness,
+  },
+]
 
 export function AboutStory() {
   return (
@@ -7,45 +34,62 @@ export function AboutStory() {
         <div className="mx-auto max-w-4xl">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Our Story</p>
           <h2 className="mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            Advice shaped around character, context, and continuity.
+            A purpose-driven wealth management practice.
           </h2>
 
           <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground">
             <p>
-              The name <strong className="text-foreground">Imvelo</strong> comes from the Zulu word meaning
-              "nature" or "character." It reflects a founding conviction: that good financial planning starts with
-              understanding the person, family, or business sitting across the table.
+              The name <strong className="text-foreground">Imvelo</strong> is rooted in Xhosa and means “to bring
+              forth.” It reflects the firm’s commitment to helping clients nurture, grow, and preserve wealth.
             </p>
 
             <p>
-              The practice is positioned around personalised, goals-based financial planning. The stronger story is not
-              a long provider list or a stack of claims; it is the discipline of helping clients understand what they
-              own, what they pay, what they are exposed to, and what needs to happen next.
+              Founded in 2018, Imvelo Wealth Solutions is a Black female-owned wealth management practice based in
+              Sandton, Johannesburg. The firm provides holistic financial planning and advisory services to individuals,
+              families, and businesses.
             </p>
 
             <p>
               The practice is led by{" "}
               <strong className="text-foreground">Palesa Tlholoe, CFP®</strong> and{" "}
-              <strong className="text-foreground">Siba Njoba, CFP®</strong>. Full public bios and background detail
-              can be expanded once the final credentials pack is confirmed.
+              <strong className="text-foreground">Siba Njoba, CFP®</strong>, supported by a team across advisory,
+              client support, operations, risk, and compliance.
             </p>
 
             <p>
-              The most credible posture is clear and restrained: licensed practice, transparent contact details,
-              confirmed regulatory identifiers, and proof points that can be traced.
+              Their stated mission is to foster empowerment, resilience, and inclusion while placing clients’ interests
+              at the forefront.
             </p>
           </div>
 
-          <div className="relative mt-12 aspect-[16/7] w-full overflow-hidden rounded-md ring-1 ring-border/40">
-            <Image
-              src="/bayport-house.jpg"
-              alt="Office park associated with Imvelo Wealth Solutions"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 800px"
-            />
-            <div className="absolute bottom-3 right-4 rounded bg-black/45 px-2 py-1 text-xs text-white/75">
-              Bryanston East office park
+          <div className="mt-14 border-y border-border/60 py-10">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Client Focus</p>
+                <h3 className="mt-3 font-serif text-2xl font-semibold text-foreground">Who Imvelo Wealth serves.</h3>
+              </div>
+              <p className="max-w-sm text-sm leading-6 text-muted-foreground">
+                Advice for individuals, families, professionals, and employers at meaningful financial decision points.
+              </p>
+            </div>
+
+            <div className="mt-8 divide-y divide-border/60">
+              {clientFocus.map((item) => {
+                const Icon = item.icon
+
+                return (
+                  <div key={item.title} className="grid gap-4 py-5 sm:grid-cols-[2rem_1fr_auto] sm:items-center">
+                    <Icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <div>
+                      <h4 className="font-serif text-xl font-semibold leading-7 text-foreground">{item.title}</h4>
+                      <p className="mt-1 text-sm leading-6 text-muted-foreground">{item.detail}</p>
+                    </div>
+                    <div className="w-fit rounded-full border border-border px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                      {item.note}
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
@@ -60,7 +104,7 @@ export function AboutStory() {
             </div>
             <div className="rounded-md border border-border bg-card p-6">
               <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Location</div>
-              <div className="mt-3 text-2xl font-semibold text-foreground">Bryanston</div>
+              <div className="mt-3 text-2xl font-semibold text-foreground">Sandton</div>
             </div>
           </div>
         </div>

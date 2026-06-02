@@ -16,13 +16,11 @@ export function ContactInfo() {
               <MapPin className="h-5 w-5 text-primary" />
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-1">Office Location</h4>
+              <h4 className="font-semibold text-foreground mb-1">Location</h4>
               <p className="text-muted-foreground">
-                EPPF Office Park, 24 Georgian Cres E
+                Sandton
                 <br />
-                Bryanston East
-                <br />
-                Johannesburg, 2152
+                Johannesburg
               </p>
             </div>
           </div>
@@ -94,7 +92,7 @@ export function ContactInfo() {
             <Button variant="outline" className="w-full bg-transparent" asChild>
               <a href="tel:+27101095097">
                 <MessageCircle className="mr-2 h-4 w-4" />
-                Call the Office
+                Call Imvelo Wealth
               </a>
             </Button>
           </div>

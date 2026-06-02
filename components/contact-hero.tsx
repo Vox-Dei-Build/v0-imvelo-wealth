@@ -8,7 +8,7 @@ export function ContactHero() {
             Speak to Imvelo Wealth Solutions.
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-muted-foreground">
-            Use the confirmed office details below or request a focused consultation through the review form.
+            Use the confirmed contact details below or request a focused consultation through the review form.
           </p>
         </div>
       </div>

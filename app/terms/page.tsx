@@ -29,7 +29,7 @@ export default function TermsPage() {
                 <p>
                   These Terms of Service ("<strong>Terms</strong>") govern your use of the website at{" "}
                   <span className="text-foreground font-medium">imvelowealth.co.za</span> (the "<strong>Site</strong>") and any
-                  financial advisory services provided by Imvelo Wealth Solutions (Pty) Ltd ("<strong>Imvelo</strong>",
+                  financial advisory services provided by Imvelo Wealth Solutions (Pty) Ltd ("<strong>Imvelo Wealth</strong>",
                   "<strong>we</strong>", "<strong>us</strong>").
                 </p>
                 <p className="mt-3">
@@ -214,7 +214,7 @@ export default function TermsPage() {
                 <p>For questions about these Terms, contact us at:</p>
                 <ul className="list-none mt-3 space-y-1">
                   <li><strong>Email:</strong> info@imvelowealth.co.za / admin@imvelowealth.co.za</li>
-                  <li><strong>Address:</strong> EPPF Office Park, 24 Georgian Cres E, Bryanston East, Johannesburg, 2152</li>
+                  <li><strong>Address:</strong> Sandton, Johannesburg</li>
                 </ul>
               </div>
 

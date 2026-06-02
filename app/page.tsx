@@ -6,7 +6,7 @@ import { PartnerStrip } from "@/components/partner-strip"
 import { ValueProposition } from "@/components/value-proposition"
 import { ServicesOverview } from "@/components/services-overview"
 import { ProcessSection } from "@/components/process-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
+import { LatestResourcesSection } from "@/components/latest-resources-section"
 import { CTASection } from "@/components/cta-section"
 import { metadataForPath } from "@/lib/seo"
 
@@ -22,8 +22,8 @@ export default function HomePage() {
         <PartnerStrip />
         <ValueProposition />
         <ServicesOverview />
+        <LatestResourcesSection />
         <ProcessSection />
-        <TestimonialsSection />
         <CTASection />
       </main>
       <Footer />

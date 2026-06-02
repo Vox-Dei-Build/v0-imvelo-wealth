@@ -26,7 +26,7 @@ export function ValueProposition() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.4fr] lg:gap-20" data-aos="fade-up">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Why Imvelo</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Why Imvelo Wealth</p>
             <h2 className="mt-4 max-w-xl font-serif text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
               Quiet confidence over financial noise.
             </h2>

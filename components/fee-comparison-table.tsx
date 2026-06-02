@@ -73,7 +73,7 @@ export function FeeComparisonTable() {
             Product-led Advice vs. Planning-led Advice
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty max-w-2xl mx-auto">
-            The value of Imvelo is not only access to products. It is the discipline of putting the client’s full
+            The value of Imvelo Wealth is not only access to products. It is the discipline of putting the client’s full
             financial picture before any implementation decision.
           </p>
         </div>
