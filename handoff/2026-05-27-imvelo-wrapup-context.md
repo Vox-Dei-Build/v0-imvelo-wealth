@@ -514,3 +514,42 @@ The actual initial commit hero was checked from `eed43db` and restored more clos
 - Browser visual checks saved:
   - `/tmp/imvelo-initial-commit-hero-restored.png`
   - `/tmp/imvelo-initial-commit-hero-lower-settled.png`
+
+## 2026-06-02 Partner Copy / Spacing / Full Team Pass
+
+Feedback called out that internal-facing provider-logo caveats had leaked into the visible page, that the philosophy and partner sections felt too tight, and that the team section did not reflect the supplied organogram.
+
+### What changed
+- Removed visible internal-review/provider-permission caveats from `components/partner-strip.tsx`.
+- Replaced the partner intro with client-facing copy about a broader provider universe supporting planning-led advice.
+- Increased breathing room in:
+  - `components/brand-story-block.tsx`
+  - `components/partner-strip.tsx`
+- Rebuilt `components/team-section.tsx` from the organogram instead of showing only the two directors.
+- Added local team image assets under `public/team/` for:
+  - Palesa Tlholoe
+  - Siba Njoba
+  - Blendine Kika
+  - Nicholas Minnie
+  - Phakama Nyembe
+  - Tshepang Ngobeni
+  - Zanele Dube
+  - Valerie Mabalane
+  - Lebogang Pooe
+- Team roles now reflect the organogram:
+  - Directors & Wealth Managers
+  - Financial Advisers
+  - Client Service Consultant
+  - Paraplanner
+  - Compliance and Fiduciary Consultant
+
+### Still to confirm
+- Several non-director headshots arrived as unnamed WhatsApp images. They are placed for internal review, but the final headshot-to-person mapping should be confirmed before public launch.
+
+### Verification
+- `pnpm build` passed after the pass.
+- Browser checks saved:
+  - `/tmp/imvelo-philosophy-spacing-fix.png`
+  - `/tmp/imvelo-partners-copy-spacing-fix.png`
+  - `/tmp/imvelo-team-section-top.png`
+  - `/tmp/imvelo-team-section-lower.png`
