@@ -8,8 +8,8 @@ export function ConsultationHero() {
             Request a private planning conversation.
           </h1>
           <p className="mb-8 max-w-2xl text-lg leading-8 text-muted-foreground">
-            Share the priorities, decisions, or questions that prompted the conversation. Imvelo can then respond with
-            the appropriate next step during office hours.
+            Share the priorities, decisions, or questions that prompted the conversation. Imvelo Wealth can then respond
+            with the appropriate next step during office hours.
           </p>
           <div className="flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">

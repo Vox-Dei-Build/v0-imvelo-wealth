@@ -18,8 +18,8 @@ export default function ThankYouPage() {
           Your request is on its way
         </h1>
         <p className="text-lg leading-8 text-muted-foreground mb-8">
-          Thank you for reaching out. The office can respond using the contact details you provided during confirmed
-          office hours.
+          Thank you for reaching out. Imvelo Wealth can respond using the contact details you provided during confirmed
+          business hours.
         </p>
 
         <div className="rounded-xl bg-muted/30 border border-border/40 p-6 text-left mb-8 space-y-3">
@@ -39,9 +39,9 @@ export default function ThankYouPage() {
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <a href="tel:+27101095097" aria-label="Call the office">
+            <a href="tel:+27101095097" aria-label="Call Imvelo Wealth">
               <MessageCircle className="mr-2 h-4 w-4" />
-              Call the office
+              Call Imvelo Wealth
             </a>
           </Button>
         </div>

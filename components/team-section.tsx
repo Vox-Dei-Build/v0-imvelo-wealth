@@ -4,15 +4,15 @@ import { Badge } from "@/components/ui/badge"
 const team = [
   {
     name: "Palesa Tlholoe",
-    role: "Director / Financial Planner",
+    role: "Founder & Wealth Manager",
     credentials: ["CFP®"],
     image: "/palesa-tlholoe.jpeg",
   },
   {
     name: "Siba Njoba",
-    role: "Director / Financial Planner",
+    role: "Founder & Wealth Manager",
     credentials: ["CFP®"],
-    image: "/siba-njoba.jpg",
+    image: "/siba-njoba-client.jpeg",
   },
 ]
 
@@ -24,11 +24,11 @@ export function TeamSection() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Team</p>
             <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-              Leadership that is visible and qualified.
+              Founder-led, CFP® qualified advice.
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              The final public profile pack is still pending. This version keeps the leadership presence focused on
-              confirmed names, headshots, and professional designations.
+              Public profiles can expand once the full credentials pack is signed off. For now, the leadership presence
+              uses confirmed names, roles, headshots, and professional designations.
             </p>
           </div>
 

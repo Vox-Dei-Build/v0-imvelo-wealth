@@ -9,27 +9,27 @@ import { metadataForPath } from "@/lib/seo"
 
 const serviceData = {
   title: "Employee Benefits",
-  subtitle: "Retain key employees with tax-efficient benefit structures",
+  subtitle: "Pension, provident, group risk, and employee wellness solutions",
   description:
-    "Preferred compensation plans that incentivise and retain key employees through investment policies structured to vest as tax-free lump sums after 5 or 10 years. Well-designed employee benefits reduce staff turnover and align employee and employer interests over the long term.",
+    "Employee benefits support businesses with pension and provident funds, group retirement plans, group risk benefits, group investment plans, and employee wellness workshops.",
   icon: Users,
   features: [
     {
-      title: "Key Employee Retention Schemes",
+      title: "Pension and Provident Funds",
       description:
-        "Investment-linked policies that vest as tax-free lump sums after 5 or 10 years of service — creating a meaningful retention incentive without the complexity of equity participation.",
+        "Retirement fund solutions that help employees save through formal pension or provident fund structures.",
       icon: TrendingUp,
     },
     {
-      title: "Group Risk Cover",
+      title: "Group Risk Benefits",
       description:
-        "Group life, disability, and critical illness cover for employees. Group rates are typically more competitive than individual cover, and benefits are valued by employees as tangible protection.",
+        "Group life, disability, and related risk benefits that provide employees and their families with financial protection.",
       icon: Shield,
     },
     {
-      title: "Employee Education",
+      title: "Employee Wellness Workshops",
       description:
-        "We provide financial literacy sessions to help employees understand and value their benefits — improving benefit appreciation and reducing the likelihood of early surrender.",
+        "Financial literacy and wellness sessions to help employees understand their benefits, budgeting, cash flow, and debt.",
       icon: BookOpen,
     },
     {
@@ -40,11 +40,11 @@ const serviceData = {
     },
   ],
   process: [
-    "Understanding your business size, key employee profile, and retention objectives",
-    "Design of a benefit structure aligned with your compensation strategy and budget",
-    "Provider selection and policy implementation",
-    "Employee communication and education sessions",
-    "Annual review of benefit adequacy and policy performance",
+    "Understanding your business size, employee profile, and current benefit structure",
+    "Review of pension, provident, group risk, and investment plan requirements",
+    "Provider comparison and benefit structure recommendation",
+    "Employee communication and wellness workshop planning",
+    "Annual review of benefit adequacy and employee engagement",
   ],
   pricing: {
     initial: "Custom proposal based on number of employees and benefit structure",
@@ -52,7 +52,7 @@ const serviceData = {
     included: [
       "Benefit structure design",
       "Provider comparison and selection",
-      "Employee education session",
+      "Employee wellness workshop",
       "Annual policy review",
     ],
   },

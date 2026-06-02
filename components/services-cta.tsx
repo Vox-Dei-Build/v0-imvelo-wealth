@@ -12,7 +12,7 @@ export function ServicesCTA() {
             Ready to Discuss Your Planning Needs?
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Choose the simplest way to connect with Imvelo during office hours.
+            Choose the simplest way to connect with Imvelo Wealth during office hours.
           </p>
         </div>
 
@@ -33,9 +33,9 @@ export function ServicesCTA() {
           <Card>
             <CardContent className="p-6 text-center">
               <Phone className="mx-auto h-8 w-8 text-accent mb-4" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Call the Office</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Call Imvelo Wealth</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Reach Imvelo Wealth Solutions on the confirmed office number.
+                Reach Imvelo Wealth Solutions on the confirmed phone number.
               </p>
               <Button variant="outline" asChild className="w-full bg-transparent">
                 <Link href="tel:+27101095097">010 109 5097</Link>

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin, ExternalLink } from "lucide-react"
 
 const navigation = {
@@ -48,12 +49,18 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-28">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <div>
-              <span className="font-serif text-2xl font-bold text-foreground">Imvelo</span>
-              <span className="ml-2 text-sm font-medium text-muted-foreground">Wealth Solutions</span>
+            <div aria-label="Imvelo Wealth">
+              <Image
+                src="/imvelo-logo-transparent.png"
+                alt="Imvelo Wealth"
+                width={190}
+                height={81}
+                className="h-14 w-auto"
+              />
             </div>
             <p className="text-sm leading-6 text-muted-foreground max-w-md">
-              Independent financial planning and wealth advice for South African individuals, families, and businesses.
+              Purpose-driven wealth management and financial planning for South African individuals, families, and
+              businesses.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -73,7 +80,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 shrink-0" />
-                <span>EPPF Office Park, 24 Georgian Cres E, Bryanston East, Johannesburg, 2152</span>
+                <span>Sandton, Johannesburg</span>
               </div>
             </div>
             <div className="flex items-center gap-4 pt-2">

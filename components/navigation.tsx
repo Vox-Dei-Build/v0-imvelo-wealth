@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -19,15 +20,16 @@ export function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/88 backdrop-blur-xl supports-[backdrop-filter]:bg-background/72">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 flex items-center gap-3 p-1.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md border border-primary/30 bg-primary text-sm font-semibold text-primary-foreground">
-              IW
-            </span>
-            <span>
-              <span className="block font-serif text-xl font-semibold leading-none text-foreground">Imvelo</span>
-              <span className="mt-1 block text-[11px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-                Wealth Solutions
-              </span>
+          <Link href="/" className="-m-1.5 block p-1.5" aria-label="Imvelo Wealth home">
+            <span className="block">
+              <Image
+                src="/imvelo-logo-transparent.png"
+                alt="Imvelo Wealth"
+                width={160}
+                height={69}
+                className="h-12 w-auto"
+                priority
+              />
             </span>
           </Link>
         </div>
@@ -65,9 +67,16 @@ export function Navigation() {
           <div className="fixed inset-0 z-50"></div>
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border/10">
             <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5">
-                <span className="font-serif text-2xl font-semibold text-foreground">Imvelo</span>
-                <span className="ml-2 text-sm font-medium text-muted-foreground">Wealth Solutions</span>
+              <Link href="/" className="-m-1.5 block p-1.5" aria-label="Imvelo Wealth home">
+                <span className="block">
+                  <Image
+                    src="/imvelo-logo-transparent.png"
+                    alt="Imvelo Wealth"
+                    width={160}
+                    height={69}
+                    className="h-12 w-auto"
+                  />
+                </span>
               </Link>
               <button
                 type="button"

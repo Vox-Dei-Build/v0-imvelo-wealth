@@ -33,10 +33,10 @@ export const siteConfig = {
   email: "info@imvelowealth.co.za",
   phone: "+27 10 109 5097",
   address: {
-    street: "EPPF Office Park, 24 Georgian Cres E",
-    locality: "Bryanston East",
+    street: "Sandton",
+    locality: "Johannesburg",
     region: "Johannesburg",
-    postalCode: "2152",
+    postalCode: "",
     country: "ZA",
   },
   defaultKeywords: [
@@ -83,9 +83,9 @@ export const pages: PageSeo[] = [
       "FSCA licensed financial advisers",
       "South African advisory practice",
       "CFP financial planner South Africa",
-      "Bryanston financial advisers",
+      "Sandton financial advisers",
     ],
-    imageTitle: "About Imvelo",
+    imageTitle: "About Imvelo Wealth",
     imageKicker: "FSCA FSP 49944",
     imageDescription: "A South African advisory practice built around long-term financial decisions.",
     priority: 0.8,
@@ -154,10 +154,10 @@ export const pages: PageSeo[] = [
     slug: "service-employee-benefits",
     title: "Employee Benefits for South African Businesses | Imvelo Wealth Solutions",
     description:
-      "Employee benefit structures for South African businesses, including key employee retention plans, group risk cover, benefit education, and annual reviews.",
+      "Employee benefit structures for South African businesses, including pension and provident funds, group retirement plans, group risk benefits, and employee wellness workshops.",
     keywords: [
       "employee benefits South Africa",
-      "key employee retention schemes",
+      "pension and provident funds",
       "group risk cover",
       "corporate financial wellness",
       "business employee benefits advice",
@@ -211,11 +211,11 @@ export const pages: PageSeo[] = [
     slug: "service-business-assurance",
     title: "Business Assurance for South African Business Owners | Imvelo Wealth Solutions",
     description:
-      "Business assurance planning for South African business owners, including buy-and-sell agreements, key person cover, continuity planning, and policy coordination.",
+      "Business assurance planning for South African business owners, including buy and sell arrangements, key man insurance, contingent liability, and policy coordination.",
     keywords: [
       "business assurance South Africa",
       "buy and sell agreement insurance",
-      "key person cover South Africa",
+      "key man insurance South Africa",
       "business continuity planning",
       "business owner financial planning",
     ],
@@ -381,11 +381,11 @@ export const pages: PageSeo[] = [
     slug: "contact",
     title: "Contact Imvelo Wealth Solutions | Johannesburg Financial Advisers",
     description:
-      "Contact Imvelo Wealth Solutions in Bryanston East, Johannesburg by phone or email for financial planning, wealth management, and advisory enquiries.",
+      "Contact Imvelo Wealth Solutions in Sandton, Johannesburg by phone or email for financial planning, wealth management, and advisory enquiries.",
     keywords: [
       "contact Imvelo Wealth Solutions",
       "Johannesburg financial adviser contact",
-      "Bryanston wealth management",
+      "Sandton wealth management",
       "financial planning enquiry South Africa",
       "FSCA licensed adviser contact",
     ],

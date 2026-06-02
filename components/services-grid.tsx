@@ -32,10 +32,10 @@ const services = [
   {
     title: "Employee Benefits",
     description:
-      "Retention structures, investment-linked benefits, group risk cover, employer education, and compliant administration.",
+      "Pension and provident funds, group retirement plans, group risk benefits, group investment plans, and employee wellness workshops.",
     icon: Users,
-    features: ["Retention schemes", "Group risk cover", "Employee communication"],
-    outcomes: ["Stronger retention", "Clearer employee value", "Compliant benefit design"],
+    features: ["Pension and provident funds", "Group risk benefits", "Employee wellness workshops"],
+    outcomes: ["Clear employee value", "Better benefit understanding", "Compliant benefit design"],
     href: "/services/employee-benefits",
   },
   {
@@ -59,9 +59,9 @@ const services = [
   {
     title: "Business Assurance",
     description:
-      "Business-owner planning for buy-and-sell agreements, key person cover, valuation, contingent liability, and succession.",
+      "Business-owner planning for buy and sell cover, key man insurance, contingent liability, and preferred compensation.",
     icon: Briefcase,
-    features: ["Buy-and-sell structuring", "Key person cover", "Continuity planning"],
+    features: ["Buy and sell", "Key man insurance", "Contingent liability"],
     outcomes: ["Business resilience", "Fair partner buyout logic", "Protected enterprise value"],
     href: "/services/business-assurance",
   },

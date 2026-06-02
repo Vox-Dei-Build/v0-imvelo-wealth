@@ -3,13 +3,12 @@ export function AboutHero() {
     <section className="bg-gradient-to-b from-background to-muted/30 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">About Imvelo</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">About Imvelo Wealth</p>
           <h1 className="mt-4 font-serif text-5xl font-semibold tracking-tight text-foreground sm:text-6xl">
-            Financial planning shaped around real lives.
+            Financial allies for long-term prosperity.
           </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Imvelo Wealth Solutions is a licensed South African advisory practice focused on planning, protection,
-            continuity, and informed financial decision-making.
+            Imvelo Wealth Solutions is a purpose-driven wealth management practice based in Sandton, Johannesburg.
           </p>
         </div>
 
@@ -23,8 +22,8 @@ export function AboutHero() {
             <div className="mt-4 text-2xl font-semibold text-foreground">2018/195882/07</div>
           </div>
           <div className="bg-background p-7">
-            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Office</div>
-            <div className="mt-4 text-2xl font-semibold text-foreground">Bryanston East</div>
+            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Founded</div>
+            <div className="mt-4 text-2xl font-semibold text-foreground">2018</div>
           </div>
         </div>
       </div>

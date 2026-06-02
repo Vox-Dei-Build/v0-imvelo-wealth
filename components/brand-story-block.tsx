@@ -7,51 +7,35 @@ export function BrandStoryBlock() {
           <div data-aos="fade-right">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Our name</p>
             <div className="flex items-baseline gap-4 mb-4">
-              <span className="font-serif text-5xl font-bold text-foreground">Imvelo</span>
+              <span className="font-serif text-5xl font-bold text-foreground">Imvelo Wealth</span>
               <span className="text-muted-foreground text-sm italic">/ im·ve·lo /</span>
             </div>
             <p className="text-sm text-muted-foreground mb-2">
-              <span className="font-semibold text-foreground">isiZulu</span> — noun
+              <span className="font-semibold text-foreground">isiXhosa</span> — to bring forth
             </p>
             <div className="my-4 h-px bg-border/50" aria-hidden="true" />
-            <ol className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex gap-3">
-                <span className="font-semibold text-foreground shrink-0">1.</span>
-                <span>
-                  <span className="italic">Nature</span>; the natural order of things — that which grows
-                  according to its own rhythm, unforced and enduring.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="font-semibold text-foreground shrink-0">2.</span>
-                <span>
-                  <span className="italic">Origin</span>; one's innate character or essence — the foundation from
-                  which everything else grows.
-                </span>
-              </li>
-            </ol>
+            <p className="max-w-md text-sm leading-7 text-muted-foreground">
+              Rooted in Xhosa, the name means “to bring forth” — a reflection of helping clients nurture, grow,
+              and preserve wealth.
+            </p>
           </div>
 
           {/* Philosophy */}
           <div className="space-y-5" data-aos="fade-left" data-aos-delay="120">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">Our philosophy</p>
             <h2 className="font-serif text-2xl font-bold text-foreground leading-snug text-balance">
-              Wealth that grows naturally from who you are and where you want to go.
+              Purpose-driven wealth management, built around financial empowerment.
             </h2>
             <p className="text-muted-foreground leading-relaxed text-pretty">
-              We chose the name <em>Imvelo</em> because the best financial plans are not imposed on your life —
-              they grow from it. A plan rooted in your values, your family, your business, and your timeline
-              will outlast any product cycle or market fluctuation.
+              Founded in 2018, Imvelo Wealth Solutions is a Black female-owned wealth management practice based in
+              Sandton, Johannesburg.
             </p>
             <p className="text-muted-foreground leading-relaxed text-pretty">
-              South Africa's financial landscape is one of the most complex in the world — multi-currency
-              portfolios, offshore allowances, estate duty, POPIA compliance, and a fast-changing regulatory
-              environment. We translate that complexity into a clear, honest picture of what you have, what
-              you need, and how to get there — independently.
+              The firm was established by Siba Njoba, CFP® and Palesa Tlholoe, CFP®, with a focus on holistic
+              financial planning, advisory services, empowerment, resilience, and inclusion.
             </p>
             <p className="text-sm text-muted-foreground border-l-2 border-accent pl-4 italic">
-              "We are not measured by how much we grow your wealth, but by how well it serves the life you
-              are building."
+              “Our role is to be a trusted partner on every client’s financial journey.”
             </p>
           </div>
         </div>

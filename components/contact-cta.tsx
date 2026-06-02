@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Building2, Clock, ShieldCheck } from "lucide-react"
+import { ArrowRight, CalendarDays, Clock, ShieldCheck } from "lucide-react"
 import Link from "next/link"
 
 const details = [
   { label: "FSP Licence", value: "49944", icon: ShieldCheck },
   { label: "Office Hours", value: "09:00-17:00", icon: Clock },
-  { label: "Office", value: "Bryanston East", icon: Building2 },
+  { label: "Founded", value: "2018", icon: CalendarDays },
 ]
 
 export function ContactCTA() {
@@ -20,7 +20,7 @@ export function ContactCTA() {
                 Keep the next step specific and traceable.
               </h2>
               <p className="mt-5 text-base leading-7 text-muted-foreground">
-                For this review pass, the contact experience uses confirmed phone, email, registration, and office
+                For this review pass, the contact experience uses confirmed phone, email, registration, and regulatory
                 details only.
               </p>
               <Button size="lg" asChild className="mt-8 group rounded-md">

@@ -15,7 +15,7 @@ const processSteps = [
   {
     icon: FileText,
     title: "Custom Proposal",
-    description: "Imvelo can outline the appropriate advisory scope and next steps after discovery.",
+    description: "Imvelo Wealth can outline the appropriate advisory scope and next steps after discovery.",
   },
   {
     icon: TrendingUp,

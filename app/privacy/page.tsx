@@ -27,10 +27,10 @@ export default function PrivacyPage() {
               <div>
                 <h2 className="text-xl font-serif font-bold text-foreground mb-3">1. Who We Are</h2>
                 <p>
-                  Imvelo Wealth Solutions (Pty) Ltd ("<strong>Imvelo</strong>", "<strong>we</strong>", "<strong>us</strong>", or
+                  Imvelo Wealth Solutions (Pty) Ltd ("<strong>Imvelo Wealth</strong>", "<strong>we</strong>", "<strong>us</strong>", or
                   "<strong>our</strong>") is a South African Financial Services Provider licensed and regulated by the Financial
                   Sector Conduct Authority (FSCA) under the Financial Advisory and Intermediary Services Act, 37 of 2002 (FAIS Act).
-                  Our registered office is at EPPF Office Park, 24 Georgian Cres E, Bryanston East, Johannesburg, 2152.
+                  Imvelo Wealth Solutions is based in Sandton, Johannesburg.
                 </p>
                 <p className="mt-3">
                   We process personal information as a responsible party in terms of the Protection of Personal Information Act,
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
                   <br />
                   <strong>Email:</strong> admin@imvelowealth.co.za
                   <br />
-                  <strong>Postal address:</strong> Information Officer, Imvelo Wealth Solutions, EPPF Office Park, 24 Georgian Cres E, Bryanston East, Johannesburg, 2152
+                  <strong>Postal address:</strong> Information Officer, Imvelo Wealth Solutions, Sandton, Johannesburg
                 </p>
               </div>
 
@@ -254,7 +254,7 @@ export default function PrivacyPage() {
                 <ul className="list-none mt-3 space-y-1">
                   <li><strong>Email:</strong> admin@imvelowealth.co.za</li>
                   <li><strong>General enquiries:</strong> info@imvelowealth.co.za / admin@imvelowealth.co.za</li>
-                  <li><strong>Physical address:</strong> EPPF Office Park, 24 Georgian Cres E, Bryanston East, Johannesburg, 2152</li>
+                  <li><strong>Location:</strong> Sandton, Johannesburg</li>
                 </ul>
               </div>
 

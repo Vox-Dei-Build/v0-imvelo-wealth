@@ -11,7 +11,7 @@ export function MobileCTABar() {
       style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom, 0px))" }}
     >
       <Button variant="outline" size="sm" className="flex-1" asChild>
-        <a href="tel:+27101095097" aria-label="Call the office">
+        <a href="tel:+27101095097" aria-label="Call Imvelo Wealth">
           <MessageCircle className="mr-2 h-4 w-4" aria-hidden="true" />
           Call
         </a>

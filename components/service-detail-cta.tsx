@@ -41,7 +41,7 @@ export function ServiceDetailCTA({ service }: ServiceDetailCTAProps) {
               <Phone className="mx-auto h-8 w-8 text-accent mb-4" />
               <h3 className="text-lg font-semibold text-foreground mb-2">Speak to an Advisor</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Call the confirmed office line during business hours.
+                Call the confirmed Imvelo Wealth phone line during business hours.
               </p>
               <Button variant="outline" asChild className="w-full bg-transparent">
                 <Link href="tel:+27101095097">010 109 5097</Link>
@@ -52,7 +52,7 @@ export function ServiceDetailCTA({ service }: ServiceDetailCTAProps) {
           <Card>
             <CardContent className="p-6 text-center">
               <Mail className="mx-auto h-8 w-8 text-accent mb-4" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Email Imvelo</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Email Imvelo Wealth</h3>
               <p className="text-sm text-muted-foreground mb-4">
                 Send a direct message to the confirmed info inbox.
               </p>

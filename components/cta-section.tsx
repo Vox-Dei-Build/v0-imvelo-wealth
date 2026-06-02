@@ -28,7 +28,7 @@ export function CTASection() {
             <Button variant="outline" size="lg" asChild className="rounded-md bg-transparent">
               <a href="mailto:info@imvelowealth.co.za">
                 <Mail className="mr-2 h-4 w-4" />
-                Email Imvelo
+                Email Imvelo Wealth
               </a>
             </Button>
           </div>
