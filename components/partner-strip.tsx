@@ -54,8 +54,8 @@ export function PartnerStrip() {
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-md border border-border bg-border shadow-sm">
-          <div className="grid w-max auto-cols-[12rem] grid-flow-col gap-px md:w-full md:auto-cols-auto md:grid-flow-row md:grid-cols-5">
+        <div className="rounded-md border border-border bg-border shadow-sm">
+          <div className="grid grid-cols-2 gap-px md:grid-cols-5">
             {partners.map((partner) => (
               <a
                 key={partner.name}
@@ -65,8 +65,8 @@ export function PartnerStrip() {
                 aria-label={`Visit ${partner.name}`}
                 className={
                   partner.tone === "dark"
-                    ? "group flex h-36 flex-col items-center justify-center gap-4 bg-[#303843] px-6 text-center transition-colors hover:bg-[#26303a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                    : "group flex h-36 flex-col items-center justify-center gap-4 bg-white px-6 text-center transition-colors hover:bg-muted/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    ? "group flex min-h-36 flex-col items-center justify-center gap-4 bg-[#303843] px-4 py-7 text-center transition-colors hover:bg-[#26303a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:px-6"
+                    : "group flex min-h-36 flex-col items-center justify-center gap-4 bg-white px-4 py-7 text-center transition-colors hover:bg-muted/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:px-6"
                 }
               >
                 <span className="flex h-16 w-full items-center justify-center transition-transform duration-300 group-hover:-translate-y-1">
@@ -76,7 +76,7 @@ export function PartnerStrip() {
                     width={190}
                     height={88}
                     sizes="190px"
-                    className="max-h-16 w-auto max-w-[9.5rem] object-contain"
+                    className="max-h-16 w-auto max-w-[7.5rem] object-contain sm:max-w-[9.5rem]"
                   />
                 </span>
                 <span
