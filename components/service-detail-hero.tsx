@@ -23,14 +23,14 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
               <Icon className="h-8 w-8 text-accent" />
             </div>
           </div>
-          <h1 className="font-serif text-4xl font-bold tracking-tight text-foreground sm:text-5xl">{service.title}</h1>
+          <h1 className="text-4xl font-medium tracking-[-0.035em] text-foreground sm:text-5xl">{service.title}</h1>
           <p className="mt-4 text-xl text-accent font-medium">{service.subtitle}</p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">{service.description}</p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="/consultation">Schedule Consultation</Link>
+            <Button size="lg" asChild className="rounded-full">
+              <Link href="/consultation">Start the WhatsApp flow</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="rounded-full">
               <Link href="/contact">Ask Questions</Link>
             </Button>
           </div>

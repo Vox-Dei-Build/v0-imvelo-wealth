@@ -1,35 +1,47 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Mail } from "lucide-react"
 import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 
 export function CTASection() {
   return (
-    <section className="bg-background py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-10 border-y border-border py-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-center" data-aos="fade-up">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Next step</p>
-            <h2 className="mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-              Start with a focused conversation, not a sales funnel.
-            </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-              Share the context that matters. The right first conversation should clarify goals, priorities, and where
-              advice can add the most value.
-            </p>
-          </div>
+    <section className="relative isolate overflow-hidden py-28 sm:py-40">
+      <img
+        src="/videos/hero-client-conversation-poster.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 -z-[5] bg-gradient-to-r from-[#032A33]/95 via-[#064654]/80 to-[#064654]/34" aria-hidden="true" />
 
-          <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-            <Button size="lg" asChild className="group rounded-md">
+      <div className="mx-auto max-w-[90rem] px-6 sm:px-8 lg:px-12">
+        <div className="max-w-2xl" data-aos="fade-up">
+          <p className="section-kicker text-[#8FD3DD]">Your next step</p>
+          <h2 className="mt-6 text-4xl font-medium leading-[1.1] tracking-[-0.035em] text-white sm:text-5xl">
+            Tell us what is on your mind. We will take it from there.
+          </h2>
+          <p className="mt-7 max-w-xl text-base leading-8 text-white/72 sm:text-lg">
+            Answer a few private questions, then continue in WhatsApp with your introduction already written. A real
+            adviser will pick up the conversation during office hours.
+          </p>
+
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Button size="lg" asChild className="h-13 rounded-full bg-white px-7 text-sm font-bold text-[#005166] hover:bg-[#EAF4F6]">
               <Link href="/consultation">
-                Request Consultation
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <WhatsAppIcon className="mr-2 h-5 w-5 text-[#25D366]" />
+                Start the WhatsApp flow
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild className="rounded-md bg-transparent">
-              <a href="mailto:info@imvelowealth.co.za">
-                <Mail className="mr-2 h-4 w-4" />
-                Email Imvelo Wealth
-              </a>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="group h-13 rounded-full border-white/40 bg-transparent px-7 text-sm font-bold text-white hover:bg-white/10 hover:text-white"
+            >
+              <Link href="/consultation">
+                See how it works
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </div>
         </div>

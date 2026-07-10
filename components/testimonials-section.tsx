@@ -40,12 +40,12 @@ const complianceLinks = [
 
 export function TestimonialsSection() {
   return (
-    <section className="bg-[#0b2025] py-24 text-white sm:py-32">
+    <section className="bg-[#073844] py-24 text-white sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c8a85a]">Trust architecture</p>
-            <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#70C3CF]">Trust architecture</p>
+            <h2 className="mt-4 text-4xl font-medium tracking-[-0.03em] sm:text-5xl">
               Trust should be visible before it is requested.
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/70">
@@ -57,7 +57,7 @@ export function TestimonialsSection() {
           <div className="grid gap-px overflow-hidden rounded-md border border-white/12 bg-white/12 sm:grid-cols-2 xl:grid-cols-4">
             {trustItems.map((item) => (
               <div key={item.title} className="bg-white/[0.04] p-6">
-                <item.icon className="h-6 w-6 text-[#c8a85a]" aria-hidden="true" />
+                <item.icon className="h-6 w-6 text-[#70C3CF]" aria-hidden="true" />
                 <h3 className="mt-7 text-base font-semibold text-white">{item.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-white/65">{item.detail}</p>
               </div>

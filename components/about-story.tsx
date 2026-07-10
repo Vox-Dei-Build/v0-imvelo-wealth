@@ -1,112 +1,94 @@
-import { BriefcaseBusiness, Landmark, Sprout, UsersRound } from "lucide-react"
+import Image from "next/image"
 
-const clientFocus = [
+const chapters = [
   {
-    title: "Retirees",
-    detail: "Planning for income, preservation, and the next chapter.",
-    note: "55-75",
-    icon: Landmark,
+    number: "01",
+    heading: "A name with intention",
+    body: "In isiXhosa, Imvelo speaks to bringing forth—the way nature nurtures new life. It became the perfect expression of the work: helping people bring plans, possibilities, and generational progress into being.",
   },
   {
-    title: "Working professionals",
-    detail: "Structured advice for accumulation, protection, and life-stage decisions.",
-    note: "25-55",
-    icon: UsersRound,
+    number: "02",
+    heading: "A practice with purpose",
+    body: "In 2018, Palesa Tlholoe, CFP® and Siba Njoba, CFP® founded an independent planning practice in Sandton with education at its core. They wanted clients to understand their choices, not simply sign for them.",
   },
   {
-    title: "Mid-career professionals",
-    detail: "More deliberate planning as responsibilities, income, and complexity increase.",
-    note: "30-55",
-    icon: Sprout,
+    number: "03",
+    heading: "A promise we still keep",
+    body: "Every relationship begins with the client’s life cycle, responsibilities, and goals. The promise is personal, goals-based planning; fair treatment; and service that stays close long after implementation.",
   },
-  {
-    title: "Employers and business owners",
-    detail: "Employee benefits, business assurance, and planning for growing teams.",
-    note: "Business clients",
-    icon: BriefcaseBusiness,
-  },
+]
+
+const clients = [
+  "Professionals building momentum",
+  "Families planning across generations",
+  "People approaching or living in retirement",
+  "Employers and business owners",
 ]
 
 export function AboutStory() {
   return (
-    <section className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Our Story</p>
-          <h2 className="mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            A purpose-driven wealth management practice.
-          </h2>
-
-          <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground">
-            <p>
-              The name <strong className="text-foreground">Imvelo</strong> is rooted in Xhosa and means “to bring
-              forth.” It reflects the firm’s commitment to helping clients nurture, grow, and preserve wealth.
+    <section className="bg-[#F7FAFB] py-24 sm:py-32">
+      <div className="mx-auto max-w-[90rem] px-6 sm:px-8 lg:px-12">
+        <div className="grid gap-14 lg:grid-cols-[0.76fr_1.24fr] lg:gap-24">
+          <div data-aos="fade-up">
+            <p className="section-kicker text-[#307283]">Our story</p>
+            <h2 className="mt-6 text-4xl font-medium leading-[1.1] tracking-[-0.035em] text-[#005166] sm:text-5xl">
+              Rooted in purpose. Grown through trust.
+            </h2>
+            <p className="mt-8 text-base leading-8 text-[#536A70] sm:text-lg">
+              Imvelo is not a story about financial products. It is a story about two planners who saw how much better
+              advice could feel when education, empathy, and technical care sat at the same table.
             </p>
-
-            <p>
-              Founded in 2018, Imvelo Wealth Solutions is a Black female-owned wealth management practice based in
-              Sandton, Johannesburg. The firm provides holistic financial planning and advisory services to individuals,
-              families, and businesses.
-            </p>
-
-            <p>
-              The practice is led by{" "}
-              <strong className="text-foreground">Palesa Tlholoe, CFP®</strong> and{" "}
-              <strong className="text-foreground">Siba Njoba, CFP®</strong>, supported by a team across advisory,
-              client support, operations, risk, and compliance.
-            </p>
-
-            <p>
-              Their stated mission is to foster empowerment, resilience, and inclusion while placing clients’ interests
-              at the forefront.
-            </p>
-          </div>
-
-          <div className="mt-14 border-y border-border/60 py-10">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Client Focus</p>
-                <h3 className="mt-3 font-serif text-2xl font-semibold text-foreground">Who Imvelo Wealth serves.</h3>
-              </div>
-              <p className="max-w-sm text-sm leading-6 text-muted-foreground">
-                Advice for individuals, families, professionals, and employers at meaningful financial decision points.
+            <div className="mt-10 border-l border-[#36859A] pl-6">
+              <p className="text-2xl font-medium leading-snug tracking-[-0.025em] text-[#005166] sm:text-3xl">
+                “Our role is to be a trusted partner on every client’s financial journey.”
               </p>
-            </div>
-
-            <div className="mt-8 divide-y divide-border/60">
-              {clientFocus.map((item) => {
-                const Icon = item.icon
-
-                return (
-                  <div key={item.title} className="grid gap-4 py-5 sm:grid-cols-[2rem_1fr_auto] sm:items-center">
-                    <Icon className="h-5 w-5 text-primary" aria-hidden="true" />
-                    <div>
-                      <h4 className="font-serif text-xl font-semibold leading-7 text-foreground">{item.title}</h4>
-                      <p className="mt-1 text-sm leading-6 text-muted-foreground">{item.detail}</p>
-                    </div>
-                    <div className="w-fit rounded-full border border-border px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                      {item.note}
-                    </div>
-                  </div>
-                )
-              })}
+              <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-[#536A70]">The founders</p>
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            <div className="rounded-md border border-border bg-card p-6">
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">FSP</div>
-              <div className="mt-3 text-2xl font-semibold text-foreground">49944</div>
+          <div className="border-y border-[#C8DDE1]" data-aos="fade-up" data-aos-delay="120">
+            {chapters.map((chapter) => (
+              <article key={chapter.number} className="grid gap-5 border-b border-[#C8DDE1] py-9 last:border-b-0 sm:grid-cols-[5rem_1fr] sm:py-11">
+                <div className="font-serif text-4xl text-[#36859A]">{chapter.number}</div>
+                <div>
+                  <h3 className="text-2xl font-medium tracking-[-0.025em] text-[#005166]">{chapter.heading}</h3>
+                  <p className="mt-4 max-w-2xl text-sm leading-7 text-[#536A70] sm:text-base sm:leading-8">{chapter.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative mt-24 overflow-hidden rounded-[2rem] bg-[#005166]" data-aos="fade-up">
+          <div className="grid lg:grid-cols-2">
+            <div className="relative min-h-[28rem] lg:min-h-[38rem]">
+              <Image
+                src="/videos/hero-family-life-poster.jpg"
+                alt="A family sharing a joyful moment outdoors"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-[#005166]/10" aria-hidden="true" />
             </div>
-            <div className="rounded-md border border-border bg-card p-6">
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Directors</div>
-              <div className="mt-3 text-2xl font-semibold text-foreground">CFP® led</div>
-            </div>
-            <div className="rounded-md border border-border bg-card p-6">
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Location</div>
-              <div className="mt-3 text-2xl font-semibold text-foreground">Sandton</div>
+            <div className="flex flex-col justify-center p-8 text-white sm:p-12 lg:p-16">
+              <p className="section-kicker text-[#8FD3DD]">Who we walk with</p>
+              <h3 className="mt-6 text-3xl font-medium leading-tight tracking-[-0.03em] sm:text-4xl">Advice for every season of a financial life.</h3>
+              <ul className="mt-9 space-y-0 border-y border-white/18">
+                {clients.map((client) => (
+                  <li key={client} className="border-b border-white/18 py-4 text-sm font-semibold text-white/75 last:border-b-0">
+                    {client}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 flex flex-col gap-2 border-t border-[#C8DDE1] pt-6 text-sm text-[#536A70] sm:flex-row sm:items-center sm:justify-between">
+          <span>Based in Sandton, Johannesburg</span>
+          <span>Company registration 2018/195882/07 · FSP 49944</span>
         </div>
       </div>
     </section>

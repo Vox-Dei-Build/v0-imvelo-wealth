@@ -1,131 +1,83 @@
-import { CheckCircle, XCircle, MinusCircle } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { ArrowRight, Check } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
-type Verdict = "yes" | "no" | "partial"
-
-interface Row {
-  criterion: string
-  description: string
-  productLed: Verdict
-  imvelo: Verdict
-}
-
-const rows: Row[] = [
+const differences = [
   {
-    criterion: "Planning before product selection",
-    description: "The advice starts with your goals, obligations, risks, and time horizon.",
-    productLed: "partial",
-    imvelo: "yes",
+    factor: "The starting point",
+    productLed: "A product or provider",
+    imvelo: "Your life and priorities",
   },
   {
-    criterion: "Provider comparison",
-    description: "Options can be compared across established providers where appropriate.",
-    productLed: "partial",
-    imvelo: "yes",
+    factor: "The view",
+    productLed: "One need in isolation",
+    imvelo: "Every connected decision",
   },
   {
-    criterion: "Clear disclosure of costs and conflicts",
-    description: "Fees, advice scope, and potential conflicts should be visible before implementation.",
-    productLed: "partial",
-    imvelo: "yes",
-  },
-  {
-    criterion: "Written needs analysis",
-    description: "Recommendations should be backed by a documented understanding of your circumstances.",
-    productLed: "partial",
-    imvelo: "yes",
-  },
-  {
-    criterion: "Integrated financial plan",
-    description: "Investment, protection, retirement, estate, and business needs are considered together.",
-    productLed: "partial",
-    imvelo: "yes",
-  },
-  {
-    criterion: "Regulated advisory environment",
-    description: "Advice is provided under an FSCA-licensed Financial Services Provider.",
-    productLed: "partial",
-    imvelo: "yes",
-  },
-  {
-    criterion: "Ongoing review logic",
-    description: "The plan can be reviewed as life, markets, tax, and legislation change.",
-    productLed: "partial",
-    imvelo: "yes",
+    factor: "The relationship",
+    productLed: "Ends with implementation",
+    imvelo: "Evolves as your life changes",
   },
 ]
 
-function VerdictIcon({ v }: { v: Verdict }) {
-  if (v === "yes") return <CheckCircle className="h-5 w-5 text-green-600 mx-auto" aria-label="Yes" />
-  if (v === "no") return <XCircle className="h-5 w-5 text-destructive mx-auto" aria-label="No" />
-  return <MinusCircle className="h-5 w-5 text-amber-500 mx-auto" aria-label="Partial" />
-}
-
 export function FeeComparisonTable() {
   return (
-    <section className="py-24 sm:py-32 bg-muted/20">
-      <div className="mx-auto max-w-5xl px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <Badge variant="secondary" className="mb-4">Why it matters</Badge>
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Product-led Advice vs. Planning-led Advice
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground text-pretty max-w-2xl mx-auto">
-            The value of Imvelo Wealth is not only access to products. It is the discipline of putting the client’s full
-            financial picture before any implementation decision.
+    <section className="relative overflow-hidden bg-[#073844] py-24 text-white sm:py-32">
+      <div className="absolute -right-32 top-12 h-[28rem] w-[28rem] rounded-full border border-white/8" aria-hidden="true" />
+      <div className="absolute -right-12 top-40 h-72 w-72 rounded-full border border-[#8FD3DD]/18" aria-hidden="true" />
+
+      <div className="relative mx-auto max-w-[90rem] px-6 sm:px-8 lg:px-12">
+        <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end lg:gap-20" data-aos="fade-up">
+          <div>
+            <p className="section-kicker text-[#8FD3DD]">Why the approach matters</p>
+            <h2 className="mt-6 text-4xl font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-5xl">
+              The difference is not access. It is the order.
+            </h2>
+          </div>
+          <p className="max-w-2xl text-base leading-8 text-white/68 sm:text-lg">
+            Products come after your circumstances are understood—not before.
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-xl border border-border shadow-sm">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-border bg-muted/50">
-                <th className="text-left px-6 py-4 font-semibold text-foreground w-1/2">What to look for</th>
-                <th className="text-center px-4 py-4 font-semibold text-muted-foreground w-1/4">
-                  Product-led
-                </th>
-                <th className="text-center px-4 py-4 font-semibold text-primary w-1/4">
-                  Imvelo Wealth
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row, i) => (
-                <tr
-                  key={row.criterion}
-                  className={`border-b border-border/50 ${i % 2 === 0 ? "bg-background" : "bg-muted/10"}`}
-                >
-                  <td className="px-6 py-4">
-                    <p className="font-medium text-foreground">{row.criterion}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{row.description}</p>
-                  </td>
-                  <td className="px-4 py-4 text-center">
-                    <VerdictIcon v={row.productLed} />
-                  </td>
-                  <td className="px-4 py-4 text-center">
-                    <VerdictIcon v={row.imvelo} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="mt-14 overflow-hidden rounded-[1.75rem] border border-white/15 bg-white/[0.035]" data-aos="fade-up" data-aos-delay="100">
+          <div className="hidden grid-cols-[0.62fr_0.82fr_1fr] border-b border-white/15 bg-white/[0.045] px-8 py-6 md:grid">
+            <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/45">The question</p>
+            <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/45">Product-led conversation</p>
+            <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#8FD3DD]">Planning-led with Imvelo</p>
+          </div>
+
+          <div className="divide-y divide-white/12">
+            {differences.map((item) => (
+              <div key={item.factor} className="grid gap-5 px-6 py-7 sm:px-8 md:grid-cols-[0.62fr_0.82fr_1fr] md:items-start md:gap-8 md:py-8">
+                <p className="text-sm font-bold text-white md:text-base">{item.factor}</p>
+                <div>
+                  <p className="mb-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-white/35 md:hidden">Product-led</p>
+                  <p className="text-sm leading-7 text-white/48">{item.productLed}</p>
+                </div>
+                <div>
+                  <p className="mb-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#8FD3DD] md:hidden">Imvelo</p>
+                  <p className="flex items-start gap-3 text-sm font-medium leading-7 text-white">
+                    <span className="mt-1.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#8FD3DD] text-[#005166]">
+                      <Check className="h-3 w-3" strokeWidth={2.5} aria-hidden="true" />
+                    </span>
+                    {item.imvelo}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="flex items-center gap-6 mt-4 text-xs text-muted-foreground px-1">
-          <span className="flex items-center gap-1.5"><CheckCircle className="h-3.5 w-3.5 text-green-600" /> Core part of the approach</span>
-          <span className="flex items-center gap-1.5"><MinusCircle className="h-3.5 w-3.5 text-amber-500" /> Varies by provider or engagement</span>
-          <span className="flex items-center gap-1.5"><XCircle className="h-3.5 w-3.5 text-destructive" /> Typically absent</span>
-        </div>
-
-        <div className="mt-10 text-center">
-          <Button size="lg" asChild>
-            <Link href="/consultation">Request a Planning Conversation</Link>
+        <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between" data-aos="fade-up">
+          <p className="max-w-2xl text-sm leading-7 text-white/52">
+            Scope and costs are confirmed before advice work begins.
+          </p>
+          <Button asChild size="lg" className="group h-13 shrink-0 rounded-full bg-white px-7 font-bold text-[#005166] hover:bg-[#EAF4F6]">
+            <Link href="/consultation">
+              Start with the full picture
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
-          <p className="mt-3 text-xs text-muted-foreground">
-            Scope and fees should be confirmed before advice work proceeds.
-          </p>
         </div>
       </div>
     </section>

@@ -11,12 +11,12 @@ export const metadata = metadataForPath("/contact")
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <Navigation variant="overlay" />
       <main>
         <ContactHero />
-        <div className="py-24">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+        <div className="bg-[#EAF4F6] py-24 sm:py-32">
+          <div className="mx-auto max-w-[90rem] px-6 sm:px-8 lg:px-12">
+            <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
               <ContactForm />
               <ContactInfo />
             </div>

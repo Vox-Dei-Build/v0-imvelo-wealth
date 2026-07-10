@@ -11,7 +11,7 @@ export const metadata = metadataForPath("/resources")
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <Navigation variant="overlay" />
       <main>
         <ResourcesHero />
         <ResourcesGrid />

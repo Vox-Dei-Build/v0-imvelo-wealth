@@ -1,26 +1,27 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Manrope, Source_Serif_4 } from "next/font/google"
+import { Jost, Libre_Baskerville } from "next/font/google"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import { AOSProvider } from "@/components/aos-provider"
 import { CookieConsent } from "@/components/cookie-consent"
 import { JsonLd } from "@/components/seo-json-ld"
 import { absoluteUrl, organizationJsonLd, siteConfig, sitewideRobots, websiteJsonLd } from "@/lib/seo"
-import "aos/dist/aos.css"
 import "./globals.css"
 
-const manrope = Manrope({
+const jost = Jost({
   subsets: ["latin"],
-  variable: "--font-manrope",
+  variable: "--font-jost",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 })
 
-const sourceSerif = Source_Serif_4({
+const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
-  variable: "--font-source-serif",
+  variable: "--font-libre-baskerville",
   display: "swap",
+  weight: ["400", "700"],
+  style: "normal",
 })
 
 export const metadata: Metadata = {
@@ -78,10 +79,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`font-sans ${manrope.variable} ${sourceSerif.variable} ${GeistMono.variable} antialiased`}>
+      <body className={`font-sans ${jost.variable} ${libreBaskerville.variable} ${GeistMono.variable} antialiased`}>
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={websiteJsonLd()} />
-        <AOSProvider />
         <Suspense fallback={null}>{children}</Suspense>
         <CookieConsent />
         {analyticsEnabled ? <Analytics /> : null}

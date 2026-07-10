@@ -27,7 +27,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Features */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">What's Included</h2>
+          <h2 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">What's Included</h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             A planning engagement should clarify the moving parts before specific recommendations are made.
           </p>
@@ -57,7 +57,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
         {/* Process */}
         <div className="mt-24">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Our Process</h2>
+            <h2 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">Our Process</h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               The process keeps discovery, advice, implementation, and review connected.
             </p>
@@ -80,7 +80,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
         {/* Engagement */}
         <div className="mt-24">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">
               Engagement Scope
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">

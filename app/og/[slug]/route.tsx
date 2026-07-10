@@ -21,8 +21,8 @@ export function GET(_: Request, { params }: { params: { slug: string } }) {
           width: "100%",
           height: "100%",
           display: "flex",
-          background: "#f4efe4",
-          color: "#13231c",
+          background: "#F1F7F8",
+          color: "#17323A",
           fontFamily: "Inter, Arial, sans-serif",
           position: "relative",
           overflow: "hidden",
@@ -78,8 +78,8 @@ export function GET(_: Request, { params }: { params: { slug: string } }) {
                 width: 66,
                 height: 66,
                 borderRadius: 10,
-                background: "#124836",
-                color: "#f8f1df",
+                background: "#005166",
+                color: "#F7FAFB",
                 fontSize: 24,
                 fontWeight: 800,
                 letterSpacing: 0,
@@ -89,7 +89,7 @@ export function GET(_: Request, { params }: { params: { slug: string } }) {
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ fontSize: 29, fontWeight: 800, letterSpacing: 0 }}>{siteConfig.name}</div>
-              <div style={{ marginTop: 5, fontSize: 18, color: "#516055" }}>FSCA FSP 49944</div>
+              <div style={{ marginTop: 5, fontSize: 18, color: "#526A70" }}>FSCA FSP 49944</div>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export function GET(_: Request, { params }: { params: { slug: string } }) {
               style={{
                 display: "flex",
                 marginBottom: 22,
-                color: "#9b6e2a",
+                color: "#307283",
                 fontSize: 24,
                 fontWeight: 800,
                 letterSpacing: 0,
@@ -122,7 +122,7 @@ export function GET(_: Request, { params }: { params: { slug: string } }) {
                 display: "flex",
                 marginTop: 24,
                 maxWidth: 720,
-                color: "#3f4f45",
+                color: "#3E5960",
                 fontSize: 28,
                 lineHeight: 1.28,
               }}
@@ -132,8 +132,8 @@ export function GET(_: Request, { params }: { params: { slug: string } }) {
           </div>
 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 20 }}>
-            <div style={{ color: "#516055" }}>Johannesburg, South Africa</div>
-            <div style={{ color: "#124836", fontWeight: 700 }}>imvelowealth.co.za</div>
+            <div style={{ color: "#526A70" }}>Johannesburg, South Africa</div>
+            <div style={{ color: "#005166", fontWeight: 700 }}>imvelowealth.co.za</div>
           </div>
         </div>
       </div>

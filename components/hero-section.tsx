@@ -1,101 +1,63 @@
-import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, BriefcaseBusiness, ShieldCheck, TrendingUp, UsersRound } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { VideoHero } from "@/components/video-hero"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 
 const trustIndicators = [
-  { value: "R500M+", label: "AUM", icon: TrendingUp },
-  { value: "500+", label: "Families Served", icon: UsersRound },
-  { value: "30+", label: "Years Combined Experience", icon: BriefcaseBusiness },
-  { value: "49944", label: "FSP Licence", icon: ShieldCheck },
+  { value: "R500M+", label: "Assets under management" },
+  { value: "500+", label: "Families guided" },
+  { value: "30+", label: "Years of shared experience" },
+  { value: "49944", label: "FSCA FSP licence" },
 ]
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          {/* Announcement Banner */}
-          <div
-            data-aos="fade-up"
-            className="inline-flex max-w-full items-center justify-center rounded-full bg-accent/10 px-4 py-2 text-center text-sm font-medium text-accent-foreground ring-1 ring-accent/20"
-          >
-            <span className="mr-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
-            FSCA licensed financial services provider · CFP® led
-          </div>
-
-          {/* Main Headline */}
-          <div className="mt-8 space-y-6">
-            <h1
-              data-aos="fade-up"
-              data-aos-delay="80"
-              className="font-serif text-4xl font-bold tracking-tight text-foreground text-balance sm:text-6xl lg:text-7xl"
-            >
-              Build Wealth That
-              <span className="text-accent"> Lasts Generations</span>
-            </h1>
-
-            <p
-              data-aos="fade-up"
-              data-aos-delay="160"
-              className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground text-pretty"
-            >
-              Financial planning and wealth management for South African professionals, entrepreneurs, families, and
-              businesses.
-            </p>
-          </div>
-
-          {/* Call to Action Buttons */}
-          <div
-            data-aos="fade-up"
-            data-aos-delay="240"
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-            <Button size="lg" asChild className="group">
-              <Link href="/consultation">
-                Schedule Consultation
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link href="/resources">View Latest Resources</Link>
-            </Button>
-          </div>
-
-          {/* Trust Indicators */}
-          <div
-            data-aos="fade-up"
-            data-aos-delay="320"
-            className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-4"
-          >
-            {trustIndicators.map((item) => (
-              <div key={item.label} className="min-w-0 text-center">
-                <item.icon className="mx-auto mb-3 h-5 w-5 text-primary" aria-hidden="true" />
-                <div className="text-xl font-bold text-foreground sm:text-2xl">{item.value}</div>
-                <div className="mt-1 text-sm text-muted-foreground">{item.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Hero Image */}
-      <div data-aos="fade-up" data-aos-delay="400" className="mt-16 sm:mt-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="relative rounded-xl bg-muted/50 p-2 ring-1 ring-border/10 lg:rounded-2xl lg:p-4">
-            <div className="relative aspect-[2/1] overflow-hidden rounded-lg bg-background shadow-2xl ring-1 ring-border/10">
-              <Image
-                src="/professional-financial-planning-meeting-with-diver.jpg"
-                alt="Professional financial planning consultation"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 1184px"
-                className="object-cover"
-              />
+    <VideoHero
+      videoSrc="/videos/hero-family-life.mp4"
+      poster="/videos/hero-family-life-poster.jpg"
+      heightClassName="min-h-[100svh]"
+      align="center"
+      mediaPosition="center 42%"
+      eyebrow="Holistic financial planning · Sandton, Johannesburg"
+      title={
+        <>
+          Bring forth the life <span className="text-[#8FD3DD]">you’re building.</span>
+        </>
+      }
+      description="A home. An education. A business with a future. We help South African families create, protect, and pass on wealth with advice that starts with the life behind the numbers."
+      footer={
+        <dl className="grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4 sm:text-left">
+          {trustIndicators.map((item) => (
+            <div key={item.label} className="flex min-w-0 flex-col">
+              <dt className="order-last mt-1 text-xs font-medium leading-5 text-white/65 sm:text-sm">{item.label}</dt>
+              <dd className="text-2xl font-medium tracking-[-0.03em] text-white sm:text-3xl">{item.value}</dd>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          ))}
+        </dl>
+      }
+    >
+      <Button
+        size="lg"
+        asChild
+        className="group h-13 rounded-full bg-white px-7 text-sm font-bold text-[#005166] shadow-[0_12px_35px_rgba(0,0,0,0.2)] hover:bg-[#EAF4F6]"
+      >
+        <Link href="/consultation">
+          <WhatsAppIcon className="mr-2 h-5 w-5 text-[#25D366]" />
+          Start on WhatsApp
+        </Link>
+      </Button>
+      <Button
+        size="lg"
+        variant="outline"
+        asChild
+        className="group h-13 rounded-full border-white/45 bg-white/5 px-7 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/12 hover:text-white"
+      >
+        <Link href="/about">
+          Meet Palesa &amp; Siba
+          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </Button>
+    </VideoHero>
   )
 }

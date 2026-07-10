@@ -1,150 +1,110 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
+import { ArrowRight, LockKeyhole } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Send } from "lucide-react"
 
 export function ContactForm() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-    newsletter: false,
-  })
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault()
     const subject = encodeURIComponent("Website enquiry")
     const body = encodeURIComponent(
       [
-        `Name: ${formData.firstName} ${formData.lastName}`,
+        `Name: ${formData.name}`,
         `Email: ${formData.email}`,
         `Phone: ${formData.phone || "Not provided"}`,
-        `Service interest: ${formData.service || "Not selected"}`,
-        `Newsletter opt-in: ${formData.newsletter ? "Yes" : "No"}`,
         "",
-        "Message:",
-        formData.message || "Not provided",
-      ].join("\n")
+        formData.message,
+      ].join("\n"),
     )
 
     window.location.href = `mailto:info@imvelowealth.co.za?subject=${subject}&body=${body}`
   }
 
   return (
-    <Card className="border-primary/20 shadow-lg">
-      <CardHeader>
-        <CardTitle className="text-2xl font-serif">Get Started Today</CardTitle>
-        <CardDescription>
-          Share your details and your email app will open a prepared message to Imvelo Wealth Solutions.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="firstName">First Name *</Label>
+    <section className="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_80px_rgba(0,81,102,0.13)] ring-1 ring-[#CFDFE2]">
+      <div className="h-1.5 bg-[#36859A]" aria-hidden="true" />
+      <div className="p-7 sm:p-10 lg:p-12">
+        <div className="flex items-center justify-between gap-5">
+          <p className="section-kicker text-[#307283]">Send an email</p>
+          <div className="flex items-center gap-2 text-xs font-semibold text-[#536A70]">
+            <LockKeyhole className="h-3.5 w-3.5" aria-hidden="true" />
+            Opens in your email app
+          </div>
+        </div>
+
+        <h2 className="mt-7 text-3xl font-medium leading-[1.15] tracking-[-0.035em] text-[#005166] sm:text-4xl">
+          Write to the team.
+        </h2>
+        <p className="mt-4 max-w-xl text-sm leading-7 text-[#536A70]">
+          Share the question or decision on your mind. We will respond during office hours.
+        </p>
+
+        <form onSubmit={handleSubmit} className="mt-9 space-y-6">
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div className="space-y-3">
+              <Label htmlFor="contact-name" className="font-bold text-[#005166]">Your name *</Label>
               <Input
-                id="firstName"
-                value={formData.firstName}
-                onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                id="contact-name"
+                value={formData.name}
+                onChange={(event) => setFormData({ ...formData, name: event.target.value })}
+                autoComplete="name"
                 required
+                className="h-14 rounded-xl border-[#C8DDE1] bg-[#F7FAFB] px-4 text-base"
               />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">Last Name *</Label>
+            <div className="space-y-3">
+              <Label htmlFor="contact-email" className="font-bold text-[#005166]">Email *</Label>
               <Input
-                id="lastName"
-                value={formData.lastName}
-                onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                id="contact-email"
+                type="email"
+                value={formData.email}
+                onChange={(event) => setFormData({ ...formData, email: event.target.value })}
+                autoComplete="email"
                 required
+                className="h-14 rounded-xl border-[#C8DDE1] bg-[#F7FAFB] px-4 text-base"
               />
             </div>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="email">Email Address *</Label>
+          <div className="space-y-3">
+            <Label htmlFor="contact-phone" className="font-bold text-[#005166]">Phone number</Label>
             <Input
-              id="email"
-              type="email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              required
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="phone">Phone Number</Label>
-            <Input
-              id="phone"
+              id="contact-phone"
               type="tel"
               value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              placeholder="+27 XX XXX XXXX"
+              onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
+              autoComplete="tel"
+              placeholder="+27"
+              className="h-14 rounded-xl border-[#C8DDE1] bg-[#F7FAFB] px-4 text-base"
             />
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="service">Service Interest</Label>
-            <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
-              <SelectTrigger>
-                <SelectValue placeholder="Select a service" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="financial-planning">Comprehensive Financial Planning</SelectItem>
-                <SelectItem value="investment-management">Investment Management</SelectItem>
-                <SelectItem value="retirement-planning">Retirement Planning</SelectItem>
-                <SelectItem value="estate-planning">Estate Planning</SelectItem>
-                <SelectItem value="tax-planning">Tax Planning</SelectItem>
-                <SelectItem value="business-planning">Business Financial Planning</SelectItem>
-                <SelectItem value="other">Other / Not Sure</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="message">Tell us about your goals</Label>
+          <div className="space-y-3">
+            <Label htmlFor="contact-message" className="font-bold text-[#005166]">What is on your mind? *</Label>
             <Textarea
-              id="message"
+              id="contact-message"
               value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="What are your main financial goals? What challenges are you facing? Any specific questions?"
-              rows={4}
+              onChange={(event) => setFormData({ ...formData, message: event.target.value })}
+              required
+              rows={6}
+              placeholder="Tell us briefly what you would like help with."
+              className="rounded-xl border-[#C8DDE1] bg-[#F7FAFB] p-4 text-base"
             />
           </div>
 
-          <div className="flex items-center space-x-2">
-            <Checkbox
-              id="newsletter"
-              checked={formData.newsletter}
-              onCheckedChange={(checked) => setFormData({ ...formData, newsletter: checked as boolean })}
-            />
-            <Label htmlFor="newsletter" className="text-sm">
-              I'd like to receive market insights and financial planning tips via email
-            </Label>
-          </div>
-
-          <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
-            <Send className="mr-2 h-5 w-5" />
-            Prepare Email
+          <Button type="submit" size="lg" className="group h-13 w-full rounded-full bg-[#005166] font-bold text-white hover:bg-[#307283] sm:w-auto sm:px-8">
+            Prepare email
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
-
-          <p className="text-xs text-muted-foreground text-center">
-            By submitting this form, you agree to our privacy policy. We'll never share your information.
-          </p>
         </form>
-      </CardContent>
-    </Card>
+      </div>
+    </section>
   )
 }

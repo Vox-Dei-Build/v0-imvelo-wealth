@@ -14,7 +14,7 @@ export default function ThankYouPage() {
             <CheckCircle className="h-9 w-9 text-primary" />
           </div>
         </div>
-        <h1 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
+        <h1 className="mb-4 text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">
           Your request is on its way
         </h1>
         <p className="text-lg leading-8 text-muted-foreground mb-8">

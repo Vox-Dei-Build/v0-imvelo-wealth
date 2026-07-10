@@ -12,7 +12,7 @@ export function NewsletterSignup() {
             <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
               <Mail className="h-8 w-8 text-primary" />
             </div>
-            <CardTitle className="text-3xl font-serif font-bold text-foreground mb-4">
+            <CardTitle className="mb-4 text-3xl font-medium tracking-[-0.03em] text-foreground">
               Stay Ahead of the Markets
             </CardTitle>
             <CardDescription className="text-lg text-pretty max-w-2xl mx-auto">

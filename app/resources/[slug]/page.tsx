@@ -32,12 +32,12 @@ const articles: Article[] = [
       <div className="space-y-6">
         <p>
           On 1 September 2024, the South African retirement industry was restructured in the most significant way since the Pension
-          Funds Act. The two-pot system — officially the <em>Revenue Laws Amendment Act</em> — splits all future retirement fund
+          Funds Act. The two-pot system — officially the <span className="font-medium">Revenue Laws Amendment Act</span> — splits all future retirement fund
           contributions into two distinct components: a savings pot and a retirement pot. Understanding how each works, and what
           the rules mean for your specific funds, is not optional. It is financially critical.
         </p>
 
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">How the Split Works</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">How the Split Works</h2>
         <p>
           From 1 September 2024, every rand you contribute to a qualifying retirement fund — a retirement annuity (RA), pension
           fund, or provident fund — is divided as follows: one-third goes into your <strong>savings pot</strong>, and two-thirds
@@ -51,7 +51,7 @@ const articles: Article[] = [
           retirement pots follow the new framework exclusively.
         </p>
 
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">The Savings Pot: Accessible, But at a Cost</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">The Savings Pot: Accessible, But at a Cost</h2>
         <p>
           The savings pot is designed to prevent retrenchment-driven cashing out of entire retirement funds — a behaviour that
           historically eroded long-term savings. You may make <strong>one withdrawal per tax year</strong> from your savings pot,
@@ -68,7 +68,7 @@ const articles: Article[] = [
           fund but are typically deducted from the withdrawal amount.
         </p>
 
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">The Retirement Pot: Non-Negotiable Until Retirement</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">The Retirement Pot: Non-Negotiable Until Retirement</h2>
         <p>
           The two-thirds that accumulates in your retirement pot is locked until you reach retirement age — typically 55, though
           this depends on your fund rules. At retirement, the retirement pot must be used to purchase an annuity (a pension
@@ -80,7 +80,7 @@ const articles: Article[] = [
           uninterrupted over a 20–30 year accumulation phase is the engine of your retirement security.
         </p>
 
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">What You Should Do Now</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">What You Should Do Now</h2>
         <p>
           Review your fund statements to understand how your existing vested pot is structured. If you have multiple retirement
           funds, the one-third / two-thirds split applies separately to each — consolidating funds may simplify administration,
@@ -118,9 +118,9 @@ const articles: Article[] = [
           and primary residences.
         </p>
 
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">How Estate Duty Is Calculated</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">How Estate Duty Is Calculated</h2>
         <p>
-          Estate duty is levied on the <em>dutiable amount of an estate</em>. The starting point is the gross value of all
+          Estate duty is levied on the <span className="font-medium">dutiable amount of an estate</span>. The starting point is the gross value of all
           property of the deceased — South African and foreign assets for residents — from which allowable deductions are
           subtracted. The primary deduction is the <strong>abatement of R3.5 million</strong>, which applies to every estate.
           If a surviving spouse inherits all assets, the unused portion of the abatement can be rolled to their estate (the
@@ -132,7 +132,7 @@ const articles: Article[] = [
           (CGT) triggered at death.
         </p>
 
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">The Double Hit: Estate Duty Plus Capital Gains Tax</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">The Double Hit: Estate Duty Plus Capital Gains Tax</h2>
         <p>
           At death, SARS deems every asset to have been disposed of at market value — triggering CGT on any accrued gain above
           the R300,000 death exclusion. The effective CGT rate for individuals is currently 18% on the gain (40% inclusion rate
@@ -147,7 +147,7 @@ const articles: Article[] = [
           tax bill exceeding R2 million, payable within 12 months of the date of death.
         </p>
 
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">Structures That Legitimately Reduce Estate Duty</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">Structures That Legitimately Reduce Estate Duty</h2>
         <p>
           <strong>Retirement fund proceeds</strong> paid directly to a nominated beneficiary (not to the estate) are excluded
           from estate duty. This makes maximising retirement fund contributions one of the most efficient estate planning tools
@@ -170,7 +170,7 @@ const articles: Article[] = [
           estate. Couples with significant assets need to plan both estates, not just the first to die.
         </p>
 
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">Liquidity: The Practical Problem</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">Liquidity: The Practical Problem</h2>
         <p>
           Even where the structures are correct, estates frequently face a liquidity crisis. Assets like property and business
           interests cannot be sold quickly, but the executor needs cash to pay estate duty within 12 months. Life insurance
@@ -200,7 +200,7 @@ const articles: Article[] = [
           Understanding the difference — and the compliance obligations attached to each — is essential before moving any funds
           across borders.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">The Single Discretionary Allowance (SDA)</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">The Single Discretionary Allowance (SDA)</h2>
         <p>
           Each South African resident aged 18 or older may transfer up to <strong>R1 million per calendar year</strong> offshore
           without prior SARS tax clearance. This is the Single Discretionary Allowance. It resets on 1 January each year and
@@ -211,7 +211,7 @@ const articles: Article[] = [
           For investment purposes, the R1 million can be invested into global unit trusts, exchange-traded funds (ETFs),
           offshore brokerage accounts, or foreign endowments — all without an approval process.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">The Foreign Capital Allowance (FCA)</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">The Foreign Capital Allowance (FCA)</h2>
         <p>
           For larger offshore allocations, the <strong>R10 million Foreign Capital Allowance</strong> is available. This
           requires a SARS tax compliance status (formerly called a "tax clearance certificate"), confirming that you are in
@@ -223,7 +223,7 @@ const articles: Article[] = [
           status is applied for online through eFiling and is typically issued within 21 working days if your tax affairs
           are in order.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">Reporting and Tax Obligations</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">Reporting and Tax Obligations</h2>
         <p>
           South African residents are taxed on their worldwide income. Offshore investment income — dividends, interest, and
           capital gains — must be declared on your annual tax return. Foreign tax credits apply where double taxation
@@ -235,7 +235,7 @@ const articles: Article[] = [
           Programme (VDP) is available for taxpayers who wish to regularise historical non-disclosure, but it should be
           approached with legal and tax advice.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">Strategic Considerations</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">Strategic Considerations</h2>
         <p>
           Offshore diversification is not purely about investment returns — it is also about currency diversification and
           geopolitical risk management. A portfolio with meaningful rand exposure is exposed to rand depreciation, which has
@@ -267,7 +267,7 @@ const articles: Article[] = [
           concentrations of assets that retirement funds may hold, and they have a direct impact on the portfolio construction
           choices available to your adviser and fund manager.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">The Key Limits</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">The Key Limits</h2>
         <p>
           The most consequential Regulation 28 limits are:
         </p>
@@ -278,7 +278,7 @@ const articles: Article[] = [
           <li><strong>Hedge funds and private equity:</strong> Maximum 10% combined.</li>
           <li><strong>Unlisted instruments:</strong> Maximum 15% of any single issuer; maximum 35% in unlisted instruments overall.</li>
         </ul>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">Practical Implications</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">Practical Implications</h2>
         <p>
           The 45% offshore allowance is the most strategically significant limit for most investors today. Prior to the 2022
           increase, retirement funds were constrained to 30% offshore — limiting the rand-hedging potential of the retirement
@@ -291,7 +291,7 @@ const articles: Article[] = [
           within 5–10 years of retirement, this constraint is generally appropriate from a risk management perspective, as it
           enforces some level of diversification.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">What Lies Outside Reg 28</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">What Lies Outside Reg 28</h2>
         <p>
           Assets held outside retirement funds — in a discretionary investment account, a living annuity post-retirement, or
           a trust — are not subject to Regulation 28 constraints. This is where a complementary investment strategy can add
@@ -326,7 +326,7 @@ const articles: Article[] = [
         <p>
           So is the trust still useful? Yes — but for different reasons than the sales pitch of a generation ago.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">Asset Protection</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">Asset Protection</h2>
         <p>
           Assets held in a properly structured inter vivos trust are not personal assets of the trustees or beneficiaries.
           If you face personal insolvency — a business failure, professional liability claim, or divorce — trust assets are
@@ -337,7 +337,7 @@ const articles: Article[] = [
           For business owners, professionals with significant liability exposure (doctors, architects, directors), and high-net-worth
           individuals operating in litigious environments, this ring-fencing function is genuinely valuable.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">Estate Duty Management</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">Estate Duty Management</h2>
         <p>
           The "loan account" trust structure remains one of the most effective — and legally sound — estate duty reduction
           mechanisms available. Here is how it works: you sell an appreciating asset (typically property or a private equity
@@ -354,14 +354,14 @@ const articles: Article[] = [
           rules on the initial sale. Done incorrectly, SARS can challenge the transaction. Done correctly, it is a durable
           wealth transfer mechanism.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">Generational Wealth and Continuity</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">Generational Wealth and Continuity</h2>
         <p>
           A trust does not die. Assets held in a trust can be preserved across generations without the disruption of winding
           up an estate — multiple times — as each generation passes. For family businesses, investment portfolios, or property
           assets intended to stay within a family over generations, the trust provides continuity and governance that a will alone
           cannot provide.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">When a Trust Is Not the Right Answer</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">When a Trust Is Not the Right Answer</h2>
         <p>
           Trusts are expensive to establish and administer. An independent trustee (strongly recommended for creditor protection
           and governance) costs R5,000–R15,000 per annum. Annual financial statements, trustee meetings, and resolutions are
@@ -392,13 +392,13 @@ const articles: Article[] = [
           typically pay between 3.5% and 5.5% nominal interest per annum. With CPI running above 5%, the real return on that
           account is negative to flat. Your emergency fund is shrinking in real terms every month it sits untouched.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">What an Emergency Fund Needs to Do</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">What an Emergency Fund Needs to Do</h2>
         <p>
           An emergency fund has two non-negotiable requirements: it must be available quickly (within one to five business days),
           and it must not lose its nominal value. Beyond those requirements, there is no reason it should not earn a competitive
           return. The question is simply: what instruments offer near-immediate liquidity with better yields than a savings account?
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">Money Market Funds</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">Money Market Funds</h2>
         <p>
           A money market unit trust invests in short-term, highly rated fixed income instruments: treasury bills, call deposits,
           NCDs (negotiable certificates of deposit) and similar instruments. Returns track the short-term interest rate environment
@@ -410,7 +410,7 @@ const articles: Article[] = [
           average maturity of money market portfolios to 120 days, which keeps the liquidity risk extremely low. For an emergency
           fund, this is a materially better vehicle than a savings account, with minimal additional risk.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">32-Day Notice Accounts</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">32-Day Notice Accounts</h2>
         <p>
           Several South African banks (and some non-bank providers) offer 32-day notice accounts paying significantly above
           savings account rates — typically prime minus 1% to prime flat, depending on the balance and provider. Technically,
@@ -423,7 +423,7 @@ const articles: Article[] = [
           float (one month of expenses in a transactional account) alongside the larger notice account. The notice account
           earns the higher rate; the float covers any immediate needs while you serve the notice period.
         </p>
-        <h2 className="text-xl font-serif font-bold text-foreground mt-8">The Tax Consideration</h2>
+        <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mt-8">The Tax Consideration</h2>
         <p>
           Interest income from money market funds and notice accounts is subject to income tax. The first R23,800 of interest
           per annum (R34,500 for those over 65) is exempt. Above that threshold, interest is taxed at your marginal rate.
@@ -501,7 +501,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 </div>
               </div>
             </div>
-            <h1 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h1 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl text-balance">
               {article.title}
             </h1>
             <p className="mt-4 text-lg text-muted-foreground text-pretty">{article.description}</p>
@@ -522,7 +522,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         {/* Consultation CTA */}
         <section className="py-12 sm:py-16 border-t border-border/40 bg-muted/20">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-            <h2 className="font-serif text-2xl font-bold text-foreground mb-3">
+            <h2 className="text-2xl font-medium tracking-[-0.025em] text-foreground mb-3">
               Want advice specific to your situation?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
@@ -531,7 +531,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button size="lg" asChild>
-                <Link href="/consultation">Book a Free Consultation</Link>
+                <Link href="/consultation">Talk it through on WhatsApp</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/resources">
