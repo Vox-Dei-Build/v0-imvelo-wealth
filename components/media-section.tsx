@@ -78,7 +78,7 @@ export function MediaSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">In the Media</p>
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">
             Palesa &amp; Siba on Air
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
@@ -103,7 +103,7 @@ export function MediaSection() {
                     </Badge>
                     <span className="text-xs text-muted-foreground">{item.platform}</span>
                   </div>
-                  <CardTitle className="text-base font-serif leading-snug group-hover:text-primary transition-colors text-balance">
+                  <CardTitle className="text-balance text-base font-semibold leading-snug transition-colors group-hover:text-primary">
                     {item.title}
                   </CardTitle>
                 </CardHeader>

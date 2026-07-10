@@ -13,7 +13,7 @@ export default function PrivacyPage() {
         <section className="py-16 sm:py-20 border-b border-border/40 bg-muted/20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Legal</p>
-            <h1 className="font-serif text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            <h1 className="text-4xl font-medium tracking-[-0.03em] text-foreground sm:text-5xl">
               Privacy Policy
             </h1>
             <p className="mt-4 text-muted-foreground">Last updated: 10 April 2026</p>
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
             <div className="space-y-10 text-sm leading-7 text-foreground/80">
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">1. Who We Are</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">1. Who We Are</h2>
                 <p>
                   Imvelo Wealth Solutions (Pty) Ltd ("<strong>Imvelo Wealth</strong>", "<strong>we</strong>", "<strong>us</strong>", or
                   "<strong>our</strong>") is a South African Financial Services Provider licensed and regulated by the Financial
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">2. What Personal Information We Collect</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">2. What Personal Information We Collect</h2>
                 <p>We collect only the minimum personal information necessary for the purposes described in this policy. This includes:</p>
                 <ul className="list-disc pl-5 mt-3 space-y-2">
                   <li>
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">3. Why We Collect It (Purpose)</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">3. Why We Collect It (Purpose)</h2>
                 <p>We process your personal information for the following purposes:</p>
                 <ul className="list-disc pl-5 mt-3 space-y-2">
                   <li>
@@ -114,7 +114,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">4. How Long We Retain Your Information</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">4. How Long We Retain Your Information</h2>
                 <ul className="list-disc pl-5 mt-3 space-y-2">
                   <li>
                     <strong>Consultation request data</strong> (name, contact details, appointment details): 12 months from the
@@ -138,7 +138,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">5. Sharing Your Information</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">5. Sharing Your Information</h2>
                 <p>
                   We do not sell your personal information. We share your information only in the following limited circumstances:
                 </p>
@@ -166,7 +166,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">6. How We Protect Your Information</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">6. How We Protect Your Information</h2>
                 <p>
                   We implement appropriate technical and organisational measures to protect your personal information against
                   unauthorised access, disclosure, alteration, and destruction. These measures include:
@@ -184,7 +184,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">7. Your Rights Under POPIA</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">7. Your Rights Under POPIA</h2>
                 <p>As a data subject under POPIA, you have the following rights:</p>
                 <ul className="list-disc pl-5 mt-3 space-y-2">
                   <li>
@@ -221,7 +221,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">8. Cookies and Website Analytics</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">8. Cookies and Website Analytics</h2>
                 <p>
                   Our website uses no third-party advertising or tracking cookies. We use privacy-respecting, anonymised analytics
                   to understand aggregate usage patterns. No personally identifiable information is stored in our analytics
@@ -230,7 +230,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">9. Marketing Communications</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">9. Marketing Communications</h2>
                 <p>
                   We may send you educational content, regulatory updates, or information about our services where you have opted
                   in or where we have a pre-existing relationship and you have not opted out. Every marketing communication
@@ -239,7 +239,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">10. Changes to This Policy</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">10. Changes to This Policy</h2>
                 <p>
                   We may update this Privacy Policy from time to time. Material changes will be communicated by posting the
                   updated policy on this page with a revised "Last updated" date. We encourage you to review this page periodically.
@@ -247,7 +247,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl font-serif font-bold text-foreground mb-3">11. Contact Us</h2>
+                <h2 className="text-xl font-semibold tracking-[-0.015em] text-foreground mb-3">11. Contact Us</h2>
                 <p>
                   For privacy-related queries, to exercise your rights, or to reach our Information Officer:
                 </p>

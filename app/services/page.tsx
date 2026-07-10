@@ -11,7 +11,7 @@ export const metadata = metadataForPath("/services")
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <Navigation variant="overlay" />
       <main>
         <ServicesHero />
         <ServicesGrid />

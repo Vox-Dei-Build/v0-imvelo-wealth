@@ -478,14 +478,8 @@ export function absoluteUrl(path = "/") {
   return `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`
 }
 
-export function isPublicIndexingEnabled() {
-  return process.env.IMVELO_REVIEW_GATE === "off"
-}
-
 export function sitewideRobots(index = true): Metadata["robots"] {
-  const shouldIndex = index && isPublicIndexingEnabled()
-
-  if (!shouldIndex) {
+  if (!index) {
     return {
       index: false,
       follow: false,
@@ -572,8 +566,6 @@ export function getPageSeoByPath(path: string) {
 }
 
 export function sitemapPages() {
-  if (!isPublicIndexingEnabled()) return []
-
   return pages.filter((page) => page.includeInSitemap !== false)
 }
 

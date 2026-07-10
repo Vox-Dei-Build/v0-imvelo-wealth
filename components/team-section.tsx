@@ -1,150 +1,63 @@
 import Image from "next/image"
-import { Badge } from "@/components/ui/badge"
 
+// Per client direction: leadership only — the wider team is acknowledged in
+// text without photos. Designations sit after the name (e.g. "…, CFP®").
 const leadership = [
   {
-    name: "Palesa Tlholoe",
-    role: "Director & Wealth Manager",
-    credentials: ["CFP®"],
+    name: "Palesa Tlholoe, CFP®",
+    role: "Co-founder · Director & Wealth Manager",
+    bio: "Palesa believes a financial plan should read like a family’s story — she leads with listening, then builds the structure around what she hears.",
     image: "/team/palesa-tlholoe.jpeg",
   },
   {
-    name: "Siba Njoba",
-    role: "Director & Wealth Manager",
-    credentials: ["CFP®"],
-    image: "/team/siba-njoba.jpeg",
-  },
-]
-
-const teams = [
-  {
-    group: "Financial Advisory Services",
-    description: "Client-facing advice, planning conversations, and implementation support.",
-    people: [
-      {
-        name: "Blendine Kika",
-        role: "Financial Adviser",
-        image: "/team/blendine-kika.jpeg",
-      },
-      {
-        name: "Nicholas Minnie",
-        role: "Financial Adviser",
-        image: "/team/nicholas-minnie.jpeg",
-      },
-      {
-        name: "Phakama Nyembe",
-        role: "Financial Adviser",
-        image: "/team/phakama-nyembe.jpeg",
-      },
-      {
-        name: "Tshepang Ngobeni",
-        role: "Financial Adviser",
-        image: "/team/tshepang-ngobeni.jpeg",
-      },
-    ],
-  },
-  {
-    group: "Client Support & Operations",
-    description: "Service coordination, client administration, and planning preparation.",
-    people: [
-      {
-        name: "Zanele Dube",
-        role: "Client Service Consultant",
-        image: "/team/zanele-dube.jpeg",
-      },
-      {
-        name: "Valerie Mabalane",
-        role: "Paraplanner",
-        image: "/team/valerie-mabalane.jpeg",
-      },
-    ],
-  },
-  {
-    group: "Risk & Compliance",
-    description: "Fiduciary oversight and governance support for regulated advice.",
-    people: [
-      {
-        name: "Lebogang Pooe",
-        role: "Compliance and Fiduciary Consultant",
-        image: "/team/lebogang-pooe.jpeg",
-      },
-    ],
+    name: "Siba Njoba, CFP®",
+    role: "Co-founder · Director & Wealth Manager",
+    bio: "Siba walks clients through their biggest decisions with calm and clarity — from a first investment to a business changing hands.",
+    image: "/team/siba-njoba-enhanced-v2.jpg",
   },
 ]
 
 export function TeamSection() {
   return (
-    <section className="bg-muted/35 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Team</p>
-          <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            A specialist team around every client relationship.
+    <section className="bg-[#F7FAFB] py-24 sm:py-32">
+      <div className="mx-auto max-w-[90rem] px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-3xl text-center" data-aos="fade-up">
+          <p className="section-kicker text-[#307283]">Leadership</p>
+          <h2 className="mt-6 text-4xl font-medium tracking-[-0.035em] text-[#005166] sm:text-5xl">
+            The two women behind Imvelo.
           </h2>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Imvelo Wealth combines director-led planning with dedicated advisory, operations, and compliance support.
+          <p className="mt-7 text-base leading-8 text-[#536A70] sm:text-lg">
+            Certified Financial Planners, co-founders, and leaders who still believe the first responsibility of good
+            advice is to listen.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-md border border-border bg-border lg:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-6xl gap-8 md:grid-cols-2" data-aos="fade-up" data-aos-delay="120">
           {leadership.map((person) => (
-            <article key={person.name} className="grid bg-background sm:grid-cols-[0.82fr_1fr]">
-              <div className="relative min-h-80 overflow-hidden bg-muted">
+            <article key={person.name} className="group overflow-hidden rounded-[1.75rem] bg-[#F7FAFB] shadow-[0_18px_55px_rgba(0,81,102,0.1)]">
+              <div className="relative aspect-[4/4.8] overflow-hidden bg-[#D4E2E5]">
                 <Image
                   src={person.image}
                   alt={person.name}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 360px"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 480px"
+                  quality={95}
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
                 />
               </div>
-              <div className="flex min-h-80 flex-col justify-end p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Leadership</p>
-                <h3 className="mt-4 font-serif text-3xl font-semibold text-foreground">{person.name}</h3>
-                <p className="mt-2 text-base text-muted-foreground">{person.role}</p>
-                <div className="mt-6 flex gap-2">
-                  {person.credentials.map((credential) => (
-                    <Badge key={credential} variant="secondary" className="rounded-md">
-                      {credential}
-                    </Badge>
-                  ))}
-                </div>
+              <div className="p-8 sm:p-10">
+                <h3 className="text-2xl font-medium tracking-[-0.03em] text-[#005166] sm:text-3xl">{person.name}</h3>
+                <p className="mt-3 text-[0.68rem] font-bold uppercase tracking-[0.16em] text-[#307283]">{person.role}</p>
+                <p className="mt-5 text-sm leading-7 text-[#536A70] sm:text-base">{person.bio}</p>
               </div>
             </article>
           ))}
         </div>
 
-        <div className="mt-14 space-y-10">
-          {teams.map((team) => (
-            <div key={team.group} className="grid gap-7 lg:grid-cols-[0.34fr_1fr] lg:gap-12">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Practice Area</p>
-                <h3 className="mt-3 font-serif text-2xl font-semibold text-foreground">{team.group}</h3>
-                <p className="mt-4 text-sm leading-6 text-muted-foreground">{team.description}</p>
-              </div>
-
-              <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 xl:grid-cols-4">
-                {team.people.map((person) => (
-                  <article key={person.name} className="group bg-background">
-                    <div className="relative aspect-[4/4.5] overflow-hidden bg-muted">
-                      <Image
-                        src={person.image}
-                        alt={person.name}
-                        fill
-                        sizes="(max-width: 768px) 50vw, 260px"
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                      />
-                    </div>
-                    <div className="p-5">
-                      <h4 className="font-serif text-xl font-semibold leading-7 text-foreground">{person.name}</h4>
-                      <p className="mt-1 text-sm leading-6 text-muted-foreground">{person.role}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <p className="mx-auto mt-14 max-w-2xl text-center text-sm leading-7 text-[#536A70] sm:text-base" data-aos="fade-up">
+          Palesa and Siba are supported by a dedicated team across financial advisory, client service, paraplanning,
+          and compliance — so every relationship has specialists behind it.
+        </p>
       </div>
     </section>
   )

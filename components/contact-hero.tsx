@@ -1,17 +1,19 @@
+import { VideoHero } from "@/components/video-hero"
+
 export function ContactHero() {
   return (
-    <section className="bg-gradient-to-b from-muted/30 to-background py-24">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-primary">Contact</p>
-          <h1 className="mb-6 font-serif text-5xl font-semibold tracking-tight text-foreground md:text-6xl">
-            Speak to Imvelo Wealth Solutions.
-          </h1>
-          <p className="max-w-2xl text-lg leading-8 text-muted-foreground">
-            Use the confirmed contact details below or request a focused consultation through the review form.
-          </p>
-        </div>
-      </div>
-    </section>
+    <VideoHero
+      videoSrc="/videos/hero-client-conversation.mp4"
+      poster="/videos/hero-client-conversation-poster.jpg"
+      heightClassName="min-h-[72svh]"
+      mediaPosition="center"
+      eyebrow="A real person is on the other side"
+      title={
+        <>
+          However you reach us, <span className="text-[#8FD3DD]">you will be heard.</span>
+        </>
+      }
+      description="Phone, email, WhatsApp, or a visit to our Sandton office—choose whichever feels most natural. We answer during office hours, Monday to Friday."
+    />
   )
 }

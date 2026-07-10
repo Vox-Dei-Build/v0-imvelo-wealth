@@ -89,7 +89,7 @@ export function ResourcesGrid() {
         {/* Featured Article */}
         {featuredResource && (
           <div className="mb-16">
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-8 text-center">Featured Article</h2>
+            <h2 className="mb-8 text-center text-3xl font-medium tracking-[-0.03em] text-foreground">Featured Article</h2>
             <Card className="max-w-4xl mx-auto border-primary/20 shadow-lg">
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-4 mb-4">
@@ -107,7 +107,7 @@ export function ResourcesGrid() {
                     </div>
                   </div>
                 </div>
-                <CardTitle className="text-2xl md:text-3xl font-serif text-balance">
+                <CardTitle className="text-balance text-2xl font-medium tracking-[-0.025em] md:text-3xl">
                   <Link href={`/resources/${featuredResource.slug}`} className="hover:text-primary transition-colors">
                     {featuredResource.title}
                   </Link>
@@ -136,7 +136,7 @@ export function ResourcesGrid() {
 
         {/* Other Resources */}
         <div>
-          <h2 className="text-3xl font-serif font-bold text-foreground mb-12 text-center">Latest Resources</h2>
+          <h2 className="mb-12 text-center text-3xl font-medium tracking-[-0.03em] text-foreground">Latest Resources</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherResources.map((resource, index) => {
               const IconComponent = resource.icon
@@ -152,7 +152,7 @@ export function ResourcesGrid() {
                       </Badge>
                       <IconComponent className="h-5 w-5 text-primary" />
                     </div>
-                    <CardTitle className="text-xl font-serif group-hover:text-primary transition-colors text-balance">
+                    <CardTitle className="text-balance text-xl font-medium tracking-[-0.02em] transition-colors group-hover:text-primary">
                       <Link href={`/resources/${resource.slug}`}>{resource.title}</Link>
                     </CardTitle>
                     <CardDescription className="text-pretty">{resource.description}</CardDescription>

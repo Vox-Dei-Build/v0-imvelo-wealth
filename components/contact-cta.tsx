@@ -1,47 +1,43 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight, CalendarDays, Clock, ShieldCheck } from "lucide-react"
 import Link from "next/link"
+import { CalendarDays, Clock, ShieldCheck } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 
 const details = [
-  { label: "FSP Licence", value: "49944", icon: ShieldCheck },
-  { label: "Office Hours", value: "09:00-17:00", icon: Clock },
-  { label: "Founded", value: "2018", icon: CalendarDays },
+  { label: "FSCA FSP licence", value: "49944", icon: ShieldCheck },
+  { label: "Office hours", value: "09:00–17:00", icon: Clock },
+  { label: "Serving clients since", value: "2018", icon: CalendarDays },
 ]
 
 export function ContactCTA() {
   return (
-    <section className="bg-muted/30 py-24">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-5xl">
-          <div className="grid gap-10 rounded-md border border-border bg-background p-8 md:grid-cols-[1fr_1.1fr] md:p-10">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Confirmed details</p>
-              <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight text-foreground">
-                Keep the next step specific and traceable.
-              </h2>
-              <p className="mt-5 text-base leading-7 text-muted-foreground">
-                For this review pass, the contact experience uses confirmed phone, email, registration, and regulatory
-                details only.
-              </p>
-              <Button size="lg" asChild className="mt-8 group rounded-md">
-                <Link href="/consultation">
-                  Request Consultation
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-            </div>
+    <section className="bg-[#005166] py-24 text-white sm:py-32">
+      <div className="mx-auto max-w-[90rem] px-6 sm:px-8 lg:px-12">
+        <div className="grid items-center gap-14 lg:grid-cols-[1fr_1.08fr] lg:gap-24">
+          <div>
+            <p className="section-kicker text-[#8FD3DD]">Prefer WhatsApp?</p>
+            <h2 className="mt-6 text-4xl font-medium leading-[1.1] tracking-[-0.035em] sm:text-5xl">
+              Begin with a little context, not a cold call.
+            </h2>
+            <p className="mt-7 max-w-xl text-base leading-8 text-white/65">
+              Our guided introduction takes about two minutes and prepares a message you can review before sending.
+            </p>
+            <Button asChild size="lg" className="mt-9 h-13 rounded-full bg-white px-7 font-bold text-[#005166] hover:bg-[#EAF4F6]">
+              <Link href="/consultation">
+                <WhatsAppIcon className="mr-2 h-5 w-5 text-[#25D366]" />
+                Start the WhatsApp flow
+              </Link>
+            </Button>
+          </div>
 
-            <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-3">
-              {details.map((detail) => (
-                <div key={detail.label} className="bg-card p-6">
-                  <detail.icon className="h-5 w-5 text-primary" />
-                  <div className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                    {detail.label}
-                  </div>
-                  <div className="mt-3 text-lg font-semibold text-foreground">{detail.value}</div>
-                </div>
-              ))}
-            </div>
+          <div className="grid border-y border-white/18 sm:grid-cols-3">
+            {details.map((detail, index) => (
+              <div key={detail.label} className={`py-8 sm:px-7 ${index > 0 ? "border-t border-white/18 sm:border-l sm:border-t-0" : ""}`}>
+                <detail.icon className="h-5 w-5 text-[#8FD3DD]" strokeWidth={1.5} aria-hidden="true" />
+                <div className="mt-7 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-white/45">{detail.label}</div>
+                <div className="mt-3 text-3xl font-medium tracking-[-0.03em] text-white">{detail.value}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

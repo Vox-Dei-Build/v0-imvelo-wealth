@@ -28,7 +28,7 @@ export function AboutValues() {
     <section className="bg-muted/30 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Our Values</h2>
+          <h2 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">Our Values</h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             These core values guide everything we do and shape how we serve our clients.
           </p>

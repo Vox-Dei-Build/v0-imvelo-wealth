@@ -39,18 +39,18 @@ export function CookieConsent() {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-[70] px-4 pb-4 sm:px-6 sm:pb-6">
-      <div className="mx-auto max-w-5xl rounded-md border border-border bg-background/95 p-5 shadow-2xl backdrop-blur-xl sm:p-6">
+      <div className="mx-auto max-w-6xl rounded-[1.25rem] border border-[#C8DDE1] bg-[#F7FAFB]/95 p-4 shadow-2xl backdrop-blur-xl sm:p-5">
         <div className="flex gap-4">
-          <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 sm:flex">
+          <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#005166]/10 sm:flex">
             <ShieldCheck className="h-5 w-5 text-primary" />
           </div>
-          <div className="min-w-0 flex-1">
+          <div className="min-w-0 flex-1 lg:grid lg:grid-cols-[1fr_auto] lg:items-center lg:gap-7">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h2 className="text-base font-semibold text-foreground">Cookie Preferences</h2>
+                <h2 className="text-base font-bold text-[#005166]">Your privacy choices</h2>
                 <p className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">
-                  We use essential cookies to keep the internal review experience working. Optional analytics or
-                  marketing cookies are only enabled if explicitly approved.
+                  Essential cookies keep the site working. Optional analytics and marketing cookies are only enabled
+                  if you choose to allow them.
                 </p>
               </div>
               <button
@@ -64,7 +64,7 @@ export function CookieConsent() {
             </div>
 
             {preferencesOpen ? (
-              <div className="mt-5 grid gap-3 border-t border-border pt-5 sm:grid-cols-3">
+              <div className="mt-5 grid gap-3 border-t border-border pt-5 sm:grid-cols-3 lg:col-span-2">
                 <div className="rounded-md border border-border bg-muted/25 p-4">
                   <div className="text-sm font-semibold text-foreground">Necessary</div>
                   <p className="mt-2 text-xs leading-5 text-muted-foreground">Required for security and preferences.</p>
@@ -101,15 +101,15 @@ export function CookieConsent() {
               </div>
             ) : null}
 
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end">
-              <Button variant="outline" className="rounded-md bg-transparent" onClick={() => setPreferencesOpen(true)}>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end lg:mt-0">
+              <Button variant="outline" className="rounded-full bg-transparent" onClick={() => setPreferencesOpen(true)}>
                 <Settings2 className="mr-2 h-4 w-4" />
                 Preferences
               </Button>
-              <Button variant="outline" className="rounded-md bg-transparent" onClick={() => save({ analytics: false, marketing: false })}>
+              <Button variant="outline" className="rounded-full bg-transparent" onClick={() => save({ analytics: false, marketing: false })}>
                 Essential Only
               </Button>
-              <Button className="rounded-md" onClick={() => save({ analytics: true, marketing: true })}>
+              <Button className="rounded-full" onClick={() => save({ analytics: true, marketing: true })}>
                 Accept All
               </Button>
             </div>
