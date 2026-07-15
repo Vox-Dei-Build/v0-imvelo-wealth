@@ -479,7 +479,7 @@ export function absoluteUrl(path = "/") {
 }
 
 export function isPublicIndexingEnabled() {
-  return process.env.IMVELO_REVIEW_GATE === "off"
+  return true
 }
 
 export function sitewideRobots(index = true): Metadata["robots"] {
