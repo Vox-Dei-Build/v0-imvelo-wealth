@@ -41,8 +41,8 @@ export function LatestResourcesSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {resources.map((resource) => (
-            <Link key={resource.href} href={resource.href} className="group overflow-hidden rounded-[1.5rem] bg-white shadow-[0_14px_40px_rgba(0,81,102,0.08)] transition-transform duration-500 hover:-translate-y-2">
+          {resources.map((resource, index) => (
+            <Link key={resource.href} href={resource.href} className="group overflow-hidden rounded-[1.5rem] bg-white shadow-[0_14px_40px_rgba(0,81,102,0.08)] transition-transform duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay={index * 90}>
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={resource.image}

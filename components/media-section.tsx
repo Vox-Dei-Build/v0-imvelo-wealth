@@ -76,7 +76,7 @@ export function MediaSection() {
   return (
     <section className="py-24 bg-muted/20 border-t border-border/40">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-16">
+        <div className="mx-auto max-w-2xl text-center mb-16" data-aos="fade-up">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">In the Media</p>
           <h2 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">
             Palesa &amp; Siba on Air
@@ -88,12 +88,14 @@ export function MediaSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mediaAppearances.map((item) => {
+          {mediaAppearances.map((item, index) => {
             const Icon = item.icon
             return (
               <Card
                 key={item.title}
                 className="flex flex-col group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30"
+                data-aos="fade-up"
+                data-aos-delay={(index % 3) * 80}
               >
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-between mb-3">
@@ -124,7 +126,7 @@ export function MediaSection() {
           })}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center" data-aos="fade-up">
           <p className="text-sm text-muted-foreground mb-4">
             Follow Imvelo Wealth for financial insights and market commentary
           </p>

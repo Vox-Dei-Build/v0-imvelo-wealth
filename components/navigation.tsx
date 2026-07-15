@@ -43,11 +43,11 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
 
   return (
     <>
-      <header className={headerClass}>
+      <header className={`${headerClass} navigation-arrive`}>
         <div className={`hidden border-b px-6 py-2 text-[0.65rem] font-bold uppercase tracking-[0.18em] sm:block ${transparent ? "border-white/10 text-white/68" : "border-border/50 text-muted-foreground"}`}>
           <div className="mx-auto flex max-w-[90rem] items-center justify-between">
             <span>Independent financial advice · Founded in 2018</span>
-            <span>FSCA licensed financial services provider · FSP 49944</span>
+            <span>Johannesburg, South Africa</span>
           </div>
         </div>
         <nav className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-3 sm:px-8 lg:px-12" aria-label="Global">
@@ -57,9 +57,9 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
                 <Image
                   src="/imvelo-logo-transparent.png"
                   alt="Imvelo Wealth"
-                  width={160}
+                  width={184}
                   height={69}
-                  className={`h-11 w-auto transition-[filter] duration-300 sm:h-12 ${transparent ? "brightness-0 invert" : ""}`}
+                  className={`h-12 w-auto transition-[filter] duration-300 sm:h-14 ${transparent ? "brightness-0 invert" : ""}`}
                   priority
                 />
               </span>
@@ -82,8 +82,8 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
                 href={item.href}
                 className={
                   transparent
-                    ? "text-sm font-semibold leading-6 text-white/82 transition-colors hover:text-white"
-                    : "text-sm font-semibold leading-6 text-muted-foreground transition-colors hover:text-foreground"
+                    ? "nav-link text-sm font-semibold leading-6 text-white/82 transition-colors hover:text-white"
+                    : "nav-link text-sm font-semibold leading-6 text-muted-foreground transition-colors hover:text-foreground"
                 }
               >
                 {item.name}
@@ -95,8 +95,8 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
               asChild
               className={
                 transparent
-                  ? "h-11 rounded-full bg-white px-6 text-sm font-bold text-[#005166] hover:bg-[#EAF4F6]"
-                  : "h-11 rounded-full px-6 text-sm font-bold"
+                  ? "premium-action h-11 rounded-full bg-white px-6 text-sm font-bold text-[#005166] hover:bg-[#EAF4F6]"
+                  : "premium-action h-11 rounded-full px-6 text-sm font-bold"
               }
             >
               <Link href="/consultation">Start a conversation</Link>
@@ -108,7 +108,7 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-[1000] min-h-dvh overflow-y-auto bg-[#064654] px-6 py-6 text-white lg:hidden"
+          className="mobile-menu-arrive fixed inset-0 z-[1000] min-h-dvh overflow-y-auto bg-[#064654] px-6 py-6 text-white lg:hidden"
           role="dialog"
           aria-modal="true"
         >
@@ -124,9 +124,9 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
                   <Image
                     src="/imvelo-logo-transparent.png"
                     alt="Imvelo Wealth"
-                    width={160}
+                    width={184}
                     height={69}
-                    className="h-12 w-auto brightness-0 invert"
+                    className="h-14 w-auto brightness-0 invert"
                   />
                 </span>
               </Link>
@@ -142,11 +142,12 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
 
             <div className="flex flex-1 flex-col justify-between pt-10">
               <div className="space-y-1">
-                {navigation.map((item) => (
+                {navigation.map((item, index) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="block border-b border-white/15 py-5 text-3xl font-medium leading-tight tracking-[-0.03em] text-white transition-colors hover:text-[#8FD3DD]"
+                    className="mobile-menu-item-arrive block border-b border-white/15 py-5 text-3xl font-medium leading-tight tracking-[-0.03em] text-white transition-colors hover:text-[#8FD3DD]"
+                    style={{ animationDelay: `${80 + index * 55}ms` }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -154,7 +155,7 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
                 ))}
               </div>
 
-              <div className="pt-10">
+              <div className="mobile-menu-item-arrive pt-10" style={{ animationDelay: "320ms" }}>
                 <Button asChild size="lg" className="w-full rounded-full bg-white font-bold text-[#005166] hover:bg-[#EAF4F6]">
                   <Link href="/consultation" onClick={() => setMobileMenuOpen(false)}>
                     Start a conversation

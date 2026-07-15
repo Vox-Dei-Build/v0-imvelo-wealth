@@ -13,7 +13,7 @@ export function ContactHero() {
           However you reach us, <span className="text-[#8FD3DD]">you will be heard.</span>
         </>
       }
-      description="Phone, email, WhatsApp, or a visit to our Sandton office—choose whichever feels most natural. We answer during office hours, Monday to Friday."
+      description="Phone, email, WhatsApp, or a Johannesburg meeting—choose whichever feels most natural. We answer during office hours, Monday to Friday."
     />
   )
 }

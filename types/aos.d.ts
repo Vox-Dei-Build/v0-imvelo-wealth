@@ -4,6 +4,7 @@ declare module "aos" {
     easing?: string
     once?: boolean
     offset?: number
+    disable?: boolean | "phone" | "tablet" | "mobile" | (() => boolean)
   }
 
   const AOS: {
