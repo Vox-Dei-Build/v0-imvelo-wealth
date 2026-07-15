@@ -5,9 +5,11 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { CookieConsent } from "@/components/cookie-consent"
+import { AOSProvider } from "@/components/aos-provider"
 import { JsonLd } from "@/components/seo-json-ld"
 import { absoluteUrl, organizationJsonLd, siteConfig, sitewideRobots, websiteJsonLd } from "@/lib/seo"
 import "./globals.css"
+import "aos/dist/aos.css"
 
 const jost = Jost({
   subsets: ["latin"],
@@ -80,6 +82,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${jost.variable} ${libreBaskerville.variable} ${GeistMono.variable} antialiased`}>
+        <AOSProvider />
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={websiteJsonLd()} />
         <Suspense fallback={null}>{children}</Suspense>

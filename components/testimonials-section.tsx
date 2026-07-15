@@ -3,7 +3,7 @@ import { ExternalLink, FileCheck2, Scale, TrendingUp, UsersRound } from "lucide-
 const trustItems = [
   {
     title: "Scale and experience",
-    detail: "R500M+ AUM, 500+ families served, and 30+ years of combined founder experience are now confirmed proof points.",
+    detail: "500+ clients served, 30+ years of combined founder experience, and FSP Licence Number 49944 are the proof points surfaced consistently.",
     icon: TrendingUp,
   },
   {
@@ -49,7 +49,7 @@ export function TestimonialsSection() {
               Trust should be visible before it is requested.
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/70">
-              The strongest proof points now combine client-confirmed scale with visible regulatory identity, compliance
+              The strongest proof points combine client-confirmed scale with visible regulatory identity, compliance
               material, and public financial education.
             </p>
           </div>

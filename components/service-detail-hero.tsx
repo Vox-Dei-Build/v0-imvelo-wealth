@@ -17,7 +17,7 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
   return (
     <section className="bg-gradient-to-b from-background to-muted/20 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl text-center" data-aos="fade-up">
           <div className="flex justify-center mb-6">
             <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-accent/10">
               <Icon className="h-8 w-8 text-accent" />
@@ -27,10 +27,10 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
           <p className="mt-4 text-xl text-accent font-medium">{service.subtitle}</p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">{service.description}</p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" asChild className="rounded-full">
+            <Button size="lg" asChild className="premium-action rounded-full">
               <Link href="/consultation">Start the WhatsApp flow</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild className="rounded-full">
+            <Button variant="outline" size="lg" asChild className="premium-action rounded-full">
               <Link href="/contact">Ask Questions</Link>
             </Button>
           </div>

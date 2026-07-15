@@ -48,7 +48,7 @@ export function Footer() {
       </h2>
       <div className="mx-auto max-w-[90rem] px-6 pb-8 pt-16 sm:px-8 sm:pt-24 lg:px-12 lg:pt-28">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-up">
             <div aria-label="Imvelo Wealth">
               <Image
                 src="/imvelo-logo-transparent.png"
@@ -79,7 +79,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-white/55">
                 <MapPin className="h-4 w-4 shrink-0" />
-                <span>Sandton, Johannesburg</span>
+                <span>Johannesburg, South Africa</span>
               </div>
             </div>
             <div className="flex items-center gap-4 pt-2">
@@ -93,8 +93,21 @@ export function Footer() {
                 <Linkedin className="h-4 w-4" />
               </a>
             </div>
+            <div className="flex max-w-sm items-center gap-5 border-t border-white/10 pt-6">
+              <Image
+                src="/compliance/masterhead-fais-compliant.png"
+                alt="Masterhead Verified — FAIS Compliant"
+                width={400}
+                height={400}
+                className="h-24 w-24 shrink-0 rounded-full object-contain"
+              />
+              <div>
+                <p className="text-sm font-bold text-white">FAIS compliant</p>
+                <p className="mt-1 text-xs leading-5 text-white/52">Masterhead verified · Licensed FSP 49944</p>
+              </div>
+            </div>
           </div>
-          <div className="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0">
+          <div className="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0" data-aos="fade-up" data-aos-delay="100">
             <div>
               <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
               <ul role="list" className="mt-6 space-y-4">

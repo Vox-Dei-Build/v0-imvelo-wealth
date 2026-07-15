@@ -28,7 +28,7 @@ export function ContactForm() {
   }
 
   return (
-    <section className="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_80px_rgba(0,81,102,0.13)] ring-1 ring-[#CFDFE2]">
+    <section className="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_80px_rgba(0,81,102,0.13)] ring-1 ring-[#CFDFE2]" data-aos="fade-right">
       <div className="h-1.5 bg-[#36859A]" aria-hidden="true" />
       <div className="p-7 sm:p-10 lg:p-12">
         <div className="flex items-center justify-between gap-5">

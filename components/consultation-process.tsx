@@ -3,7 +3,7 @@ import { ShieldCheck } from "lucide-react"
 
 export function ConsultationProcess() {
   return (
-    <aside className="lg:sticky lg:top-32">
+    <aside className="lg:sticky lg:top-32" data-aos="fade-left" data-aos-delay="120">
       <div className="relative min-h-[34rem] overflow-hidden rounded-[2rem] shadow-[0_24px_80px_rgba(0,81,102,0.16)] sm:min-h-[42rem]">
         <Image
           src="/imagery/consultation-team.jpg"

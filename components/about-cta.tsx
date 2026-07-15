@@ -7,7 +7,7 @@ export function AboutCTA() {
   return (
     <section className="bg-[#F7FAFB] py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-center" data-aos="fade-up">
           <p className="section-kicker text-[#307283]">Start where you are</p>
           <h2 className="mt-6 text-4xl font-medium leading-[1.1] tracking-[-0.035em] text-[#005166] sm:text-5xl">
             Your story is the right place to begin.

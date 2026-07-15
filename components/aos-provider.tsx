@@ -2,8 +2,11 @@
 
 import { useEffect } from "react"
 import AOS from "aos"
+import { usePathname } from "next/navigation"
 
 export function AOSProvider() {
+  const pathname = usePathname()
+
   useEffect(() => {
     // AOS mutates [data-aos] elements' classNames. Doing that while React is
     // still hydrating server HTML triggers hydration mismatches that can wedge
@@ -14,10 +17,11 @@ export function AOSProvider() {
     const init = () => {
       raf = requestAnimationFrame(() =>
         AOS.init({
-          duration: 750,
+          duration: 850,
           easing: "ease-out-cubic",
           once: true,
-          offset: 80,
+          offset: 64,
+          disable: () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
         }),
       )
     }
@@ -33,6 +37,13 @@ export function AOSProvider() {
       window.removeEventListener("load", init)
     }
   }, [])
+
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => {
+      if (document.body.hasAttribute("data-aos-easing")) AOS.refreshHard()
+    })
+    return () => cancelAnimationFrame(raf)
+  }, [pathname])
 
   return null
 }

@@ -4,16 +4,16 @@ import Image from "next/image"
 // text without photos. Designations sit after the name (e.g. "…, CFP®").
 const leadership = [
   {
-    name: "Palesa Tlholoe, CFP®",
-    role: "Co-founder · Director & Wealth Manager",
-    bio: "Palesa believes a financial plan should read like a family’s story — she leads with listening, then builds the structure around what she hears.",
-    image: "/team/palesa-tlholoe.jpeg",
-  },
-  {
     name: "Siba Njoba, CFP®",
     role: "Co-founder · Director & Wealth Manager",
     bio: "Siba walks clients through their biggest decisions with calm and clarity — from a first investment to a business changing hands.",
     image: "/team/siba-njoba-enhanced-v2.jpg",
+  },
+  {
+    name: "Palesa Tlholoe, CFP®",
+    role: "Co-founder · Director & Wealth Manager",
+    bio: "Palesa believes a financial plan should read like a family’s story — she leads with listening, then builds the structure around what she hears.",
+    image: "/team/palesa-tlholoe.jpeg",
   },
 ]
 
@@ -32,9 +32,14 @@ export function TeamSection() {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-6xl gap-8 md:grid-cols-2" data-aos="fade-up" data-aos-delay="120">
-          {leadership.map((person) => (
-            <article key={person.name} className="group overflow-hidden rounded-[1.75rem] bg-[#F7FAFB] shadow-[0_18px_55px_rgba(0,81,102,0.1)]">
+        <div className="mx-auto mt-16 grid max-w-6xl gap-8 md:grid-cols-2">
+          {leadership.map((person, index) => (
+            <article
+              key={person.name}
+              className="group overflow-hidden rounded-[1.75rem] bg-white shadow-[0_18px_55px_rgba(0,81,102,0.1)] transition-[transform,box-shadow] duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(0,81,102,0.14)]"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               <div className="relative aspect-[4/4.8] overflow-hidden bg-[#D4E2E5]">
                 <Image
                   src={person.image}

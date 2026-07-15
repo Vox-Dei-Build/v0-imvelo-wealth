@@ -24,7 +24,7 @@ export function FeeComparisonTable() {
   return (
     <section className="relative overflow-hidden bg-[#073844] py-24 text-white sm:py-32">
       <div className="absolute -right-32 top-12 h-[28rem] w-[28rem] rounded-full border border-white/8" aria-hidden="true" />
-      <div className="absolute -right-12 top-40 h-72 w-72 rounded-full border border-[#8FD3DD]/18" aria-hidden="true" />
+      <div className="soft-pulse absolute -right-12 top-40 h-72 w-72 rounded-full border border-[#8FD3DD]/18" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-[90rem] px-6 sm:px-8 lg:px-12">
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end lg:gap-20" data-aos="fade-up">

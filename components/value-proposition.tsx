@@ -38,8 +38,8 @@ export function ValueProposition() {
           <figure className="relative" data-aos="fade-up" data-aos-delay="120">
             <div className="relative aspect-[16/11] overflow-hidden rounded-[2rem] bg-[#B8D0D5] shadow-[0_24px_70px_rgba(0,81,102,0.18)]">
               <Image
-                src="/videos/hero-family-life-poster.jpg"
-                alt="A family enjoying time together outdoors"
+                src="/videos/hero-generations-poster.jpg"
+                alt="A family spending time together at sunset"
                 fill
                 sizes="(max-width: 1024px) 100vw, 760px"
                 className="object-cover"

@@ -26,7 +26,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Features */}
-        <div className="mx-auto max-w-2xl text-center mb-16">
+        <div className="mx-auto max-w-2xl text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">What's Included</h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
             A planning engagement should clarify the moving parts before specific recommendations are made.
@@ -34,10 +34,15 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
         </div>
 
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
-          {service.features.map((feature) => {
+          {service.features.map((feature, index) => {
             const Icon = feature.icon
             return (
-              <Card key={feature.title}>
+              <Card
+                key={feature.title}
+                className="transition-transform duration-500 hover:-translate-y-1 hover:shadow-lg"
+                data-aos="fade-up"
+                data-aos-delay={(index % 3) * 80}
+              >
                 <CardHeader>
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10">
@@ -56,7 +61,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
 
         {/* Process */}
         <div className="mt-24">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="mx-auto max-w-2xl text-center mb-16" data-aos="fade-up">
             <h2 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">Our Process</h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               The process keeps discovery, advice, implementation, and review connected.
@@ -66,7 +71,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
           <div className="mx-auto max-w-3xl">
             <div className="space-y-4">
               {service.process.map((step, index) => (
-                <div key={index} className="flex items-start gap-4">
+                <div key={index} className="flex items-start gap-4" data-aos="fade-up" data-aos-delay={index * 70}>
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-accent-foreground font-bold text-sm">
                     {index + 1}
                   </div>
@@ -79,7 +84,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
 
         {/* Engagement */}
         <div className="mt-24">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="mx-auto max-w-2xl text-center mb-16" data-aos="fade-up">
             <h2 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl">
               Engagement Scope
             </h2>
@@ -88,7 +93,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
             </p>
           </div>
 
-          <div className="mx-auto max-w-2xl">
+          <div className="mx-auto max-w-2xl" data-aos="fade-up" data-aos-delay="100">
             <Card>
               <CardContent className="p-8">
                 <div className="space-y-6">

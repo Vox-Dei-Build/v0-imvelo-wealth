@@ -121,7 +121,7 @@ export function ConsultationForm() {
   const current = stepCopy[step]
 
   return (
-    <section className="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_80px_rgba(0,81,102,0.13)] ring-1 ring-[#CFDFE2]">
+    <section className="overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_80px_rgba(0,81,102,0.13)] ring-1 ring-[#CFDFE2]" data-aos="fade-right">
       <div className="h-1.5 bg-[#D9E7EA]" aria-hidden="true">
         <div className="h-full bg-[#36859A] transition-all duration-500" style={{ width: `${progress}%` }} />
       </div>
@@ -135,13 +135,13 @@ export function ConsultationForm() {
           </div>
         </div>
 
-        <div className="mt-8 min-h-[8.5rem]">
+        <div key={`step-copy-${step}`} className="form-step-enter mt-8 min-h-[8.5rem]">
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#536A70]">{current.kicker}</p>
           <h2 className="mt-3 text-3xl font-medium leading-[1.15] tracking-[-0.035em] text-[#005166] sm:text-4xl">{current.title}</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#536A70]">{current.description}</p>
         </div>
 
-        <div className="mt-8 min-h-[18rem]">
+        <div key={`step-form-${step}`} className="form-step-enter mt-8 min-h-[18rem]">
           {step === 0 ? <ChoiceGrid options={topics} value={topic} onChange={setTopic} /> : null}
           {step === 1 ? <ChoiceGrid options={lifeStages} value={lifeStage} onChange={setLifeStage} /> : null}
           {step === 2 ? (

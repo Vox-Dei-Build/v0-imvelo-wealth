@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation"
+import Image from "next/image"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -16,6 +17,8 @@ interface Article {
   description: string
   readTime: string
   date: string
+  image: string
+  imageAlt: string
   body: React.ReactNode
 }
 
@@ -28,6 +31,8 @@ const articles: Article[] = [
       "From 1 September 2024, South Africa's two-pot retirement system fundamentally changed how you access your savings. Here is what it means for your RA, pension fund, and provident fund — and what you should do now.",
     readTime: "9 min read",
     date: "March 2025",
+    image: "/resources/two-pot-retirement.jpg",
+    imageAlt: "A retired couple reviewing a document together",
     body: (
       <div className="space-y-6">
         <p>
@@ -108,6 +113,8 @@ const articles: Article[] = [
       "South Africa's estate duty rate is 20% on dutiable estates up to R30 million, and 25% above that. Combined with capital gains tax on deemed disposals at death, an estate that looks straightforward can lose 30–40% of its value. Here is how to manage it.",
     readTime: "11 min read",
     date: "February 2025",
+    image: "/resources/estate-duty.jpg",
+    imageAlt: "A family standing together outside their home",
     body: (
       <div className="space-y-6">
         <p>
@@ -193,6 +200,8 @@ const articles: Article[] = [
       "Every South African adult has a R1 million single discretionary allowance and a R10 million foreign capital allowance (with tax clearance). Used strategically, these allowances can meaningfully diversify your wealth outside rand-denominated assets.",
     readTime: "8 min read",
     date: "January 2025",
+    image: "/resources/offshore-allowances.jpg",
+    imageAlt: "An aerial view of the Cape Town coastline",
     body: (
       <div className="space-y-6">
         <p>
@@ -259,6 +268,8 @@ const articles: Article[] = [
       "Regulation 28 of the Pension Funds Act limits how much your retirement savings can be invested in equities, offshore assets, and alternative investments. Here is a clear breakdown of the rules and how a fee-transparent adviser structures portfolios within — and alongside — Reg 28 constraints.",
     readTime: "7 min read",
     date: "December 2024",
+    image: "/resources/regulation-28.jpg",
+    imageAlt: "A team reviewing investment charts and financial data",
     body: (
       <div className="space-y-6">
         <p>
@@ -314,6 +325,8 @@ const articles: Article[] = [
       "A trust is not a tax shelter. SARS has closed most of the historical loopholes. But a well-structured inter vivos trust still serves critical purposes: protecting assets from personal liability, ring-fencing family wealth, and managing estate duty exposure.",
     readTime: "10 min read",
     date: "November 2024",
+    image: "/resources/trusts-south-africa.jpg",
+    imageAlt: "Four generations of a family spending time together",
     body: (
       <div className="space-y-6">
         <p>
@@ -384,6 +397,8 @@ const articles: Article[] = [
       "A savings account earning 4% nominal is losing real value at South Africa's current inflation rate. Money market funds, 32-day notice accounts, and flexible income unit trusts offer materially better returns with near-identical liquidity.",
     readTime: "6 min read",
     date: "October 2024",
+    image: "/resources/emergency-fund.jpg",
+    imageAlt: "A couple reviewing their household budget together",
     body: (
       <div className="space-y-6">
         <p>
@@ -475,53 +490,64 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       ) : null}
       <Navigation />
       <main>
-        {/* Article header */}
-        <section className="py-16 sm:py-20 border-b border-border/40 bg-muted/20">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8">
-            <div className="mb-6">
+        <section className="border-b border-[#C8DDE1] bg-[#EAF4F6] py-12 sm:py-16 lg:py-20">
+          <div className="mx-auto grid max-w-[90rem] items-center gap-12 px-6 sm:px-8 lg:grid-cols-[0.94fr_1.06fr] lg:gap-20 lg:px-12">
+            <div data-aos="fade-right">
               <Button variant="ghost" size="sm" asChild className="-ml-2 text-muted-foreground hover:text-foreground">
                 <Link href="/resources">
                   <ArrowLeft className="mr-2 h-4 w-4" />
-                  Back to Resources
+                  Back to resources
                 </Link>
               </Button>
-            </div>
-            <div className="flex items-center gap-4 mb-4">
-              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                {article.category}
-              </Badge>
-              <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <div className="flex items-center gap-1">
-                  <Calendar className="h-4 w-4" />
-                  {article.date}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="h-4 w-4" />
-                  {article.readTime}
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Badge variant="secondary" className="border-[#BCD5DA] bg-white/65 text-[#005166]">
+                  {article.category}
+                </Badge>
+                <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-[#536A70]">
+                  <span className="flex items-center gap-1.5">
+                    <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
+                    {article.date}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+                    {article.readTime}
+                  </span>
                 </div>
               </div>
+              <h1 className="mt-6 text-4xl font-medium leading-[1.08] tracking-[-0.04em] text-[#005166] sm:text-5xl">
+                {article.title}
+              </h1>
+              <p className="mt-6 text-base leading-8 text-[#536A70] sm:text-lg">{article.description}</p>
+              <p className="mt-6 border-t border-[#BCD5DA] pt-5 text-xs leading-6 text-[#536A70]">
+                This article is for educational purposes only and does not constitute personalised financial advice under
+                the FAIS Act. Consult a licensed financial services provider for advice specific to your circumstances.
+              </p>
             </div>
-            <h1 className="text-3xl font-medium tracking-[-0.03em] text-foreground sm:text-4xl text-balance">
-              {article.title}
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground text-pretty">{article.description}</p>
-            <p className="mt-4 text-xs text-muted-foreground">
-              This article is for educational purposes only and does not constitute personalised financial advice under
-              the FAIS Act. Consult a licensed financial services provider for advice specific to your circumstances.
-            </p>
+
+            <figure className="relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-[#C8DDE1] shadow-[0_24px_70px_rgba(0,81,102,0.15)] lg:aspect-[5/4]" data-aos="fade-left" data-aos-delay="120">
+              <Image
+                src={article.image}
+                alt={article.imageAlt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 53vw"
+                quality={90}
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-[#005166]/6" aria-hidden="true" />
+            </figure>
           </div>
         </section>
 
-        {/* Article body */}
-        <section className="py-12 sm:py-16">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8 text-sm leading-7 text-foreground/80">
+        <section className="bg-white py-16 sm:py-24">
+          <div className="mx-auto max-w-3xl px-6 text-base leading-8 text-[#3F575D] lg:px-8" data-aos="fade-up">
             {article.body}
           </div>
         </section>
 
         {/* Consultation CTA */}
         <section className="py-12 sm:py-16 border-t border-border/40 bg-muted/20">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
+          <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center" data-aos="fade-up">
             <h2 className="text-2xl font-medium tracking-[-0.025em] text-foreground mb-3">
               Want advice specific to your situation?
             </h2>

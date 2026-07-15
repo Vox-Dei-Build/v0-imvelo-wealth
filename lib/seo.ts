@@ -33,7 +33,7 @@ export const siteConfig = {
   email: "info@imvelowealth.co.za",
   phone: "+27 10 109 5097",
   address: {
-    street: "Sandton",
+    street: "Johannesburg",
     locality: "Johannesburg",
     region: "Johannesburg",
     postalCode: "",
@@ -83,7 +83,7 @@ export const pages: PageSeo[] = [
       "FSCA licensed financial advisers",
       "South African advisory practice",
       "CFP financial planner South Africa",
-      "Sandton financial advisers",
+      "Johannesburg financial advisers",
     ],
     imageTitle: "About Imvelo Wealth",
     imageKicker: "FSCA FSP 49944",
@@ -381,11 +381,11 @@ export const pages: PageSeo[] = [
     slug: "contact",
     title: "Contact Imvelo Wealth Solutions | Johannesburg Financial Advisers",
     description:
-      "Contact Imvelo Wealth Solutions in Sandton, Johannesburg by phone or email for financial planning, wealth management, and advisory enquiries.",
+      "Contact Imvelo Wealth Solutions in Johannesburg by phone, email, or WhatsApp for financial planning, wealth management, and advisory enquiries.",
     keywords: [
       "contact Imvelo Wealth Solutions",
       "Johannesburg financial adviser contact",
-      "Sandton wealth management",
+      "Johannesburg wealth management",
       "financial planning enquiry South Africa",
       "FSCA licensed adviser contact",
     ],
