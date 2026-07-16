@@ -52,9 +52,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: absoluteUrl("/og/home"),
+        url: absoluteUrl("/og.png"),
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "Imvelo Wealth Solutions social preview",
       },
     ],
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
     title: "Imvelo Wealth Solutions | Financial Planning & Wealth Management in South Africa",
     description:
       "FSCA-licensed financial advisers helping South African families and business owners plan, protect, invest, and transfer wealth with clear, planning-led advice.",
-    images: [absoluteUrl("/og/home")],
+    images: [absoluteUrl("/og.png")],
   },
   robots: sitewideRobots(),
   generator: "Next.js",
