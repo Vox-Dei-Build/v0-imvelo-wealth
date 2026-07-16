@@ -16,12 +16,12 @@ export function ConsultationProcess() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#032A33]/95 via-[#005166]/25 to-transparent" aria-hidden="true" />
 
         <div className="absolute inset-x-0 bottom-0 p-7 text-white sm:p-9">
-          <p className="section-kicker text-[#8FD3DD]">A real person replies</p>
+          <p className="section-kicker text-[#8FD3DD]">A real person confirms</p>
           <h2 className="mt-5 text-3xl font-medium leading-[1.12] tracking-[-0.035em] sm:text-4xl">
-            Context before conversation.
+            A request first. A confirmed time next.
           </h2>
           <p className="mt-4 max-w-md text-sm leading-7 text-white/72 sm:text-base">
-            Your introduction helps the right adviser prepare a useful first response.
+            Your answers help the right adviser prepare, then confirm an available appointment with you in WhatsApp.
           </p>
           <div className="mt-7 flex items-center gap-3 border-t border-white/20 pt-6 text-sm font-semibold text-white/78">
             <ShieldCheck className="h-5 w-5 text-[#8FD3DD]" aria-hidden="true" />

@@ -20,8 +20,7 @@ export type PageSeo = {
 }
 
 const siteUrl = normalizeUrl(
-  process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://imvelowealth.co.za"),
+  process.env.NEXT_PUBLIC_SITE_URL || "https://imvelo-wealth.vercel.app",
 )
 
 export const siteConfig = {
@@ -514,7 +513,7 @@ export function metadataForPath(path: string): Metadata {
   const page = pagesByPath.get(path)
   if (!page) return {}
 
-  const imageUrl = absoluteUrl(`/og/${page.slug}`)
+  const imageUrl = absoluteUrl("/og.png")
   const url = absoluteUrl(page.path)
   const type = page.type || "website"
 
@@ -545,6 +544,7 @@ export function metadataForPath(path: string): Metadata {
           url: imageUrl,
           width: 1200,
           height: 630,
+          type: "image/png",
           alt: `${page.imageTitle || page.title} social preview`,
         },
       ],

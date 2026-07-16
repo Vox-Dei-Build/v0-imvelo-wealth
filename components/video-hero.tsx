@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import Image from "next/image"
+import { HeroFilm } from "@/components/hero-film"
 
 interface VideoHeroProps {
   videoSrc: string
@@ -41,30 +41,7 @@ export function VideoHero({
 
   return (
     <section className={`relative isolate flex flex-col justify-end overflow-hidden bg-[#064654] ${heightClassName}`}>
-      <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-        <Image
-          src={poster}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: mediaPosition }}
-        />
-        <video
-          className="hero-film absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
-          style={{ objectPosition: mediaPosition }}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={poster}
-          tabIndex={-1}
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      </div>
+      <HeroFilm videoSrc={videoSrc} poster={poster} mediaPosition={mediaPosition} />
 
       <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(2,30,38,0.58)_0%,rgba(2,30,38,0.16)_32%,rgba(2,30,38,0.58)_73%,rgba(2,30,38,0.88)_100%)]" aria-hidden="true" />
       <div className="absolute inset-0 z-10 bg-[#136578]/20 mix-blend-multiply" aria-hidden="true" />

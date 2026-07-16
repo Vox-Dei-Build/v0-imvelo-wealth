@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { ArrowLeft, ArrowRight, Check, LockKeyhole } from "lucide-react"
+import { ArrowLeft, ArrowRight, CalendarDays, Check, LockKeyhole } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -27,7 +27,7 @@ const lifeStages = [
   "Business owner or employer",
 ]
 
-const timeWindows = ["Weekday mornings", "Weekday afternoons", "Any time during office hours"]
+const timeWindows = ["Morning · 09:00–12:00", "Afternoon · 12:00–17:00", "No time preference"]
 
 const stepCopy = [
   {
@@ -47,8 +47,8 @@ const stepCopy = [
   },
   {
     kicker: "Ready when you are",
-    title: "When should we pick up the conversation?",
-    description: "Your answers will be placed into WhatsApp. You can review the message before choosing to send it.",
+    title: "When would suit you best?",
+    description: "Choose a preferred date and time window. The team will confirm the appointment with you on WhatsApp.",
   },
 ]
 
@@ -101,6 +101,13 @@ export function ConsultationForm() {
   const [name, setName] = useState("")
   const [note, setNote] = useState("")
   const [timeWindow, setTimeWindow] = useState("")
+  const [preferredDate, setPreferredDate] = useState("")
+
+  const minimumDate = useMemo(() => {
+    const today = new Date()
+    const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60_000)
+    return localDate.toISOString().split("T")[0]
+  }, [])
 
   const message = useMemo(
     () =>
@@ -109,11 +116,13 @@ export function ConsultationForm() {
         `I would like help with: ${topic}.`,
         `Where I am in life: ${lifeStage}.`,
         note.trim() ? `What is on my mind: ${note.trim()}` : null,
-        `Best time to continue: ${timeWindow}.`,
+        `Preferred consultation date: ${preferredDate || "Any suitable weekday"}.`,
+        `Preferred time: ${timeWindow}.`,
+        "Please let me know what appointment time is available.",
       ]
         .filter(Boolean)
         .join("\n"),
-    [lifeStage, name, note, timeWindow, topic],
+    [lifeStage, name, note, preferredDate, timeWindow, topic],
   )
 
   const canContinue = [Boolean(topic), Boolean(lifeStage), Boolean(name.trim()), Boolean(timeWindow)][step]
@@ -172,11 +181,27 @@ export function ConsultationForm() {
           ) : null}
           {step === 3 ? (
             <div className="space-y-7">
+              <div className="space-y-3">
+                <Label htmlFor="consultation-date" className="text-sm font-bold text-[#005166]">
+                  Preferred date <span className="font-medium text-[#536A70]">(optional)</span>
+                </Label>
+                <Input
+                  id="consultation-date"
+                  type="date"
+                  min={minimumDate}
+                  value={preferredDate}
+                  onChange={(event) => setPreferredDate(event.target.value)}
+                  className="h-14 rounded-xl border-[#C8DDE1] bg-[#F7FAFB] px-4 text-base"
+                />
+              </div>
               <ChoiceGrid options={timeWindows} value={timeWindow} onChange={setTimeWindow} />
               {timeWindow ? (
-                <div className="rounded-2xl bg-[#EAF4F6] p-5 text-sm leading-7 text-[#455E65]">
-                  <span className="font-bold text-[#005166]">Your introduction is ready.</span> WhatsApp will open with
-                  it filled in. Nothing is sent until you choose to send it there.
+                <div className="flex gap-4 rounded-2xl bg-[#EAF4F6] p-5 text-sm leading-7 text-[#455E65]">
+                  <CalendarDays className="mt-1 h-5 w-5 shrink-0 text-[#307283]" aria-hidden="true" />
+                  <p>
+                    <span className="font-bold text-[#005166]">Your appointment request is ready.</span> WhatsApp will
+                    open with it filled in. The time is only confirmed once the team replies.
+                  </p>
                 </div>
               ) : null}
             </div>
@@ -209,17 +234,17 @@ export function ConsultationForm() {
             <Button
               asChild={canContinue}
               disabled={!canContinue}
-              className="h-12 rounded-full bg-[#25D366] px-7 font-bold text-[#073844] hover:bg-[#20bd5b]"
+              className="h-12 w-full rounded-full bg-[#25D366] px-7 font-bold text-[#073844] hover:bg-[#20bd5b] sm:w-auto"
             >
               {canContinue ? (
                 <a href={waLink(message)} target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="mr-2 h-5 w-5" />
-                  Continue in WhatsApp
+                  Request on WhatsApp
                 </a>
               ) : (
                 <span>
                   <WhatsAppIcon className="mr-2 h-5 w-5" />
-                  Continue in WhatsApp
+                  Request on WhatsApp
                 </span>
               )}
             </Button>

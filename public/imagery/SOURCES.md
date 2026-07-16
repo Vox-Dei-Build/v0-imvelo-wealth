@@ -1,5 +1,12 @@
 # Photography sources
 
+## Generated social preview
+
+- `public/og.png` — generated for Imvelo Wealth on 2026-07-17 using the official logo and
+  `public/videos/hero-family-life-poster.jpg` as source references. Used as the static Open Graph and WhatsApp preview image.
+
+## Licensed photography
+
 The following images were downloaded from Unsplash and are used under the Unsplash licence.
 
 - `consultation-team.jpg` — Christina @ wocintechchat.com, Unsplash image `photo-1573164574397-dd250bc8a598`
