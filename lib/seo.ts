@@ -48,6 +48,37 @@ export const siteConfig = {
   ],
 }
 
+const socialAssetBaseUrl =
+  process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL
+    ? normalizeUrl(
+        process.env.VERCEL_URL.startsWith("http")
+          ? process.env.VERCEL_URL
+          : `https://${process.env.VERCEL_URL}`,
+      )
+    : siteConfig.url
+
+export const socialPreviewUrl = `${socialAssetBaseUrl}/og-imvelo-v3.jpg`
+export const squareSocialPreviewUrl = `${socialAssetBaseUrl}/og-imvelo-square-v3.jpg`
+
+export function socialPreviewImages(alt: string) {
+  return [
+    {
+      url: socialPreviewUrl,
+      width: 1200,
+      height: 630,
+      type: "image/jpeg",
+      alt,
+    },
+    {
+      url: squareSocialPreviewUrl,
+      width: 1200,
+      height: 1200,
+      type: "image/jpeg",
+      alt,
+    },
+  ]
+}
+
 const commonModifiedTime = "2026-05-27T00:00:00+02:00"
 
 export const pages: PageSeo[] = [
@@ -513,7 +544,6 @@ export function metadataForPath(path: string): Metadata {
   const page = pagesByPath.get(path)
   if (!page) return {}
 
-  const imageUrl = absoluteUrl("/og.png")
   const url = absoluteUrl(page.path)
   const type = page.type || "website"
 
@@ -539,15 +569,7 @@ export function metadataForPath(path: string): Metadata {
             authors: [siteConfig.name],
           }
         : {}),
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          type: "image/png",
-          alt: `${page.imageTitle || page.title} social preview`,
-        },
-      ],
+      images: socialPreviewImages(`${page.imageTitle || page.title} social preview`),
     },
     twitter: {
       card: "summary_large_image",
@@ -555,7 +577,7 @@ export function metadataForPath(path: string): Metadata {
       creator: siteConfig.twitterHandle,
       title: page.title,
       description: page.description,
-      images: [imageUrl],
+      images: [socialPreviewUrl],
     },
     robots: sitewideRobots(page.index !== false),
   }

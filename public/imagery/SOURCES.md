@@ -2,8 +2,10 @@
 
 ## Generated social preview
 
-- `public/og.png` — generated for Imvelo Wealth on 2026-07-17 using the official logo and
-  `public/videos/hero-family-life-poster.jpg` as source references. Used as the static Open Graph and WhatsApp preview image.
+- `public/og-imvelo-v3.jpg` and `public/og-imvelo-square-v3.jpg` — generated for Imvelo Wealth on
+  2026-07-17 using the official logo and the approved portraits of Siba Njoba and Palesa Tlholoe.
+  The lightweight, versioned files are used for wide and square social previews respectively.
+- `public/og.png` — superseded social preview retained temporarily for cache compatibility.
 
 ## Licensed photography
 
