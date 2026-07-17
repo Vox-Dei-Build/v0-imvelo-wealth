@@ -2,7 +2,7 @@
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/vox-dei-projects/v0-imvelo-wealth-marketing-site)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/vox-dei-projects/imvelo)
 [![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/vr6iQrxxLvk)
 
 ## Overview
@@ -14,7 +14,9 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 Your project is live at:
 
-**[https://vercel.com/vox-dei-projects/v0-imvelo-wealth-marketing-site](https://vercel.com/vox-dei-projects/v0-imvelo-wealth-marketing-site)**
+**[https://imvelo-wealth.vercel.app](https://imvelo-wealth.vercel.app)**
+
+Vercel project dashboard: [vox-dei-projects/imvelo](https://vercel.com/vox-dei-projects/imvelo)
 
 ## Build your app
 
