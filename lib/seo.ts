@@ -48,8 +48,17 @@ export const siteConfig = {
   ],
 }
 
-export const socialPreviewUrl = absoluteUrl("/og-imvelo-v3.jpg")
-export const squareSocialPreviewUrl = absoluteUrl("/og-imvelo-square-v3.jpg")
+const socialAssetBaseUrl =
+  process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL
+    ? normalizeUrl(
+        process.env.VERCEL_URL.startsWith("http")
+          ? process.env.VERCEL_URL
+          : `https://${process.env.VERCEL_URL}`,
+      )
+    : siteConfig.url
+
+export const socialPreviewUrl = `${socialAssetBaseUrl}/og-imvelo-v3.jpg`
+export const squareSocialPreviewUrl = `${socialAssetBaseUrl}/og-imvelo-square-v3.jpg`
 
 export function socialPreviewImages(alt: string) {
   return [
