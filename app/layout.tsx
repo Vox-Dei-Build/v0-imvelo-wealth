@@ -7,7 +7,14 @@ import { Suspense } from "react"
 import { CookieConsent } from "@/components/cookie-consent"
 import { AOSProvider } from "@/components/aos-provider"
 import { JsonLd } from "@/components/seo-json-ld"
-import { absoluteUrl, organizationJsonLd, siteConfig, sitewideRobots, websiteJsonLd } from "@/lib/seo"
+import {
+  organizationJsonLd,
+  siteConfig,
+  sitewideRobots,
+  socialPreviewImages,
+  socialPreviewUrl,
+  websiteJsonLd,
+} from "@/lib/seo"
 import "./globals.css"
 import "aos/dist/aos.css"
 
@@ -50,15 +57,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: siteConfig.locale,
     type: "website",
-    images: [
-      {
-        url: absoluteUrl("/og.png"),
-        width: 1200,
-        height: 630,
-        type: "image/png",
-        alt: "Imvelo Wealth Solutions social preview",
-      },
-    ],
+    images: socialPreviewImages("Imvelo Wealth Solutions social preview"),
   },
   twitter: {
     card: "summary_large_image",
@@ -67,7 +66,7 @@ export const metadata: Metadata = {
     title: "Imvelo Wealth Solutions | Financial Planning & Wealth Management in South Africa",
     description:
       "FSCA-licensed financial advisers helping South African families and business owners plan, protect, invest, and transfer wealth with clear, planning-led advice.",
-    images: [absoluteUrl("/og.png")],
+    images: [socialPreviewUrl],
   },
   robots: sitewideRobots(),
   generator: "Next.js",

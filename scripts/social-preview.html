@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        background: #00495c;
+        color: #ffffff;
+        font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 58% 42%;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 7% 92%, rgba(143, 211, 221, 0.18), transparent 29%),
+          linear-gradient(135deg, #003d4e 0%, #00566b 72%, #0b6f82 100%);
+      }
+
+      .content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px 54px 46px 60px;
+      }
+
+      .content::after {
+        position: absolute;
+        right: -1px;
+        top: 52px;
+        bottom: 52px;
+        width: 1px;
+        content: "";
+        background: rgba(255, 255, 255, 0.22);
+      }
+
+      .logo {
+        width: 245px;
+        height: auto;
+        filter: grayscale(1) brightness(0) invert(1);
+      }
+
+      .eyebrow {
+        margin: 0 0 17px;
+        color: #9bdae3;
+        font-size: 15px;
+        font-weight: 750;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 590px;
+        margin: 0;
+        font-size: 54px;
+        font-weight: 570;
+        letter-spacing: -0.047em;
+        line-height: 1.02;
+      }
+
+      .description {
+        max-width: 540px;
+        margin: 20px 0 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 20px;
+        font-weight: 450;
+        line-height: 1.38;
+      }
+
+      .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+        padding-right: 8px;
+      }
+
+      .fsp {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border: 1px solid rgba(155, 218, 227, 0.72);
+        border-radius: 999px;
+        color: #b5e5ec;
+        font-size: 14px;
+        font-weight: 720;
+        letter-spacing: 0.06em;
+      }
+
+      .fsp::before {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        content: "";
+        background: #9bdae3;
+      }
+
+      .location {
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 14px;
+        font-weight: 550;
+      }
+
+      .portraits {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
+        padding: 24px 24px 24px 0;
+      }
+
+      .portrait {
+        position: relative;
+        min-width: 0;
+        overflow: hidden;
+        background: #dfe8e9;
+      }
+
+      .portrait:first-child {
+        border-radius: 28px 0 0 28px;
+      }
+
+      .portrait:last-child {
+        border-radius: 0 28px 28px 0;
+      }
+
+      .portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.84) contrast(1.02);
+      }
+
+      .portrait.siba img {
+        object-position: 51% center;
+      }
+
+      .portrait.palesa img {
+        object-position: 49% center;
+      }
+
+      .portrait::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: linear-gradient(180deg, transparent 52%, rgba(0, 37, 47, 0.86) 100%);
+      }
+
+      .person {
+        position: absolute;
+        z-index: 2;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+      }
+
+      .person strong {
+        display: block;
+        font-size: 17px;
+        font-weight: 720;
+        letter-spacing: -0.015em;
+      }
+
+      .person span {
+        display: block;
+        margin-top: 4px;
+        color: #a8dfe7;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      @media (min-height: 900px) {
+        .card {
+          grid-template-columns: 1fr;
+          grid-template-rows: 54% 46%;
+        }
+
+        .content {
+          padding: 74px 76px 54px;
+        }
+
+        .content::after {
+          right: 76px;
+          bottom: -1px;
+          left: 76px;
+          top: auto;
+          width: auto;
+          height: 1px;
+        }
+
+        .logo {
+          width: 310px;
+        }
+
+        .eyebrow {
+          margin-bottom: 22px;
+          font-size: 20px;
+        }
+
+        h1 {
+          max-width: 930px;
+          font-size: 76px;
+        }
+
+        .description {
+          max-width: 840px;
+          margin-top: 24px;
+          font-size: 27px;
+        }
+
+        .fsp,
+        .location {
+          font-size: 18px;
+        }
+
+        .portraits {
+          gap: 4px;
+          padding: 0 76px 70px;
+        }
+
+        .portrait:first-child {
+          border-radius: 28px 0 0 28px;
+        }
+
+        .portrait:last-child {
+          border-radius: 0 28px 28px 0;
+        }
+
+        .portrait.siba img,
+        .portrait.palesa img {
+          object-position: center 31%;
+        }
+
+        .person {
+          right: 30px;
+          bottom: 26px;
+          left: 30px;
+        }
+
+        .person strong {
+          font-size: 24px;
+        }
+
+        .person span {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <section class="content">
+        <img class="logo" src="../public/imvelo-logo-transparent.png" alt="Imvelo Wealth" />
+
+        <div>
+          <p class="eyebrow">Independent financial advice</p>
+          <h1>Personal advice.<br />Purposeful planning.</h1>
+          <p class="description">Helping South Africans plan, protect and grow what matters.</p>
+        </div>
+
+        <div class="footer-row">
+          <div class="fsp">FSCA FSP 49944</div>
+          <div class="location">Johannesburg · South Africa</div>
+        </div>
+      </section>
+
+      <section class="portraits" aria-label="Imvelo Wealth founders">
+        <article class="portrait siba">
+          <img src="../public/team/siba-njoba-enhanced-v2.jpg" alt="Siba Njoba" />
+          <div class="person">
+            <strong>Siba Njoba, CFP®</strong>
+            <span>Co-founder</span>
+          </div>
+        </article>
+        <article class="portrait palesa">
+          <img src="../public/team/palesa-tlholoe.jpeg" alt="Palesa Tlholoe" />
+          <div class="person">
+            <strong>Palesa Tlholoe, CFP®</strong>
+            <span>Co-founder</span>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
