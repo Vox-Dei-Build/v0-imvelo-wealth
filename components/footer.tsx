@@ -77,9 +77,15 @@ export function Footer() {
                 <Phone className="h-4 w-4 shrink-0" />
                 <a href="tel:+27101095097" className="transition-colors hover:text-white">010 109 5097</a>
               </div>
-              <div className="flex items-center gap-2 text-sm text-white/55">
-                <MapPin className="h-4 w-4 shrink-0" />
-                <span>Johannesburg, South Africa</span>
+              <div className="flex items-start gap-2 text-sm text-white/55">
+                <MapPin className="mt-1 h-4 w-4 shrink-0" />
+                <span className="leading-6">
+                  Aluwani House, EPPF Office Park
+                  <br />
+                  24 Georgian Crescent East
+                  <br />
+                  Bryanston East, Johannesburg, 2152
+                </span>
               </div>
             </div>
             <div className="flex items-center gap-4 pt-2">

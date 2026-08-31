@@ -95,7 +95,7 @@ export function AboutStory() {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-[#C8DDE1] pt-6 text-sm text-[#536A70] sm:flex-row sm:items-center sm:justify-between">
-          <span>Johannesburg, South Africa</span>
+          <span>Bryanston East, Johannesburg</span>
           <span>Company registration 2018/195882/07 · FSP 49944</span>
         </div>
       </div>

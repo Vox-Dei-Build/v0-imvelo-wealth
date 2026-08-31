@@ -47,7 +47,7 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
         <div className={`hidden border-b px-6 py-2 text-[0.65rem] font-bold uppercase tracking-[0.18em] sm:block ${transparent ? "border-white/10 text-white/68" : "border-border/50 text-muted-foreground"}`}>
           <div className="mx-auto flex max-w-[90rem] items-center justify-between">
             <span>Independent financial advice · Founded in 2018</span>
-            <span>Johannesburg, South Africa</span>
+            <span>Bryanston East, Johannesburg</span>
           </div>
         </div>
         <nav className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-3 sm:px-8 lg:px-12" aria-label="Global">
