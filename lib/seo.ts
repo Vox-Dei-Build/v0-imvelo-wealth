@@ -20,7 +20,7 @@ export type PageSeo = {
 }
 
 const siteUrl = normalizeUrl(
-  process.env.NEXT_PUBLIC_SITE_URL || "https://imvelo-wealth.vercel.app",
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.imvelowealth.co.za",
 )
 
 export const siteConfig = {
@@ -32,10 +32,10 @@ export const siteConfig = {
   email: "info@imvelowealth.co.za",
   phone: "+27 10 109 5097",
   address: {
-    street: "Johannesburg",
+    street: "Aluwani House, EPPF Office Park, 24 Georgian Crescent East, Bryanston East",
     locality: "Johannesburg",
-    region: "Johannesburg",
-    postalCode: "",
+    region: "Gauteng",
+    postalCode: "2152",
     country: "ZA",
   },
   defaultKeywords: [
@@ -79,7 +79,7 @@ export function socialPreviewImages(alt: string) {
   ]
 }
 
-const commonModifiedTime = "2026-05-27T00:00:00+02:00"
+const commonModifiedTime = "2026-08-31T00:00:00+02:00"
 
 export const pages: PageSeo[] = [
   {

@@ -30,7 +30,7 @@ export default function PrivacyPage() {
                   Imvelo Wealth Solutions (Pty) Ltd ("<strong>Imvelo Wealth</strong>", "<strong>we</strong>", "<strong>us</strong>", or
                   "<strong>our</strong>") is a South African Financial Services Provider licensed and regulated by the Financial
                   Sector Conduct Authority (FSCA) under the Financial Advisory and Intermediary Services Act, 37 of 2002 (FAIS Act).
-                  Imvelo Wealth Solutions is based in Johannesburg, South Africa.
+                  Imvelo Wealth Solutions is based in Bryanston East, Johannesburg, South Africa.
                 </p>
                 <p className="mt-3">
                   We process personal information as a responsible party in terms of the Protection of Personal Information Act,
@@ -43,7 +43,8 @@ export default function PrivacyPage() {
                   <br />
                   <strong>Email:</strong> admin@imvelowealth.co.za
                   <br />
-                  <strong>Postal address:</strong> Information Officer, Imvelo Wealth Solutions, Johannesburg, South Africa
+                  <strong>Postal address:</strong> Information Officer, Imvelo Wealth Solutions, Aluwani House, EPPF Office Park,
+                  24 Georgian Crescent East, Bryanston East, Johannesburg, 2152, South Africa
                 </p>
               </div>
 
@@ -254,7 +255,7 @@ export default function PrivacyPage() {
                 <ul className="list-none mt-3 space-y-1">
                   <li><strong>Email:</strong> admin@imvelowealth.co.za</li>
                   <li><strong>General enquiries:</strong> info@imvelowealth.co.za / admin@imvelowealth.co.za</li>
-                  <li><strong>Location:</strong> Johannesburg, South Africa</li>
+                  <li><strong>Location:</strong> Aluwani House, EPPF Office Park, 24 Georgian Crescent East, Bryanston East, Johannesburg, 2152, South Africa</li>
                 </ul>
               </div>
 

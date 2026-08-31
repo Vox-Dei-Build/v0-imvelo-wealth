@@ -23,7 +23,7 @@ export function ContactInfo() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#032A33]/85 via-transparent to-transparent" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 p-7 text-white">
-          <p className="section-kicker text-[#8FD3DD]">Johannesburg, South Africa</p>
+          <p className="section-kicker text-[#8FD3DD]">Bryanston East, Johannesburg</p>
           <p className="mt-3 text-xl font-medium tracking-[-0.02em]">A real person is on the other side.</p>
         </div>
       </div>
@@ -33,7 +33,13 @@ export function ContactInfo() {
           <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#8FD3DD]" aria-hidden="true" />
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/45">Office</p>
-            <p className="mt-2 text-sm font-semibold">Johannesburg, South Africa</p>
+            <p className="mt-2 text-sm font-semibold leading-6">
+              Aluwani House, EPPF Office Park
+              <br />
+              24 Georgian Crescent East
+              <br />
+              Bryanston East, Johannesburg, 2152
+            </p>
           </div>
         </div>
 

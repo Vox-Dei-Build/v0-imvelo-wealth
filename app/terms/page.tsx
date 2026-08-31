@@ -214,7 +214,7 @@ export default function TermsPage() {
                 <p>For questions about these Terms, contact us at:</p>
                 <ul className="list-none mt-3 space-y-1">
                   <li><strong>Email:</strong> info@imvelowealth.co.za / admin@imvelowealth.co.za</li>
-                  <li><strong>Address:</strong> Johannesburg, South Africa</li>
+                  <li><strong>Address:</strong> Aluwani House, EPPF Office Park, 24 Georgian Crescent East, Bryanston East, Johannesburg, 2152, South Africa</li>
                 </ul>
               </div>
 
