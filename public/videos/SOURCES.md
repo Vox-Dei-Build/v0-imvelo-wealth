@@ -27,4 +27,4 @@ The two Wavebreak Media scenes are free Magnific stock with linked attribution r
 
 People are illustrative stock subjects, not identified as Imvelo clients or endorsers. People-footage filming locations are unconfirmed. Sandton and the closing coast listings identify South African settings; the balloon listing identifies Cappadocia, Turkey. Safari, wildlife and sailing locations are unconfirmed. No investment outcome is promised.
 
-The former homepage video, `hero-family-life.mp4`, is retained as a click-to-play, silent family moment in About → Who we walk with. Its existing Pexels attribution above remains applicable. The rejected home-couple source (Magnific 1923597) is not included in the new hero.
+The former homepage video, `hero-family-life.mp4`, is now the silent, looping header background on Resources, with the shared hero's pause/play control and reduced-motion support. About → Who we walk with retains its original static image. The dancing film's existing Pexels attribution above remains applicable. The rejected home-couple source (Magnific 1923597) is not included in the new homepage hero.
