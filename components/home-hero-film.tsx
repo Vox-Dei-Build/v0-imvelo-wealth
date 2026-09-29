@@ -72,7 +72,7 @@ export function HomeHeroFilm() {
         fill
         priority
         sizes="100vw"
-        className="object-contain"
+        className="object-cover object-[center_42%] xl:object-contain xl:object-center"
       />
       <video
         ref={videoRef}
@@ -84,7 +84,7 @@ export function HomeHeroFilm() {
         playsInline
         preload="none"
         poster="/videos/hero-travel-freedom-poster.jpg"
-        className={`absolute inset-0 h-full w-full object-contain ${hasFrame ? "opacity-100" : "opacity-0"}`}
+        className={`absolute inset-0 h-full w-full object-cover object-[center_42%] xl:object-contain xl:object-center ${hasFrame ? "opacity-100" : "opacity-0"}`}
         onLoadedData={() => setHasFrame(true)}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
@@ -100,10 +100,10 @@ export function HomeHeroFilm() {
             videoRef.current?.pause()
           } else play()
         }}
-        className="absolute bottom-3 right-3 z-30 inline-flex min-h-11 items-center gap-2 rounded-full border border-white/40 bg-[#032A33]/90 px-4 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#032A33] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white xl:bottom-10 xl:right-12"
+        className="absolute right-6 top-28 z-30 inline-flex h-11 w-11 items-center justify-center gap-2 rounded-full border border-white/30 bg-[#032A33]/45 text-xs font-semibold text-white backdrop-blur-md transition-colors hover:bg-[#032A33]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:right-8 sm:top-32 lg:right-12 xl:bottom-10 xl:top-auto xl:w-auto xl:border-white/40 xl:bg-[#032A33]/90 xl:px-4 xl:shadow-sm xl:hover:bg-[#032A33]"
       >
         {playing ? <Pause className="h-4 w-4" aria-hidden="true" /> : <Play className="h-4 w-4" aria-hidden="true" />}
-        {playing ? "Pause video" : "Play video"}
+        <span className="hidden xl:inline">{playing ? "Pause video" : "Play video"}</span>
       </button>
     </>
   )
