@@ -68,16 +68,23 @@ export function AboutStory() {
 
         <div className="relative mt-8 overflow-hidden rounded-[2rem] bg-[#005166]" data-aos="fade-up">
           <div className="grid lg:grid-cols-[1.08fr_0.92fr]">
-            <div className="relative min-h-[28rem] lg:min-h-[34rem]">
-              <Image
-                src="/videos/hero-generations-poster.jpg"
-                alt="A family spending time together at sunset"
-                fill
-                sizes="(max-width: 1024px) 100vw, 54vw"
-                className="object-cover"
+            <figure className="flex flex-col justify-center bg-[#032A33]">
+              <video
+                src="/videos/hero-family-life.mp4"
+                poster="/videos/hero-family-life-poster.jpg"
+                controls
+                playsInline
+                muted
+                preload="none"
+                width={1280}
+                height={720}
+                aria-label="A silent film of a family dancing together outdoors"
+                className="aspect-video w-full object-contain"
               />
-              <div className="absolute inset-0 bg-[#005166]/10" aria-hidden="true" />
-            </div>
+              <figcaption className="px-6 py-5 text-center text-sm text-white/80">
+                Time together, across generations.
+              </figcaption>
+            </figure>
             <div className="flex flex-col justify-center p-8 text-white sm:p-12 lg:p-14">
               <p className="section-kicker text-[#8FD3DD]">Who we walk with</p>
               <h3 className="mt-6 text-3xl font-medium leading-tight tracking-[-0.03em] sm:text-4xl">

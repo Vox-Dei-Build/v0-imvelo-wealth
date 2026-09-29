@@ -187,6 +187,17 @@ export function Footer() {
               </ul>
             </div>
           </div>
+          <p className="mt-5 text-xs leading-6 text-white/70 xl:col-span-3">
+            Homepage film: {" "}
+            <a className="underline underline-offset-4 hover:text-white" href="https://www.magnific.com/free-video/african-american-senior-couple-wearing-hand-gloves-gardening-together-garden_3140943">
+              Gardening footage by Wavebreak Media
+            </a>
+            {" · "}
+            <a className="underline underline-offset-4 hover:text-white" href="https://www.magnific.com/free-video/multi-generation-african-american-family-spending-time-garden-together_1912474">
+              Family footage by Wavebreak Media
+            </a>
+            {" (Magnific)."}
+          </p>
         </div>
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
