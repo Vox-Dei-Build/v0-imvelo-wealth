@@ -3,10 +3,9 @@ import { VideoHero } from "@/components/video-hero"
 export function ResourcesHero() {
   return (
     <VideoHero
-      videoSrc="/videos/hero-family-life.mp4"
-      poster="/videos/hero-family-life-poster.jpg"
+      videoSrc="/videos/hero-sunlight-leaves.mp4"
+      poster="/videos/hero-sunlight-leaves-poster.jpg"
       heightClassName="min-h-[70svh]"
-      mediaPosition="center 42%"
       eyebrow="Financial education, without the jargon"
       title={
         <>

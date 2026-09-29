@@ -3,8 +3,8 @@ import { VideoHero } from "@/components/video-hero"
 export function AboutHero() {
   return (
     <VideoHero
-      videoSrc="/videos/hero-sunlight-leaves.mp4"
-      poster="/videos/hero-sunlight-leaves-poster.jpg"
+      videoSrc="/videos/hero-family-life.mp4"
+      poster="/videos/hero-family-life-poster.jpg"
       heightClassName="min-h-[82svh]"
       mediaPosition="center 42%"
       eyebrow="The story behind Imvelo Wealth"
