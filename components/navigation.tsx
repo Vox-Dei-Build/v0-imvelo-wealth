@@ -44,8 +44,8 @@ export function Navigation({ variant = "solid" }: NavigationProps) {
   return (
     <>
       <header className={`${headerClass} navigation-arrive`}>
-        <div className={`hidden border-b px-6 py-2 text-[0.65rem] font-bold uppercase tracking-[0.18em] sm:block ${transparent ? "border-white/10 text-white/68" : "border-border/50 text-muted-foreground"}`}>
-          <div className="mx-auto flex max-w-[90rem] items-center justify-between">
+        <div className={`hidden border-b py-2 text-[0.65rem] font-bold uppercase tracking-[0.18em] sm:block ${transparent ? "border-white/10 text-white/68" : "border-border/50 text-muted-foreground"}`}>
+          <div className="mx-auto flex max-w-[90rem] items-center justify-between px-6 sm:px-8 lg:px-12">
             <span>Independent financial advice · Founded in 2018</span>
             <span>Bryanston East, Johannesburg</span>
           </div>
