@@ -19,8 +19,8 @@ export function HomeHeroFilm() {
     video.muted = true
     if (!video.getAttribute("src")) {
       video.src = window.matchMedia("(max-width: 767px)").matches
-        ? "/videos/hero-travel-freedom-720p.mp4"
-        : "/videos/hero-travel-freedom-1080p.mp4"
+        ? "/videos/hero-travel-freedom-no-safari-720p.mp4"
+        : "/videos/hero-travel-freedom-no-safari-1080p.mp4"
       video.load()
     } else if (video.error) {
       video.load()
@@ -67,7 +67,7 @@ export function HomeHeroFilm() {
   return (
     <>
       <Image
-        src="/videos/hero-travel-freedom-poster.jpg"
+        src="/videos/hero-travel-freedom-no-safari-poster.jpg"
         alt=""
         fill
         priority
@@ -83,7 +83,7 @@ export function HomeHeroFilm() {
         loop
         playsInline
         preload="none"
-        poster="/videos/hero-travel-freedom-poster.jpg"
+        poster="/videos/hero-travel-freedom-no-safari-poster.jpg"
         className={`absolute inset-0 h-full w-full object-cover object-[center_42%] xl:object-contain xl:object-center ${hasFrame ? "opacity-100" : "opacity-0"}`}
         onLoadedData={() => setHasFrame(true)}
         onPlay={() => setPlaying(true)}
