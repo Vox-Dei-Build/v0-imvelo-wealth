@@ -1,13 +1,13 @@
 {
-  "title": "Imvelo Wealth Solutions \u2014 travel, wealth and freedom",
-  "revision": "2026-09-29-r5-travel-led",
-  "basis": "User explicitly rejected the close-up couple at home and clarified a preference for travel and wealth over people. Travel now leads; two approved people scenes provide short supporting moments.",
+  "title": "Imvelo Wealth Solutions \u2014 without safari",
+  "revision": "2026-09-29-r6-no-safari",
+  "basis": "Selected no-safari revision: removes safari drive and elephant, reallocates their time across existing places and travel. People scenes retain their approved trims; sailing ends before the boat leaves the centred mobile crop.",
   "timebase": {
     "fps": 25,
     "source_ranges": "Half-open ranges after frame-rate normalization. Natural 1x playback."
   },
   "output": {
-    "file": "imvelo-travel-led-60s-1080p.mp4",
+    "file": "hero-travel-freedom-no-safari-1080p.mp4",
     "width": 1920,
     "height": 1080,
     "fps": 25,
@@ -23,7 +23,8 @@
     "level": "4.0",
     "audio": false,
     "faststart": true,
-    "bytes": 21008938
+    "bytes": 19968830,
+    "sha256": "bb7147da89759b1246301fc24586a55131754c993b75ae1e330a59c1461cb3f1"
   },
   "clips": [
     {
@@ -35,12 +36,12 @@
       "download_url": "https://videos.pexels.com/video-files/33644362/14297488_3840_2160_24fps.mp4",
       "sha256": "de2de04ba67a9263c0e82ce96ef73833a82b34e0f6af953ff324bb85be3593b2",
       "source_in_seconds": 1,
-      "source_out_seconds": 7.8,
-      "source_duration_seconds": 6.8,
+      "source_out_seconds": 12.8,
+      "source_duration_seconds": 11.8,
       "source_in_25fps": 25,
-      "source_out_25fps": 195,
+      "source_out_25fps": 320,
       "final_timeline_nominal_in_seconds": -0.8,
-      "final_timeline_nominal_out_seconds": 6,
+      "final_timeline_nominal_out_seconds": 11,
       "colour": {
         "contrast": 1.005,
         "brightness": 0,
@@ -58,73 +59,7 @@
       "attribution_required": false,
       "license_url": "https://www.pexels.com/license/",
       "filming_location": "Sandton, South Africa \u2014 source listing",
-      "crop": "Full 16:9 frame retained; proportional scaling only. Mobile preview also retains the full frame."
-    },
-    {
-      "name": "Safari drive",
-      "file": "safari-drive.mp4",
-      "credit": "SwissHumanity Stories",
-      "source_page": "https://www.pexels.com/video/jeep-on-dirt-road-during-safari-trip-11236995/",
-      "download_url": "https://videos.pexels.com/video-files/11236995/11236995-uhd_2560_1440_30fps.mp4",
-      "sha256": "85ced4a8448822c9794e6b2853d38c756cdb78e981f2c4ac4a4a43e120dc396c",
-      "source_in_seconds": 1,
-      "source_out_seconds": 11.8,
-      "source_duration_seconds": 10.8,
-      "source_in_25fps": 25,
-      "source_out_25fps": 295,
-      "final_timeline_nominal_in_seconds": 5.2,
-      "final_timeline_nominal_out_seconds": 16,
-      "colour": {
-        "contrast": 1.025,
-        "brightness": 0,
-        "saturation": 0.96,
-        "gamma": 1.045,
-        "red_midtones": 0,
-        "blue_midtones": 0
-      },
-      "source_metadata": {
-        "duration": 32.499133,
-        "width": 2560,
-        "height": 1440,
-        "fps": "30000/1001"
-      },
-      "attribution_required": false,
-      "license_url": "https://www.pexels.com/license/",
-      "filming_location": "Unconfirmed",
-      "crop": "Full 16:9 frame retained; proportional scaling only. Mobile preview also retains the full frame."
-    },
-    {
-      "name": "Wildlife encounter",
-      "file": "elephant.mp4",
-      "credit": "Magda Ehlers",
-      "source_page": "https://www.pexels.com/video/elephant-crossing-road-in-african-safari-37412829/",
-      "download_url": "https://videos.pexels.com/video-files/37412829/15845472_2560_1440_25fps.mp4",
-      "sha256": "c0014389816622ed73f2692dc509afa0f9b89292b922c6c93b8e2a8496b9e4d7",
-      "source_in_seconds": 2,
-      "source_out_seconds": 9.8,
-      "source_duration_seconds": 7.8,
-      "source_in_25fps": 50,
-      "source_out_25fps": 245,
-      "final_timeline_nominal_in_seconds": 15.2,
-      "final_timeline_nominal_out_seconds": 23,
-      "colour": {
-        "contrast": 1.015,
-        "brightness": 0,
-        "saturation": 0.96,
-        "gamma": 1.055,
-        "red_midtones": 0,
-        "blue_midtones": 0
-      },
-      "source_metadata": {
-        "duration": 18.08,
-        "width": 2560,
-        "height": 1440,
-        "fps": "25/1"
-      },
-      "attribution_required": false,
-      "license_url": "https://www.pexels.com/license/",
-      "filming_location": "Unconfirmed",
-      "crop": "Full 16:9 frame retained; proportional scaling only. Mobile preview also retains the full frame."
+      "crop": "16:9 export retained. Website mobile presentation uses a centred portrait crop at object-position: center 42%."
     },
     {
       "name": "Balloon flight",
@@ -133,13 +68,13 @@
       "source_page": "https://www.pexels.com/video/video-of-a-flying-hot-air-balloons-8345507/",
       "download_url": "https://videos.pexels.com/video-files/8345507/8345507-uhd_2560_1440_25fps.mp4",
       "sha256": "e09e327cb5867202adc8f7cbee94e7292afe76de3484dc19a30fdb40cef1e840",
-      "source_in_seconds": 6,
-      "source_out_seconds": 16.8,
-      "source_duration_seconds": 10.8,
-      "source_in_25fps": 150,
-      "source_out_25fps": 420,
-      "final_timeline_nominal_in_seconds": 22.2,
-      "final_timeline_nominal_out_seconds": 33,
+      "source_in_seconds": 1,
+      "source_out_seconds": 18.8,
+      "source_duration_seconds": 17.8,
+      "source_in_25fps": 25,
+      "source_out_25fps": 470,
+      "final_timeline_nominal_in_seconds": 10.2,
+      "final_timeline_nominal_out_seconds": 28,
       "colour": {
         "contrast": 1.02,
         "brightness": 0,
@@ -157,7 +92,7 @@
       "attribution_required": false,
       "license_url": "https://www.pexels.com/license/",
       "filming_location": "Cappadocia, Turkey \u2014 listing identifies location",
-      "crop": "Full 16:9 frame retained; proportional scaling only. Mobile preview also retains the full frame."
+      "crop": "16:9 export retained. Website mobile presentation uses a centred portrait crop at object-position: center 42%."
     },
     {
       "name": "Sailing at sunset",
@@ -167,12 +102,12 @@
       "download_url": "https://videos.pexels.com/video-files/852286/852286-hd_1920_1080_30fps.mp4",
       "sha256": "352945e666808c6b6eb97b6920e9cbd15931223a966ec799e8be63e788a3727b",
       "source_in_seconds": 0,
-      "source_out_seconds": 7.8,
-      "source_duration_seconds": 7.8,
+      "source_out_seconds": 8.8,
+      "source_duration_seconds": 8.8,
       "source_in_25fps": 0,
-      "source_out_25fps": 195,
-      "final_timeline_nominal_in_seconds": 32.2,
-      "final_timeline_nominal_out_seconds": 40,
+      "source_out_25fps": 220,
+      "final_timeline_nominal_in_seconds": 27.2,
+      "final_timeline_nominal_out_seconds": 36,
       "colour": {
         "contrast": 1,
         "brightness": 0,
@@ -190,7 +125,7 @@
       "attribution_required": false,
       "license_url": "https://www.pexels.com/license/",
       "filming_location": "Unconfirmed",
-      "crop": "Full 16:9 frame retained; proportional scaling only. Mobile preview also retains the full frame."
+      "crop": "16:9 export retained. Website mobile presentation uses a centred portrait crop at object-position: center 42%."
     },
     {
       "name": "Retirement in the garden",
@@ -217,15 +152,15 @@
       "source_duration_seconds": 5.8,
       "source_in_25fps": 180,
       "source_out_25fps": 325,
-      "final_timeline_nominal_in_seconds": 39.2,
-      "final_timeline_nominal_out_seconds": 45,
+      "final_timeline_nominal_in_seconds": 35.2,
+      "final_timeline_nominal_out_seconds": 41,
       "source_metadata": {
         "duration": 15.083333,
         "width": 1920,
         "height": 1080,
         "fps": "24/1"
       },
-      "crop": "Full 16:9 frame retained; proportional scaling only. Mobile preview also retains the full frame."
+      "crop": "16:9 export retained. Website mobile presentation uses a centred portrait crop at object-position: center 42%."
     },
     {
       "name": "Family garden lunch",
@@ -252,15 +187,15 @@
       "source_duration_seconds": 6.8,
       "source_in_25fps": 110,
       "source_out_25fps": 280,
-      "final_timeline_nominal_in_seconds": 44.2,
-      "final_timeline_nominal_out_seconds": 51,
+      "final_timeline_nominal_in_seconds": 40.2,
+      "final_timeline_nominal_out_seconds": 47,
       "source_metadata": {
         "duration": 14.666667,
         "width": 1920,
         "height": 1080,
         "fps": "24/1"
       },
-      "crop": "Full 16:9 frame retained; proportional scaling only. Mobile preview also retains the full frame."
+      "crop": "16:9 export retained. Website mobile presentation uses a centred portrait crop at object-position: center 42%."
     },
     {
       "name": "South African coast",
@@ -270,12 +205,12 @@
       "source_page": "https://www.pexels.com/video/man-walking-on-the-shore-3326765/",
       "download_url": "https://videos.pexels.com/video-files/3326765/3326765-hd_1920_1080_24fps.mp4",
       "sha256": "9b437e4c48f0e6e44d2ecbbb2c21b2332dac30d02e2d03bc876cf9b68783dee4",
-      "source_in_seconds": 2,
-      "source_out_seconds": 11.8,
-      "source_duration_seconds": 9.8,
-      "source_in_25fps": 50,
-      "source_out_25fps": 295,
-      "final_timeline_nominal_in_seconds": 50.2,
+      "source_in_seconds": 1,
+      "source_out_seconds": 14.8,
+      "source_duration_seconds": 13.8,
+      "source_in_25fps": 25,
+      "source_out_25fps": 370,
+      "final_timeline_nominal_in_seconds": 46.2,
       "final_timeline_nominal_out_seconds": 60,
       "colour": {
         "contrast": 1.035,
@@ -294,19 +229,17 @@
       "attribution_required": false,
       "license_url": "https://www.pexels.com/license/",
       "filming_location": "South Africa \u2014 source listing",
-      "crop": "Full 16:9 frame retained; proportional scaling only. Mobile preview also retains the full frame."
+      "crop": "16:9 export retained. Website mobile presentation uses a centred portrait crop at object-position: center 42%."
     }
   ],
   "loop": {
     "opening_handle_frames": 20,
     "assembly_dissolve_offsets_seconds": [
-      6,
-      16,
-      23,
-      33,
-      40,
-      45,
-      51,
+      11,
+      28,
+      36,
+      41,
+      47,
       60
     ],
     "final_trim_frames": [
@@ -317,62 +250,46 @@
     "wrap_expression": "A*max(0,min(1,(P-0.05)/0.95))+B*(1-max(0,min(1,(P-0.05)/0.95)))",
     "endpoint_note": "Endpoint-weighted 20-frame wrap reduces the residual outgoing image at the file boundary. Custom transition duration remains 0.8s."
   },
-  "status": "Rendered and verified. Rejected home source absent; revised travel-led order checked.",
-  "representation": "Illustrative stock; no subject is identified as an Imvelo client or endorser. People-footage filming locations remain unconfirmed. Only Sandton and closing coast listings identify South African settings. Balloon listing identifies Cappadocia, Turkey. Safari, wildlife and sailing locations remain unconfirmed.",
+  "status": "Verified Option A selected by user for publication on 29 September 2026.",
+  "representation": "Illustrative stock; no subject is identified as an Imvelo client or endorser. People-footage filming locations are unconfirmed. Sandton and coast listings identify South African settings; balloons are listed in Cappadocia, Turkey. Sailing location is unconfirmed.",
   "dissolves": [
     {
       "from": "sandton.mp4",
-      "to": "safari-drive.mp4",
-      "in_seconds": 5.2,
-      "out_seconds": 6,
-      "duration_frames": 20,
-      "transition": "fade"
-    },
-    {
-      "from": "safari-drive.mp4",
-      "to": "elephant.mp4",
-      "in_seconds": 15.2,
-      "out_seconds": 16,
-      "duration_frames": 20,
-      "transition": "fade"
-    },
-    {
-      "from": "elephant.mp4",
       "to": "balloons-wide.mp4",
-      "in_seconds": 22.2,
-      "out_seconds": 23,
+      "in_seconds": 10.2,
+      "out_seconds": 11,
       "duration_frames": 20,
       "transition": "fade"
     },
     {
       "from": "balloons-wide.mp4",
       "to": "sailing.mp4",
-      "in_seconds": 32.2,
-      "out_seconds": 33,
+      "in_seconds": 27.2,
+      "out_seconds": 28,
       "duration_frames": 20,
       "transition": "fade"
     },
     {
       "from": "sailing.mp4",
       "to": "gardening.mp4",
-      "in_seconds": 39.2,
-      "out_seconds": 40,
+      "in_seconds": 35.2,
+      "out_seconds": 36,
       "duration_frames": 20,
       "transition": "fade"
     },
     {
       "from": "gardening.mp4",
       "to": "family-lunch.mp4",
-      "in_seconds": 44.2,
-      "out_seconds": 45,
+      "in_seconds": 40.2,
+      "out_seconds": 41,
       "duration_frames": 20,
       "transition": "fade"
     },
     {
       "from": "family-lunch.mp4",
       "to": "coast.mp4",
-      "in_seconds": 50.2,
-      "out_seconds": 51,
+      "in_seconds": 46.2,
+      "out_seconds": 47,
       "duration_frames": 20,
       "transition": "fade"
     },
@@ -390,14 +307,26 @@
       "file": "home.mp4",
       "provider_id": 1923597,
       "reason": "Explicitly rejected by user; must not return in later edits."
+    },
+    {
+      "file": "safari-drive.mp4",
+      "reason": "Removed for the no-safari client-feedback comparison."
+    },
+    {
+      "file": "elephant.mp4",
+      "reason": "Removed for the no-safari client-feedback comparison."
     }
   ],
   "mobile_output": {
-    "file": "imvelo-travel-led-60s-720p.mp4",
+    "file": "hero-travel-freedom-no-safari-720p.mp4",
     "width": 1280,
     "height": 720,
     "fps": 25,
     "duration_seconds": 60,
-    "bytes": 9855294
+    "bytes": 9180982,
+    "sha256": "cb1c75c20dfbcc3d7b64aed5475822bd783cf5950e1019cccaa159d015984c2e",
+    "audio": false,
+    "faststart": true,
+    "codec": "H.264 / libx264"
   }
 }
